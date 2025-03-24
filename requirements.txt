@@ -1,0 +1,5 @@
+pdfplumber==0.11.5
+torch==2.6.0
+transformers==4.49.0
+pymupdf==1.25.4
+pytesseract==0.3.13
