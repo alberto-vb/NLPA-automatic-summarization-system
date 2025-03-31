@@ -2,117 +2,158 @@ import pdfplumber
 import re
 import json
 from transformers import pipeline
+from typing import List
+import os
 from textwrap import wrap
+import string
 
-# ---------- EXTRACCIÓN DE TEXTO ----------
+# ---------- UTILIDADES ----------
+def normalize_text(text: str) -> str:
+    """
+    Convierte el texto a minúsculas, elimina espacios extra y remueve la puntuación,
+    para facilitar la comparación.
+    """
+    text = text.lower().strip()
+    translator = str.maketrans("", "", string.punctuation)
+    return text.translate(translator)
 
+def remove_duplicates_strict(seq: list) -> list:
+    """
+    Elimina duplicados utilizando la versión normalizada para la comparación.
+    Mantiene el orden original.
+    """
+    seen = set()
+    result = []
+    for x in seq:
+        norm = normalize_text(x)
+        if norm not in seen:
+            seen.add(norm)
+            result.append(x)
+    return result
+
+def maybe_reverse_text(text: str) -> str:
+    """
+    Detecta si el texto parece estar invertido (por ejemplo, si al invertir los primeros 50 caracteres
+    se encuentran cadenas como 'http' o 'boe') y, de ser así, revierte el texto.
+    """
+    test_str = text[:50]
+    reversed_test = test_str[::-1]
+    if "http" in reversed_test.lower() or "boe" in reversed_test.lower():
+        print("Detectado texto invertido. Revirtiendo el texto...")
+        return text[::-1]
+    return text
+
+# ---------- LECTURA DE PDF ----------
 def extract_text_from_pdf(pdf_path: str) -> str:
-    """Extracts and concatenates text from all pages of the PDF."""
     text = ""
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
             page_text = page.extract_text()
             if page_text:
                 text += page_text + "\n"
+    text = maybe_reverse_text(text)
     return text
 
+# ---------- DIVISIÓN EN PÁRRAFOS ----------
+def split_into_paragraphs(text: str) -> List[str]:
+    # Primero intenta dividir por doble salto de línea; si no hay suficientes, usa salto simple.
+    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+    if len(paragraphs) < 3:
+        paragraphs = [p.strip() for p in text.split("\n") if p.strip()]
+    return paragraphs
 
-# ---------- ENTIDADES NOMBRADAS ----------
+# ---------- FILTRO DE PÁRRAFOS ----------
+def find_paragraphs_with_dates(paragraphs: List[str]) -> List[str]:
+    # Se buscan dos formatos de fecha: "21 de diciembre de 2007" y "21/12/2007"
+    regex_date1 = r"\d{1,2}\s+de\s+\w+\s+de\s+\d{4}"
+    regex_date2 = r"\d{1,2}/\d{1,2}/\d{4}"
+    return [p for p in paragraphs if re.search(regex_date1, p, re.IGNORECASE) or re.search(regex_date2, p)]
 
-def extract_entities(text: str, chunk_size: int = 400) -> list:
-    """Uses NER pipeline with chunking to avoid token overflow."""
-    ner_pipeline = pipeline(
-        "ner",
-        model="mrm8488/bert-spanish-cased-finetuned-ner",
-        aggregation_strategy="simple"
+def find_paragraphs_with_amounts(paragraphs: List[str]) -> List[str]:
+    # Busca cantidades en formatos como "1.234,56 €" o "1234,56 €"
+    regex_amount = r"\d{1,3}(?:\.\d{3})*,\d{2}\s?€"
+    return [p for p in paragraphs if re.search(regex_amount, p)]
+
+def find_paragraphs_with_requirements(paragraphs: List[str]) -> List[str]:
+    keywords = ["requisito", "nota media", "haber superado", "matriculado", "mínimo de créditos"]
+    return [p for p in paragraphs if any(kw in p.lower() for kw in keywords)]
+
+# ---------- CONSTRUCCIÓN DEL PROMPT ----------
+def build_summary_input_v2(date_paragraphs: List[str],
+                             amount_paragraphs: List[str],
+                             requirement_paragraphs: List[str]) -> str:
+    prompt = (
+        "Elabora un resumen conciso y claro en lenguaje natural, orientado a estudiantes, "
+        "destacando los plazos de solicitud, las cuantías económicas y los requisitos académicos de la convocatoria. "
+        "Omite repeticiones y redundancias. A continuación se muestra la información extraída:\n\n"
     )
-    chunks = wrap(text, chunk_size)
-    all_entities = []
-    for chunk in chunks:
-        all_entities.extend(ner_pipeline(chunk))
-    return all_entities
+    if date_paragraphs:
+        dates = remove_duplicates_strict(date_paragraphs)
+        prompt += "Plazos:\n" + "\n".join(dates) + "\n\n"
+    if amount_paragraphs:
+        amounts = remove_duplicates_strict(amount_paragraphs)
+        prompt += "Cuantías:\n" + "\n".join(amounts) + "\n\n"
+    if requirement_paragraphs:
+        reqs = remove_duplicates_strict(requirement_paragraphs)
+        prompt += "Requisitos:\n" + "\n".join(reqs) + "\n\n"
+    return prompt.strip()
 
+# ---------- RESUMIDOR ----------
+# Inicializamos el pipeline con un límite mayor y early_stopping activado.
+summarizer = pipeline(
+    "text2text-generation",
+    model="google/flan-t5-large",
+    max_length=1024,
+    early_stopping=True
+)
 
-# ---------- EXTRACCIÓN REGLADA DE CAMPOS ----------
+def generate_summary(text: str) -> str:
+    return summarizer(text)[0]["generated_text"]
 
-def extract_amounts(text: str):
-    return re.findall(r"\d{1,3}(?:\.\d{3})*(?:,\d{2})?\s?€", text)
-
-def extract_deadlines(text: str):
-    return re.findall(r"hasta el \d{1,2} de \w+ de \d{4}", text, flags=re.IGNORECASE)
-
-def extract_income_thresholds(text: str):
-    return re.findall(r"(renta.*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€)", text, flags=re.IGNORECASE)
-
-def extract_education_levels(text: str):
-    niveles = ["educación secundaria", "bachillerato", "formación profesional", "grado", "máster", "universidad"]
-    return [nivel for nivel in niveles if nivel in text.lower()]
-
-def extract_academic_requirements(text: str):
-    pattern = r"(haber\s.+?créditos|nota\smedia\s.+?\d,\d+|superar\s.+?%)"
-    return re.findall(pattern, text, flags=re.IGNORECASE)
-
-def extract_legal_references(text: str):
-    return re.findall(r"(Real Decreto\s\d+/\d+|BOE\s(núm\.|\d+).+?\d{4})", text)
-
-def extract_submission_urls(text: str):
-    return re.findall(r"https?://\S+", text)
-
-
-# ---------- ESTRUCTURAR INFORMACIÓN ----------
-
-def structure_information(text: str, entities: list, doc_name: str) -> dict:
-    education_levels = extract_education_levels(text)
-    scholarship_amounts = extract_amounts(text)
-    income_thresholds = [i[1] for i in extract_income_thresholds(text)]
-    academic_requirements = extract_academic_requirements(text)
-    application_deadline = extract_deadlines(text)
-    legal_references = [ref[0] for ref in extract_legal_references(text)]
-    submission_platform = extract_submission_urls(text)
-
-    info = {
-        "documento": doc_name,
-        "autoridad_emisora": "",
-        "niveles_educativos": sorted(set(education_levels)),
-        "importes_beca": sorted(set(scholarship_amounts)),
-        "umbrales_de_ingresos": sorted(set(income_thresholds)),
-        "requisitos_académicos": sorted(set(academic_requirements)),
-        "fecha_limite": sorted(set(application_deadline)),
-        "legal_references": sorted(set(legal_references)),
-        "plataforma": sorted(set(submission_platform))
-    }
-
-    # Tomamos el primer ORG como organismo convocante
-    organizations = [e["word"] for e in entities if e["entity_group"] == "ORG"]
-    if organizations:
-        info["autoridad_emisora"] = organizations[0]
-
-    return info
-
-
-# ---------- GENERACIÓN DE RESUMEN ----------
-
-def generate_summary(data: dict):
-    summarizer = pipeline("text2text-generation", model="google/flan-t5-large", max_length=512)
-
-    prompt = f"""
-    Genera un resumen claro y conciso para estudiantes sobre la beca publicada en {data['documento']}.
-
-    Organismo: {data['autoridad_emisora']}
-    Niveles educativos: {", ".join(data['niveles_educativos'])}
-    Cuantía: {", ".join(data['importes_beca'])}
-    Umbral de renta: {", ".join(data['umbrales_de_ingresos'])}
-    Requisitos académicos: {", ".join(data['requisitos_académicos'])}
-    Plazo de solicitud: {", ".join(data['fecha_limite'])}
-    Más info: {", ".join(data['plataforma'])}
+def hierarchical_summarize(texts: List[str], group_size: int = 10) -> str:
     """
+    Resume una lista de textos dividiéndolos en grupos de tamaño 'group_size',
+    resumiendo cada grupo y luego combinando los resúmenes intermedios en un resumen final.
+    """
+    groups = [texts[i:i+group_size] for i in range(0, len(texts), group_size)]
+    group_summaries = []
+    for group in groups:
+        group_prompt = "Resume los siguientes fragmentos relacionados con una convocatoria de beca:\n" + "\n".join(group)
+        summary = summarizer(group_prompt)[0]["generated_text"]
+        group_summaries.append(summary)
+    if len(group_summaries) == 1:
+        return group_summaries[0]
+    else:
+        final_prompt = "Resume los siguientes resúmenes relacionados con una convocatoria de beca:\n" + "\n".join(group_summaries)
+        final_summary = summarizer(final_prompt)[0]["generated_text"]
+        return final_summary
 
-    summary = summarizer(prompt)[0]["generated_text"]
-    return summary
-
+def generate_chunked_summary(long_text: str, max_chars: int = 500) -> str:
+    """
+    Divide el texto en fragmentos de hasta 'max_chars' caracteres y resume cada uno (procesándolos en batch).
+    Si se generan muchos mini resúmenes, se aplica una estrategia jerárquica para combinarlos.
+    """
+    chunks = wrap(long_text, max_chars)
+    if not chunks:
+        return ""
+    print(f"Número de chunks generados: {len(chunks)}")
+    
+    # Procesar los fragmentos en batch
+    mini_outputs = summarizer(chunks, batch_size=4)
+    mini_summaries = [output["generated_text"] for output in mini_outputs]
+    
+    # Si hay más de 10 mini resúmenes, aplicar resumen jerárquico
+    if len(mini_summaries) > 10:
+        return hierarchical_summarize(mini_summaries, group_size=10)
+    else:
+        resumen_global_prompt = (
+            "A continuación se presentan varios fragmentos resumidos de una convocatoria de beca.\n"
+            "Resume los aspectos clave para un estudiante (plazos, requisitos, cuantía):\n\n" +
+            "\n".join(mini_summaries)
+        )
+        return summarizer(resumen_global_prompt)[0]["generated_text"]
 
 # ---------- MAIN ----------
-
 if __name__ == "__main__":
     pdfs = [
         'corpus/ayudas_20-21.pdf',
@@ -121,34 +162,64 @@ if __name__ == "__main__":
         'corpus/ayudas_23-24.pdf',
         'corpus/ayudas_24-25.pdf',
     ]
-
-    all_info = []
-
+    resultados = []
     for pdf in pdfs:
         print(f"\nProcesando: {pdf}")
         try:
             raw_text = extract_text_from_pdf(pdf)
+            print("Vista previa del texto extraído:", raw_text[:200])
+            
+            paragraphs = split_into_paragraphs(raw_text)
+            print("Número de párrafos extraídos:", len(paragraphs))
+            if paragraphs:
+                print("Primeros párrafos:", paragraphs[:3])
+            
+            date_paragraphs = find_paragraphs_with_dates(paragraphs)
+            amount_paragraphs = find_paragraphs_with_amounts(paragraphs)
+            requirement_paragraphs = find_paragraphs_with_requirements(paragraphs)
+            
+            print("Párrafos con fechas:", date_paragraphs[:5])
+            print("Párrafos con cuantías:", amount_paragraphs[:5])
+            print("Párrafos con requisitos:", requirement_paragraphs[:5])
+            
+            summary_input = build_summary_input_v2(date_paragraphs, amount_paragraphs, requirement_paragraphs)
+            print("Prompt para el resumen:")
+            print(summary_input)
+            
+            resumen = generate_chunked_summary(summary_input)
+            print("Resumen generado:")
+            print(resumen)
+            
+            resultados.append({
+                "documento": pdf,
+                "resumen": resumen
+            })
+            
+            # Guardar el resumen en un archivo .txt
+            base_name = os.path.basename(pdf).replace('.pdf', '_resumen.txt')
+            txt_path = os.path.join("corpus", base_name)
+            with open(txt_path, "w", encoding="utf-8") as f:
+                f.write(resumen)
         except Exception as e:
-            print(f"Error al leer {pdf}: {e}")
-            continue
-
-        entities = extract_entities(raw_text)
-        structured_data = structure_information(raw_text, entities, pdf)
-
-        # Guardar JSON individual
-        json_path = f"corpus/{pdf.split('/')[-1].replace('.pdf', '_info.json')}"
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(structured_data, f, indent=2, ensure_ascii=False)
-
-        # Generar resumen
-        resumen = generate_summary(structured_data)
-        print("Resumen generado:")
-        print(resumen)
-
-        # También puedes guardar todos los datos para análisis conjunto
-        structured_data["summary"] = resumen
-        all_info.append(structured_data)
-
-    # Guardar resumen conjunto
-    with open("corpus/resumenes_becas.json", "w", encoding="utf-8") as f:
-        json.dump(all_info, f, indent=2, ensure_ascii=False)
+            print(f"Error procesando {pdf}: {e}")
+    
+    # Guardar todos los resúmenes en un JSON
+    with open("corpus/resumenes_focalizados.json", "w", encoding="utf-8") as f:
+        json.dump(resultados, f, indent=2, ensure_ascii=False)
+    
+    # Crear un resumen general a partir de los resúmenes individuales
+    resumenes_texto = "\n\n".join(
+        f"{os.path.basename(r['documento'])}:\n{r['resumen']}" for r in resultados
+    )
+    resumen_general_prompt = (
+        "A continuación se presentan resúmenes de distintas convocatorias de becas.\n"
+        "Genera un resumen general para los estudiantes, indicando patrones comunes, "
+        "requisitos frecuentes, cuantías típicas y fechas aproximadas de solicitud.\n\n" +
+        resumenes_texto
+    )
+    resumen_general = generate_summary(resumen_general_prompt)
+    print("\nResumen general generado:")
+    print(resumen_general)
+    
+    with open("corpus/resumen_general.txt", "w", encoding="utf-8") as f:
+        f.write(resumen_general)
