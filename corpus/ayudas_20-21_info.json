@@ -1,0 +1,20 @@
+{
+  "documento": "corpus/ayudas_20-21.pdf",
+  "autoridad_emisora": "V",
+  "niveles_educativos": [],
+  "importes_beca": [],
+  "umbrales_de_ingresos": [],
+  "requisitos_académicos": [],
+  "fecha_limite": [],
+  "referencias_legales": [],
+  "plataforma": [
+    "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm"
+  ],
+  "criterios_elegibilidad": {
+    "nacionalidad": [],
+    "residencia": [],
+    "límites_de_edad": []
+  },
+  "documentacion_requerida": [],
+  "incompatibilidades": []
+}

@@ -1,794 +1,297 @@
 import pdfplumber
 import re
 import json
-import os
-import datetime
-import pandas as pd
-import nltk
-from nltk.tokenize import sent_tokenize
-from transformers import pipeline, AutoTokenizer, AutoModelForQuestionAnswering
+from transformers import pipeline
 from textwrap import wrap
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import fitz  # PyMuPDF for more advanced PDF handling
-import logging
-from concurrent.futures import ThreadPoolExecutor
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("scholarship_extraction.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger("scholarship_extractor")
+# ---------- EXTRACCIÓN DE TEXTO ----------
 
-# Download NLTK resources if not already available
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+def extract_text_from_pdf(pdf_path: str) -> str:
+    """Extracts and concatenates text from all pages of the PDF."""
+    text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            page_text = page.extract_text()
+            if page_text:
+                text += page_text + "\n"
+    return text
 
-# ---------- ADVANCED CONFIGURATION ----------
 
-# Regular expressions for common scholarship fields
-REGEX_PATTERNS = {
-    "amounts": r"\d{1,3}(?:\.\d{3})*(?:,\d{2})?\s?€",
-    "deadlines": r"(?:hasta|antes del|plazo[^.]*?)\s+(?:el|día|fecha)?\s+\d{1,2}\s+de\s+\w+\s+(?:de|del)?\s+\d{4}",
-    "income_thresholds": r"(renta.*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€)",
-    "academic_requirements": r"(haber\s.+?créditos|nota\smedia\s.+?\d,\d+|superar\s.+?%)",
-    "legal_references": r"(Real Decreto\s\d+/\d+|BOE\s(núm\.|\d+).+?\d{4})",
-    "submission_urls": r"https?://\S+",
-    "document_number": r"(?:Resolución|Convocatoria|Orden).+?(?:número|núm\.|nº)\s+([A-Z0-9-]+)",
-    "phone_numbers": r"\d{3}[\s.-]?\d{2}[\s.-]?\d{2}[\s.-]?\d{2}",
-    "emails": r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}",
-    "student_types": r"(estudiantes\s+(?:de|universitarios|internacionales|extranjeros|con\s+discapacidad|de\s+máster|de\s+doctorado|de\s+grado))",
-    # Add patterns for named entity recognition to replace spaCy
-    "organizations": r"(?:Universidad|Ministerio|Fundación|Consejería|Instituto|Gobierno|Ayuntamiento|Diputación|Agencia)(?:\s+de|\s+del|\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)+",
-    "people": r"(?:Don|Doña|Sr\.|Sra\.|Dr\.|Dra\.)\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)+",
-    "locations": r"(?:en|de)\s+(?:[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s+de\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?)",
-    "dates": r"\d{1,2}\s+de\s+[a-záéíóúñ]+\s+(?:de|\s+)\d{4}",
-    "money": r"\d{1,3}(?:\.\d{3})*(?:,\d{2})?\s*(?:euros|€)"
-}
+# ---------- ENTIDADES NOMBRADAS ----------
 
-# Predefined queries for QA extraction
-QA_QUERIES = [
-    "¿Cuál es el plazo de solicitud?",
-    "¿Cuáles son los requisitos académicos?",
-    "¿Qué cantidad económica ofrece la beca?",
-    "¿Quién puede solicitar esta beca?",
-    "¿Qué documentación se necesita presentar?",
-    "¿Dónde se presenta la solicitud?",
-    "¿Cuáles son los criterios de selección?",
-    "¿Cuál es el umbral de renta máximo?",
-    "¿Cuándo se publicará la resolución?"
-]
-
-# Categories of educational levels and their keywords
-EDUCATION_LEVELS = {
-    "educación_secundaria": ["educación secundaria", "eso", "secundaria", "educación secundaria obligatoria"],
-    "bachillerato": ["bachillerato", "bachiller"],
-    "formación_profesional": ["formación profesional", "fp", "ciclos formativos", "grado medio", "grado superior", "cfgm", "cfgs"],
-    "grado": ["grado", "graduado", "título universitario", "estudios universitarios", "enseñanzas universitarias"],
-    "máster": ["máster", "master", "posgrado", "postgrado"],
-    "doctorado": ["doctorado", "phd", "doctor", "doctoral"]
-}
-
-# ---------- EXTRACCIÓN DE TEXTO AVANZADA ----------
-
-def extract_text_from_pdf(pdf_path: str, method="pdfplumber") -> dict:
-    """
-    Extracts text from PDF using multiple methods and combines results.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        method: The extraction method to use ("pdfplumber", "pymupdf", or "combined")
-        
-    Returns:
-        Dictionary with extracted text by page and full text
-    """
-    logger.info(f"Extracting text from {pdf_path} using {method}")
-    result = {"pages": {}, "full_text": ""}
-    
-    try:
-        if method == "pdfplumber" or method == "combined":
-            with pdfplumber.open(pdf_path) as pdf:
-                for i, page in enumerate(pdf.pages, 1):
-                    page_text = page.extract_text() or ""
-                    if method == "combined":
-                        result["pages"][f"page_{i}_pdfplumber"] = page_text
-                    else:
-                        result["pages"][f"page_{i}"] = page_text
-                    result["full_text"] += page_text + "\n"
-                
-        if method == "pymupdf" or method == "combined":
-            with fitz.open(pdf_path) as doc:
-                for i, page in enumerate(doc, 1):
-                    page_text = page.get_text() or ""
-                    if method == "combined":
-                        result["pages"][f"page_{i}_pymupdf"] = page_text
-                        # If using combined, only add PyMuPDF text if it adds significant content
-                        pdfplumber_text = result["pages"].get(f"page_{i}_pdfplumber", "")
-                        if len(page_text) > len(pdfplumber_text) * 1.2:  # 20% more text
-                            result["full_text"] += page_text + "\n"
-                    else:
-                        result["pages"][f"page_{i}"] = page_text
-                        result["full_text"] += page_text + "\n"
-        
-        # Extract tables from PDF as well
-        tables = extract_tables_from_pdf(pdf_path)
-        if tables:
-            result["tables"] = tables
-            
-        return result
-    
-    except Exception as e:
-        logger.error(f"Error extracting text from {pdf_path}: {e}")
-        return {"pages": {}, "full_text": "", "error": str(e)}
-
-def extract_tables_from_pdf(pdf_path: str) -> list:
-    """Extract tables from PDF and convert to structured data"""
-    tables = []
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for i, page in enumerate(pdf.pages, 1):
-                page_tables = page.extract_tables()
-                for j, table in enumerate(page_tables, 1):
-                    if table:
-                        # Convert to pandas DataFrame for easier manipulation
-                        df = pd.DataFrame(table[1:], columns=table[0] if table[0] else None)
-                        tables.append({
-                            "page": i,
-                            "table_index": j,
-                            "data": df.to_dict(orient="records")
-                        })
-        return tables
-    except Exception as e:
-        logger.error(f"Error extracting tables from {pdf_path}: {e}")
-        return []
-
-def extract_metadata_from_pdf(pdf_path: str) -> dict:
-    """Extract PDF metadata like author, creation date, title"""
-    metadata = {}
-    try:
-        with fitz.open(pdf_path) as doc:
-            metadata = doc.metadata
-            # Add page count
-            metadata["page_count"] = len(doc)
-        return metadata
-    except Exception as e:
-        logger.error(f"Error extracting metadata from {pdf_path}: {e}")
-        return {}
-
-# ---------- PROCESAMIENTO DE TEXTO AVANZADO ----------
-
-def preprocess_text(text: str) -> str:
-    """Clean and normalize text for better extraction"""
-    # Remove excessive whitespace
-    text = re.sub(r'\s+', ' ', text)
-    # Normalize quotes and dashes
-    text = text.replace('"', '"').replace('"', '"').replace('–', '-')
-    # Remove headers/footers that match common patterns
-    text = re.sub(r'Página \d+ de \d+', '', text)
-    text = re.sub(r'(?i)código seguro de verificación.+?firmante.*?\d{2}:\d{2}', '', text)
-    return text.strip()
-
-def segment_text(text: str) -> dict:
-    """
-    Segment text into sections based on common scholarship document structure
-    """
-    sections = {
-        "introduction": "",
-        "requirements": "",
-        "documentation": "",
-        "procedure": "",
-        "deadlines": "",
-        "selection_criteria": "",
-        "benefits": "",
-        "obligations": "",
-        "other": ""
-    }
-    
-    sentences = sent_tokenize(text)
-    
-    # Dictionary of keywords that suggest a particular section
-    section_keywords = {
-        "introduction": ["objeto", "finalidad", "introducción", "convoca", "convocatoria"],
-        "requirements": ["requisitos", "podrán solicitar", "podrán participar", "destinatarios"],
-        "documentation": ["documentación", "documentos", "acreditar", "presentar", "solicitud"],
-        "procedure": ["procedimiento", "tramitación", "forma de presentación", "solicitudes"],
-        "deadlines": ["plazo", "fecha límite", "hasta el día", "término"],
-        "selection_criteria": ["criterios de selección", "baremo", "valoración", "evaluación"],
-        "benefits": ["dotación", "cuantía", "importe", "euros", "€", "cantidad"],
-        "obligations": ["obligaciones", "compromiso", "deber"],
-    }
-    
-    # Assign sentences to sections based on keyword matching
-    for sentence in sentences:
-        sentence_lower = sentence.lower()
-        assigned = False
-        
-        for section, keywords in section_keywords.items():
-            if any(keyword in sentence_lower for keyword in keywords):
-                sections[section] += sentence + " "
-                assigned = True
-                break
-                
-        if not assigned:
-            sections["other"] += sentence + " "
-    
-    return {k: v.strip() for k, v in sections.items() if v.strip()}
-
-# ---------- NAMED ENTITY RECOGNITION REPLACEMENT ----------
-
-def extract_entities(text: str, chunk_size: int = 400) -> dict:
-    """
-    Extract named entities using regex patterns instead of spaCy
-    Groups entities by type.
-    """
-    # Initialize results dictionary
-    entities_by_type = {
-        "ORG": [],  # Organizations
-        "PER": [],  # People
-        "LOC": [],  # Locations
-        "DATE": [], # Dates
-        "MONEY": [] # Monetary values
-    }
-    
-    # Use regex patterns to extract entities
-    org_matches = set(re.findall(REGEX_PATTERNS["organizations"], text, re.IGNORECASE))
-    per_matches = set(re.findall(REGEX_PATTERNS["people"], text, re.IGNORECASE))
-    loc_matches = set(re.findall(REGEX_PATTERNS["locations"], text, re.IGNORECASE))
-    date_matches = set(re.findall(REGEX_PATTERNS["dates"], text, re.IGNORECASE))
-    money_matches = set(re.findall(REGEX_PATTERNS["money"], text, re.IGNORECASE))
-    
-    # Clean up extracted entities
-    entities_by_type["ORG"] = sorted([m.strip() for m in org_matches if len(m.strip()) > 3])
-    entities_by_type["PER"] = sorted([m.strip() for m in per_matches if len(m.strip()) > 3])
-    entities_by_type["LOC"] = sorted([m.strip() for m in loc_matches if len(m.strip()) > 3])
-    entities_by_type["DATE"] = sorted([m.strip() for m in date_matches if len(m.strip()) > 3])
-    entities_by_type["MONEY"] = sorted([m.strip() for m in money_matches if len(m.strip()) > 3])
-    
-    # Optional: use transformers NER for better accuracy if available
-    try:
-        ner_pipeline = pipeline(
-            "ner",
-            model="mrm8488/bert-spanish-cased-finetuned-ner",
-            aggregation_strategy="simple"
-        )
-        
-        chunks = wrap(text, chunk_size)
-        
-        for chunk in chunks:
-            try:
-                transformer_entities = ner_pipeline(chunk)
-                for ent in transformer_entities:
-                    if ent["entity_group"] in ["ORG", "PER", "LOC"]:
-                        mapped_type = {
-                            "ORG": "ORG", 
-                            "PER": "PER", 
-                            "LOC": "LOC"
-                        }.get(ent["entity_group"])
-                        
-                        if mapped_type and ent["word"] not in entities_by_type[mapped_type]:
-                            entities_by_type[mapped_type].append(ent["word"])
-            except Exception as e:
-                logger.warning(f"Error in Transformers NER chunk processing: {e}")
-    except Exception as e:
-        logger.warning(f"Transformers NER not available, using regex only: {e}")
-    
-    # Clean up results and remove duplicates
-    for entity_type in entities_by_type:
-        entities_by_type[entity_type] = sorted(list(set(entities_by_type[entity_type])))
-    
-    return entities_by_type
-
-# ---------- EXTRACCIÓN BASADA EN QA ----------
-
-def extract_info_with_qa(text: str, queries: list = None) -> dict:
-    """
-    Use Question-Answering model to extract specific information
-    """
-    if queries is None:
-        queries = QA_QUERIES
-        
-    try:
-        # Load QA model for Spanish
-        tokenizer = AutoTokenizer.from_pretrained("PlanTL-GOB-ES/roberta-base-bne-sqac")
-        model = AutoModelForQuestionAnswering.from_pretrained("PlanTL-GOB-ES/roberta-base-bne-sqac")
-        qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer)
-        
-        results = {}
-        
-        # Process text in chunks if it's too long
-        max_length = 512
-        text_chunks = []
-        
-        if len(text) > max_length:
-            # Split text into sentences and group them into chunks
-            sentences = sent_tokenize(text)
-            current_chunk = ""
-            
-            for sentence in sentences:
-                if len(current_chunk) + len(sentence) < max_length:
-                    current_chunk += sentence + " "
-                else:
-                    text_chunks.append(current_chunk.strip())
-                    current_chunk = sentence + " "
-            
-            # Add the last chunk
-            if current_chunk:
-                text_chunks.append(current_chunk.strip())
-        else:
-            text_chunks = [text]
-        
-        # Run QA on each query and each chunk
-        for query in queries:
-            best_answer = {"score": 0, "answer": ""}
-            
-            for chunk in text_chunks:
-                try:
-                    result = qa_pipeline(question=query, context=chunk)
-                    
-                    # Keep the best answer based on score
-                    if result["score"] > best_answer["score"]:
-                        best_answer = result
-                except Exception as e:
-                    logger.error(f"Error in QA for query '{query}': {e}")
-            
-            if best_answer["score"] > 0.2:  # Only keep reasonably confident answers
-                # Clean up and format the key
-                key = query.lower()
-                key = re.sub(r'¿|cuál es |cuáles son |qué |dónde |cuándo |cómo |la |el |los |las |se |una |un ', '', key)
-                key = key.replace(' ', '_').replace('?', '').strip()
-                
-                results[key] = best_answer["answer"]
-        
-        return results
-    
-    except Exception as e:
-        logger.error(f"Error setting up QA pipeline: {e}")
-        return {}
-
-# ---------- EXTRACCIÓN REGLADA DE CAMPOS MEJORADA ----------
-
-def extract_field_with_regex(text: str, pattern_name: str) -> list:
-    """Extract information using predefined regex patterns"""
-    pattern = REGEX_PATTERNS.get(pattern_name)
-    if not pattern:
-        logger.warning(f"No pattern defined for {pattern_name}")
-        return []
-    
-    matches = re.findall(pattern, text, flags=re.IGNORECASE | re.DOTALL)
-    
-    # Handle tuples returned by regex groups
-    if matches and isinstance(matches[0], tuple):
-        # For cases where we want the whole match and a specific group
-        if pattern_name == "income_thresholds":
-            return [m[1] for m in matches]  # Return just the amounts
-        return [m[0] for m in matches]  # Return the full match
-    
-    return matches
-
-def extract_education_levels(text: str) -> dict:
-    """
-    Extract education levels with more detailed categorization
-    """
-    text_lower = text.lower()
-    found_levels = {}
-    
-    for category, keywords in EDUCATION_LEVELS.items():
-        for keyword in keywords:
-            if keyword in text_lower:
-                # Find the full context around this keyword
-                # Look for sentences containing the keyword
-                matches = re.findall(r'[^.!?]*(?<=[.!?\s])' + re.escape(keyword) + r'(?=[.!?\s])[^.!?]*[.!?]', text_lower)
-                
-                if matches:
-                    found_levels[category] = {
-                        "detected": True,
-                        "keyword": keyword,
-                        "context": [m.strip() for m in matches]
-                    }
-                    break
-                else:
-                    found_levels[category] = {
-                        "detected": True,
-                        "keyword": keyword,
-                        "context": []
-                    }
-                    break
-        
-        if category not in found_levels:
-            found_levels[category] = {"detected": False}
-    
-    return found_levels
-
-def extract_document_date(text: str) -> str:
-    """Extract the document publication/creation date"""
-    # Look for common date patterns in Spanish documents
-    date_patterns = [
-        r'(?:Madrid|Barcelona|Valencia|Sevilla),?\s+a\s+(\d{1,2})\s+de\s+([a-zñáéíóú]+)\s+de\s+(\d{4})',
-        r'(?:fecha|publicado el|con fecha)\s+(?:de|del)?\s*?(\d{1,2})\s+de\s+([a-zñáéíóú]+)\s+(?:de|del)?\s+(\d{4})',
-        r'(\d{1,2})\s+de\s+([a-zñáéíóú]+)\s+de\s+(\d{4})'
-    ]
-    
-    for pattern in date_patterns:
-        matches = re.findall(pattern, text, flags=re.IGNORECASE)
-        if matches:
-            day, month, year = matches[0]
-            
-            # Normalize Spanish month names
-            month_map = {
-                'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
-                'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
-                'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
-            }
-            
-            month_num = month_map.get(month.lower(), '00')
-            return f"{day.zfill(2)}/{month_num}/{year}"
-    
-    return ""
-
-def extract_contact_information(text: str) -> dict:
-    """Extract contact information like phones, emails, websites"""
-    contact_info = {
-        "phones": extract_field_with_regex(text, "phone_numbers"),
-        "emails": extract_field_with_regex(text, "emails"),
-        "websites": extract_field_with_regex(text, "submission_urls")
-    }
-    return contact_info
-
-# ---------- SEMANTIC SEARCH AND CLASSIFICATION ----------
-
-def create_semantic_index(documents: list) -> tuple:
-    """Create a semantic search index for document comparison"""
-    vectorizer = TfidfVectorizer(
-        min_df=1, 
-        ngram_range=(1, 2),
-        stop_words=['de', 'la', 'el', 'y', 'en', 'a', 'que', 'los', 'del', 'se', 'las', 'por', 'un', 'para', 'con']
+def extract_entities(text: str, chunk_size: int = 400) -> list:
+    """Uses NER pipeline with chunking to avoid token overflow."""
+    ner_pipeline = pipeline(
+        "ner",
+        model="mrm8488/bert-spanish-cased-finetuned-ner",
+        aggregation_strategy="simple"
     )
-    
-    # Extract just the text content and document names
-    texts = [doc["full_text"] for doc in documents]
-    doc_names = [doc["file_name"] for doc in documents]
-    
-    # Create the TF-IDF matrix
-    tfidf_matrix = vectorizer.fit_transform(texts)
-    
-    return vectorizer, tfidf_matrix, doc_names
+    chunks = wrap(text, chunk_size)
+    all_entities = []
+    for chunk in chunks:
+        all_entities.extend(ner_pipeline(chunk))
+    return all_entities
 
-def find_similar_documents(query_text: str, vectorizer, tfidf_matrix, doc_names, top_n=3) -> list:
-    """Find documents similar to a query text"""
-    # Transform the query using the same vectorizer
-    query_vector = vectorizer.transform([query_text])
+
+# ---------- EXTRACCIÓN REGLADA DE CAMPOS ----------
+
+def extract_amounts(text: str):
+    # Original pattern
+    original_amounts = re.findall(r"\d{1,3}(?:\.\d{3})*(?:,\d{2})?\s?€", text)
+    # New pattern with range format (1.000-2.000 €)
+    range_amounts = re.findall(r"\d{1,3}(?:\.\d{3})*(?:,\d{2})?(?:\s?-\s?\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?\s?€", text)
+    # New pattern for annual amounts
+    annual_amounts = re.findall(r"(?:anual(?:es)?|por año|por curso).*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€", text, flags=re.IGNORECASE)
     
-    # Calculate similarity
-    similarity_scores = cosine_similarity(query_vector, tfidf_matrix).flatten()
+    # Combine all amounts, removing duplicates
+    all_amounts = set(original_amounts + range_amounts)
+    if annual_amounts:
+        all_amounts.update([amt + " € (anual)" for amt in annual_amounts])
+        
+    return list(all_amounts)
+
+def extract_deadlines(text: str):
+    # Original pattern
+    original_deadlines = re.findall(r"hasta el \d{1,2} de \w+ de \d{4}", text, flags=re.IGNORECASE)
     
-    # Get indices of top N similar documents
-    top_indices = similarity_scores.argsort()[-top_n:][::-1]
+    # New patterns for additional date formats
+    extended_deadlines = re.findall(r"(?:hasta|antes del|fin(?:aliza)?(?:\sel)?|término)(?:\sel)?\s\d{1,2}\s?(?:de)?\s?\w+(?:\sde)?\s?\d{4}", text, flags=re.IGNORECASE)
     
-    # Return document names and scores
-    results = [
-        {"document": doc_names[i], "similarity": similarity_scores[i]} 
-        for i in top_indices if similarity_scores[i] > 0
+    # Pattern for deadline with specific time
+    time_deadlines = re.findall(r"(?:hasta|antes del|fin(?:aliza)?(?:\sel)?|término)(?:\sel)?\s\d{1,2}\s?(?:de)?\s?\w+(?:\sde)?\s?\d{4}(?:\sa\slas)?\s\d{1,2}(?::\d{2})?\s?(?:horas|h\.?)", text, flags=re.IGNORECASE)
+    
+    # Pattern for application period
+    period_deadlines = re.findall(r"(?:periodo|plazo)(?:\sde\ssolicitud|\sde\spresentación)(?:\scomprendido|\sestablecido)?(?:\sentre|\sdesde)\sel\s\d{1,2}\s?(?:de)?\s?\w+(?:\sde)?\s?\d{4}(?:\s(?:y|hasta|al)\sel\s\d{1,2}\s?(?:de)?\s?\w+(?:\sde)?\s?\d{4})?", text, flags=re.IGNORECASE)
+    
+    return list(set(original_deadlines + extended_deadlines + time_deadlines + period_deadlines))
+
+def extract_income_thresholds(text: str):
+    # Original pattern
+    original_thresholds = re.findall(r"(renta.*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€)", text, flags=re.IGNORECASE)
+    
+    # New pattern for family income thresholds
+    family_thresholds = re.findall(r"(?:umbral|límite)(?:\sde)?(?:\s\w+){0,3}(?:\sfamiliar|\sper\scápita|\spersonal).*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€", text, flags=re.IGNORECASE)
+    
+    # Pattern for income thresholds by family members
+    members_thresholds = re.findall(r"(?:familia|miembros|personas)(?:\sde)?(?:\s\d+\smiembros|\s\w+).*?(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s?€", text, flags=re.IGNORECASE)
+    
+    # Combine all thresholds
+    all_thresholds = original_thresholds
+    if family_thresholds:
+        all_thresholds.extend([("umbral familiar " + ft, ft) for ft in family_thresholds])
+    if members_thresholds:
+        all_thresholds.extend([("umbral por miembros " + mt, mt) for mt in members_thresholds])
+        
+    return all_thresholds
+
+def extract_education_levels(text: str):
+    # Original list of education levels
+    niveles = ["educación secundaria", "bachillerato", "formación profesional", "grado", "máster", "universidad"]
+    
+    # Add more specific education levels
+    niveles_extendidos = [
+        "educación infantil", "educación primaria", "eso", "educación secundaria obligatoria",
+        "fp básica", "fp grado medio", "fp grado superior", "ciclo formativo", 
+        "estudios superiores", "doctorado", "postgrado", "enseñanzas artísticas",
+        "enseñanzas deportivas", "idiomas", "escuela oficial de idiomas"
     ]
     
-    return results
+    # Combine all education levels
+    all_niveles = niveles + niveles_extendidos
+    
+    return [nivel for nivel in all_niveles if re.search(r'\b' + re.escape(nivel) + r'\b', text.lower())]
 
-def classify_scholarship_type(text: str) -> list:
-    """
-    Classify the scholarship by type based on text content.
-    Returns a list of probable scholarship types with confidence scores.
-    """
-    # Define keyword sets for different scholarship types
-    scholarship_types = {
-        "mobility": ["movilidad", "erasmus", "internacional", "intercambio", "extranjero"],
-        "research": ["investigación", "doctorado", "proyecto", "laboratorio", "tesis"],
-        "general": ["general", "ordinaria", "matrícula", "tasas", "curso académico"],
-        "excellence": ["excelencia", "rendimiento", "alto rendimiento", "premios", "extraordinario"],
-        "need_based": ["necesidad", "situación económica", "emergencia", "vulnerabilidad", "renta"],
-        "disability": ["discapacidad", "diversidad funcional", "necesidades especiales"],
-        "postgraduate": ["posgrado", "postgrado", "máster", "especialización"],
-        "internship": ["prácticas", "empresa", "profesional", "formación práctica"]
+def extract_academic_requirements(text: str):
+    # Original pattern
+    original_requirements = re.findall(r"(haber\s.+?créditos|nota\smedia\s.+?\d,\d+|superar\s.+?%)", text, flags=re.IGNORECASE)
+    
+    # New patterns for academic requirements
+    passing_reqs = re.findall(r"(?:haber aprobado|tener aprobad[oa]s|superar)(?:\sun\smínimo\sde)?\s(?:\w+\s){0,3}(?:\d+\s)?(?:asignaturas|créditos|ECTS|materias)", text, flags=re.IGNORECASE)
+    
+    grade_reqs = re.findall(r"(?:nota\s(?:media|mínima))(?:\srequerida|\snecesaria|\sexigida)?(?:\sde|\s:)?\s\d+(?:[,.]\d+)?", text, flags=re.IGNORECASE)
+    
+    continuation_reqs = re.findall(r"(?:estar\smatriculado|matricularse)(?:\sen|\sde)(?:\sun\smínimo\sde)?\s(?:\w+\s){0,3}(?:\d+\s)?(?:asignaturas|créditos|ECTS|materias)", text, flags=re.IGNORECASE)
+    
+    all_requirements = original_requirements + passing_reqs + grade_reqs + continuation_reqs
+    
+    return list(set(all_requirements))
+
+def extract_legal_references(text: str):
+    # Original pattern
+    original_references = re.findall(r"(Real Decreto\s\d+/\d+|BOE\s(núm\.|\d+).+?\d{4})", text)
+    
+    # New patterns for legal references
+    law_references = re.findall(r"(?:Ley(?:\sOrgánica)?|Orden(?:\sMinisterial)?|Resolución)\s(?:de\s\d{1,2}\sde\s\w+(?:\sde)?\s\d{4}|\d+/\d+)", text)
+    
+    ministry_references = re.findall(r"(?:Ministerio|Consejería)(?:\sde\s\w+){1,4}(?:\sde\sfecha)?\s\d{1,2}\sde\s\w+(?:\sde)?\s\d{4}", text)
+    
+    official_bulletin = re.findall(r"(?:Boletín\sOficial|BOJA|BOCM|DOGC|BOPV|BOCYL)\s(?:del\s)?(?:Estado|Comunidad)?\s(?:núm\.|número)?\s\d+", text)
+    
+    all_references = []
+    for ref in original_references:
+        all_references.append(ref[0])
+    all_references.extend(law_references)
+    all_references.extend(ministry_references)
+    all_references.extend(official_bulletin)
+    
+    return list(set(all_references))
+
+def extract_submission_urls(text: str):
+    # Original pattern for URLs
+    urls = re.findall(r"https?://\S+", text)
+    
+    # New pattern for web platforms without full URL
+    web_platforms = re.findall(r"(?:sede\selectrónica|portal\sweb|plataforma\sdigital|aplicación\sweb|sistema\sde\ssolicitud)\s(?:en|\:)?\s(?:la\spágina\sweb\s)?(?:https?://)?(?:www\.)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/\S*)?)", text, flags=re.IGNORECASE)
+    
+    # Combine original URLs with web platforms
+    all_urls = urls
+    if web_platforms:
+        for platform in web_platforms:
+            if not any(platform in url for url in urls):
+                # Add the platform as a potential URL if not already part of an existing URL
+                if not platform.startswith(('http://', 'https://')):
+                    platform = 'https://' + platform
+                all_urls.append(platform)
+    
+    return list(set(all_urls))
+
+def extract_eligibility_criteria(text: str):
+    """Extract eligibility criteria related to nationality, residency, etc."""
+    nationality = re.findall(r"(?:nacionalidad|ciudadanía)(?:\s\w+){1,4}(?:español(?:a)?|europea?|extranjero)", text, flags=re.IGNORECASE)
+    
+    residency = re.findall(r"(?:residencia|residir|empadronamiento)(?:\slegal)?(?:\sen\s\w+){1,3}(?:durante|mínimo|al\smenos|por\sun\speriodo)(?:\s\w+){0,3}\d+(?:\saños?|\smeses?)", text, flags=re.IGNORECASE)
+    
+    age_limits = re.findall(r"(?:edad|ser\smayor\sde|tener\sentre|menores\sde)(?:\s\w+){0,2}\s\d+(?:\s\w+){0,2}(?:años|edad)", text, flags=re.IGNORECASE)
+    
+    return {
+        "nacionalidad": list(set(nationality)),
+        "residencia": list(set(residency)),
+        "límites_de_edad": list(set(age_limits))
     }
-    
-    results = []
-    text_lower = text.lower()
-    
-    for s_type, keywords in scholarship_types.items():
-        count = sum(1 for keyword in keywords if keyword in text_lower)
-        if count > 0:
-            confidence = min(count / len(keywords) * 2, 1.0)  # Normalize to max 1.0
-            results.append({"type": s_type, "confidence": confidence})
-    
-    # Sort by confidence
-    results.sort(key=lambda x: x["confidence"], reverse=True)
-    
-    return results
 
-# ---------- STRUCTURING INFORMATION ----------
+def extract_required_documents(text: str):
+    """Extract information about required documentation."""
+    document_keywords = [
+        "dni", "nie", "pasaporte", "certificado", "expediente académico", 
+        "declaración", "renta", "empadronamiento", "formulario", "solicitud",
+        "título", "acreditación", "justificante"
+    ]
+    
+    documents_pattern = r"(?:presentar|aportar|adjuntar|documentación|documentos)(?:\s\w+){0,5}(?:" + "|".join(document_keywords) + r")(?:\s\w+){0,15}(?:\.|,)"
+    required_docs = re.findall(documents_pattern, text, flags=re.IGNORECASE)
+    
+    return list(set(required_docs))
 
-def structure_information(text: str, extraction_results: dict, doc_name: str) -> dict:
-    """
-    Combine all extraction methods into a structured output
-    """
-    # Clean and preprocess text
-    clean_text = preprocess_text(text)
+def extract_incompatibilities(text: str):
+    """Extract information about incompatibilities with other scholarships."""
+    incompatibilities = re.findall(r"(?:incompatible|no\spodrá\sser\sbeneficiario|no\spodrán\ssolicitarla)(?:\s\w+){0,15}(?:beca|ayuda|subvención)(?:\s\w+){0,30}(?:\.|,)", text, flags=re.IGNORECASE)
     
-    # Extract basic information using regex
-    education_levels = extract_education_levels(clean_text)
-    scholarship_amounts = extract_field_with_regex(clean_text, "amounts")
-    income_thresholds = extract_field_with_regex(clean_text, "income_thresholds")
-    academic_requirements = extract_field_with_regex(clean_text, "academic_requirements")
-    application_deadline = extract_field_with_regex(clean_text, "deadlines")
-    legal_references = extract_field_with_regex(clean_text, "legal_references")
-    submission_platform = extract_field_with_regex(clean_text, "submission_urls")
+    return list(set(incompatibilities))
+
+
+# ---------- ESTRUCTURAR INFORMACIÓN ----------
+
+def structure_information(text: str, entities: list, doc_name: str) -> dict:
+    education_levels = extract_education_levels(text)
+    scholarship_amounts = extract_amounts(text)
+    income_thresholds = [i[1] for i in extract_income_thresholds(text)]
+    academic_requirements = extract_academic_requirements(text)
+    application_deadline = extract_deadlines(text)
+    legal_references = extract_legal_references(text)
+    submission_platform = extract_submission_urls(text)
     
-    # Get entities from extraction_results
-    entities = extraction_results.get("entities", {})
-    
-    # Get QA results if available
-    qa_results = extraction_results.get("qa_results", {})
-    
-    # Get document metadata if available
-    metadata = extraction_results.get("metadata", {})
-    
-    # Extract document date
-    document_date = extract_document_date(clean_text)
-    
-    # Extract contact information
-    contact_info = extract_contact_information(clean_text)
-    
-    # Get document segmentation
-    sections = segment_text(clean_text)
-    
-    # Classify scholarship type
-    scholarship_types = classify_scholarship_type(clean_text)
-    
-    # Construct the structured information
+    # New extractions
+    eligibility = extract_eligibility_criteria(text)
+    required_documents = extract_required_documents(text)
+    incompatibilities = extract_incompatibilities(text)
+
     info = {
-        "documento": {
-            "nombre": doc_name,
-            "fecha": document_date,
-            "metadata": metadata
-        },
+        "documento": doc_name,
         "autoridad_emisora": "",
-        "tipo_beca": scholarship_types,
-        "niveles_educativos": education_levels,
+        "niveles_educativos": sorted(set(education_levels)),
         "importes_beca": sorted(set(scholarship_amounts)),
         "umbrales_de_ingresos": sorted(set(income_thresholds)),
         "requisitos_académicos": sorted(set(academic_requirements)),
         "fecha_limite": sorted(set(application_deadline)),
         "referencias_legales": sorted(set(legal_references)),
         "plataforma": sorted(set(submission_platform)),
-        "contacto": contact_info,
-        "secciones": sections,
-        "qa_respuestas": qa_results
+        # New fields
+        "criterios_elegibilidad": eligibility,
+        "documentacion_requerida": sorted(set(required_documents)),
+        "incompatibilidades": sorted(set(incompatibilities))
     }
-    
-    # Set the issuing authority if found
-    organizations = entities.get("ORG", [])
+
+    # Tomamos el primer ORG como organismo convocante
+    organizations = [e["word"] for e in entities if e["entity_group"] == "ORG"]
     if organizations:
         info["autoridad_emisora"] = organizations[0]
-    
-    # Remove empty fields for cleaner output
-    info = {k: v for k, v in info.items() if v}
-    
+
     return info
 
-# ---------- GENERACIÓN DE RESUMEN MEJORADO ----------
 
-def generate_summary(data: dict, model="google/flan-t5-large") -> dict:
-    """
-    Generate a comprehensive summary in multiple formats:
-    - Short summary (1-2 sentences)
-    - Bullet points for key details
-    - Full narrative summary
-    """
-    try:
-        summarizer = pipeline("text2text-generation", model=model, max_length=512)
-        
-        # Extract relevant data for the summary
-        doc_name = data.get("documento", {}).get("nombre", "documento")
-        issuer = data.get("autoridad_emisora", "")
-        education = []
-        for level, details in data.get("niveles_educativos", {}).items():
-            if details.get("detected"):
-                education.append(level.replace("_", " "))
-        
-        amounts = data.get("importes_beca", [])
-        income = data.get("umbrales_de_ingresos", [])
-        requirements = data.get("requisitos_académicos", [])
-        deadline = data.get("fecha_limite", [])
-        platform = data.get("plataforma", [])
-        
-        # Create prompt for the short summary
-        short_prompt = f"""
-        Resume en una frase esta beca: {doc_name} de {issuer} para estudiantes de {', '.join(education)[:100]}.
-        Importe: {', '.join(amounts)[:50]}. Fecha límite: {', '.join(deadline)[:50]}.
-        """
-        
-        # Create prompt for the full summary
-        full_prompt = f"""
-        Genera un resumen completo y claro para estudiantes sobre la beca publicada en {doc_name}.
+# ---------- GENERACIÓN DE RESUMEN ----------
 
-        Organismo: {issuer}
-        Niveles educativos: {', '.join(education)}
-        Cuantía: {', '.join(amounts)}
-        Umbral de renta: {', '.join(income)}
-        Requisitos académicos: {', '.join(requirements)}
-        Plazo de solicitud: {', '.join(deadline)}
-        Más info: {', '.join(platform)}
-        """
-        
-        # Generate summaries
-        short_summary = summarizer(short_prompt)[0]["generated_text"]
-        full_summary = summarizer(full_prompt)[0]["generated_text"]
-        
-        # Create bullet points from key data
-        bullet_points = []
-        if issuer:
-            bullet_points.append(f"Convoca: {issuer}")
-        if education:
-            bullet_points.append(f"Para estudiantes de: {', '.join(education)}")
-        if amounts:
-            bullet_points.append(f"Importe: {', '.join(amounts[:3])}")
-        if deadline:
-            bullet_points.append(f"Plazo: {', '.join(deadline[:1])}")
-        if requirements:
-            bullet_points.append(f"Requisitos clave: {', '.join(requirements[:2])}")
-        if platform:
-            bullet_points.append(f"Solicitud: {', '.join(platform[:1])}")
-        
-        return {
-            "short_summary": short_summary,
-            "bullet_points": bullet_points,
-            "full_summary": full_summary
-        }
-        
-    except Exception as e:
-        logger.error(f"Error generating summary: {e}")
-        return {
-            "short_summary": f"Beca publicada en {doc_name}.",
-            "bullet_points": ["Error al generar puntos clave."],
-            "full_summary": f"Error al generar resumen completo para {doc_name}."
-        }
+def generate_summary(data: dict):
+    summarizer = pipeline("text2text-generation", model="google/flan-t5-large", max_length=512)
 
-# ---------- TEMPORAL ANALYSIS ----------
+    prompt = f"""
+    Genera un resumen claro y conciso para estudiantes sobre la beca publicada en {data['documento']}.
 
-def compare_scholarship_years(scholarship_data: list) -> dict:
+    Organismo: {data['autoridad_emisora']}
+    Niveles educativos: {", ".join(data['niveles_educativos'])}
+    Cuantía: {", ".join(data['importes_beca'])}
+    Umbral de renta: {", ".join(data['umbrales_de_ingresos'])}
+    Requisitos académicos: {", ".join(data['requisitos_académicos'])}
+    Nacionalidad/Residencia: {", ".join(data['criterios_elegibilidad']['nacionalidad'] + data['criterios_elegibilidad']['residencia'])}
+    Edad: {", ".join(data['criterios_elegibilidad']['límites_de_edad'])}
+    Documentación: {", ".join(data['documentacion_requerida'][:3])} y otros documentos
+    Incompatibilidades: {", ".join(data['incompatibilidades'][:2])}
+    Plazo de solicitud: {", ".join(data['fecha_limite'])}
+    Más info: {", ".join(data['plataforma'])}
     """
-    Compare scholarship details across different years to identify changes
-    """
-    if len(scholarship_data) < 2:
-        return {"error": "Need at least two scholarship entries to compare"}
-    
-    # Sort data by date if available
-    try:
-        sorted_data = sorted(scholarship_data, 
-                            key=lambda x: x.get("documento", {}).get("fecha", ""), 
-                            reverse=True)
-    except:
-        sorted_data = scholarship_data
-    
-    comparison = {
-        "scholarships_compared": len(sorted_data),
-        "changes": {
-            "importes_beca": {},
-            "umbrales_de_ingresos": {},
-            "requisitos_académicos": {},
-            "fecha_limite": {},
-            "plataforma": {}
-        },
-        "temporal_trends": {},
-        "summary": ""
-    }
-    
-    # Track changes across all documents
-    for i in range(len(sorted_data) - 1):
-        current = sorted_data[i]
-        previous = sorted_data[i + 1]
-        
-        current_year = current.get("documento", {}).get("fecha", "")[-4:]
-        previous_year = previous.get("documento", {}).get("fecha", "")[-4:]
-        
-        if not current_year or not previous_year:
+
+    summary = summarizer(prompt)[0]["generated_text"]
+    return summary
+
+
+# ---------- MAIN ----------
+
+if __name__ == "__main__":
+    pdfs = [
+        'corpus/ayudas_20-21.pdf',
+        'corpus/ayudas_21-22.pdf',
+        'corpus/ayudas_22-23.pdf',
+        'corpus/ayudas_23-24.pdf',
+        'corpus/ayudas_24-25.pdf',
+    ]
+
+    all_info = []
+
+    for pdf in pdfs:
+        print(f"\nProcesando: {pdf}")
+        try:
+            raw_text = extract_text_from_pdf(pdf)
+        except Exception as e:
+            print(f"Error al leer {pdf}: {e}")
             continue
-            
-        # Compare key fields
-        for field in ["importes_beca", "umbrales_de_ingresos", "requisitos_académicos", 
-                      "fecha_limite", "plataforma"]:
-            current_values = set(current.get(field, []))
-            previous_values = set(previous.get(field, []))
-            
-            added = current_values - previous_values
-            removed = previous_values - current_values
-            
-            if added or removed:
-                if f"{previous_year}_to_{current_year}" not in comparison["changes"][field]:
-                    comparison["changes"][field][f"{previous_year}_to_{current_year}"] = {
-                        "added": list(added),
-                        "removed": list(removed)
-                    }
-    
-    # Analyze trends in scholarship amounts
-    all_amounts = []
-    for data in sorted_data:
-        doc_year = data.get("documento", {}).get("fecha", "")[-4:]
-        if not doc_year:
-            continue
-            
-        for amount_str in data.get("importes_beca", []):
-            # Extract numeric values from amount strings
-            match = re.search(r'(\d+(?:\.\d+)*(?:,\d+)?)', amount_str)
-            if match:
-                amount_num = float(match.group(1).replace('.', '').replace(',', '.'))
-                all_amounts.append((doc_year, amount_num))
-    
-    # Group amounts by year
-    amounts_by_year = {}
-    for year, amount in all_amounts:
-        if year not in amounts_by_year:
-            amounts_by_year[year] = []
-        amounts_by_year[year].append(amount)
-    
-    # Calculate average amount per year
-    avg_by_year = {year: sum(amounts)/len(amounts) for year, amounts in amounts_by_year.items()}
-    
-    # Calculate percentage change between years
-    years = sorted(avg_by_year.keys())
-    for i in range(len(years) - 1):
-        current_year = years[i+1]
-        prev_year = years[i]
-        
-        if avg_by_year[prev_year] > 0:
-            percent_change = ((avg_by_year[current_year] - avg_by_year[prev_year]) / 
-                             avg_by_year[prev_year] * 100)
-            
-            comparison["temporal_trends"][f"{prev_year}_to_{current_year}"] = {
-                "avg_amount_prev": avg_by_year[prev_year],
-                "avg_amount_curr": avg_by_year[current_year],
-                "percent_change": round(percent_change, 2)
-            }
-    
-    # Generate a summary of the changes
-    changes_detected = any(bool(changes) for changes in comparison["changes"].values())
-    
-    if changes_detected:
-        summary = "Se han detectado cambios significativos entre convocatorias: "
-        
-        for field, years_changes in comparison["changes"].items():
-            if years_changes:
-                field_name = {
-                    "importes_beca": "importes",
-                    "umbrales_de_ingresos": "umbrales de renta",
-                    "requisitos_académicos": "requisitos académicos",
-                    "fecha_limite": "plazos de solicitud",
-                    "plataforma": "plataformas de solicitud"
-                }.get(field, field)
-                
-                summary += f"cambios en {field_name}, "
-        
-        # Add trend information
-        if comparison["temporal_trends"]:
-            trend_info = []
-            for year_range, trend in comparison["temporal_trends"].items():
-                if abs(trend["percent_change"]) > 5:  # Only report significant changes
-                    direction = "aumentado" if trend["percent_change"] > 0 else "disminuido"
-                    trend_info.append(
-                        f"los importes han {direction} un {abs(trend['percent_change']):.1f}% " 
-                        f"de {year_range.split('_to_')[0]} a {year_range.split('_to_')[1]}"
-                    )
-            
-            if trend_info:
-                summary += "con tendencias notables: " + "; ".join(trend_info)
-        
-        comparison["summary"] = summary.rstrip(", ")
-    else:
-        comparison["summary"] = "No se han detectado cambios significativos entre las convocatorias analizadas."
-    
-    return comparison
+
+        entities = extract_entities(raw_text)
+        structured_data = structure_information(raw_text, entities, pdf)
+
+        # Guardar JSON individual
+        json_path = f"corpus/{pdf.split('/')[-1].replace('.pdf', '_info.json')}"
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(structured_data, f, indent=2, ensure_ascii=False)
+
+        # Generar resumen
+        resumen = generate_summary(structured_data)
+        print("Resumen generado:")
+        print(resumen)
+
+        # También puedes guardar todos los datos para análisis conjunto
+        structured_data["summary"] = resumen
+        all_info.append(structured_data)
+
+    # Guardar resumen conjunto
+    with open("corpus/resumenes_becas.json", "w", encoding="utf-8") as f:
+        json.dump(all_info, f, indent=2, ensure_ascii=False)

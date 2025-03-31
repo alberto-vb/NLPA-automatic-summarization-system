@@ -1,0 +1,70 @@
+{
+  "documento": "corpus/ayudas_21-22.pdf",
+  "autoridad_emisora": "##IO DE EDUCACIÓN",
+  "niveles_educativos": [
+    "bachillerato",
+    "ciclo formativo",
+    "doctorado",
+    "educación infantil",
+    "educación secundaria",
+    "educación secundaria obligatoria",
+    "enseñanzas artísticas",
+    "enseñanzas deportivas",
+    "estudios superiores",
+    "formación profesional",
+    "grado",
+    "idiomas",
+    "máster",
+    "universidad"
+  ],
+  "importes_beca": [],
+  "umbrales_de_ingresos": [],
+  "requisitos_académicos": [
+    "haber superado el cincuenta por ciento de las asignaturas, créditos",
+    "matricularse en un número de créditos",
+    "nota media\nserá de 7,00",
+    "nota media de 5,00",
+    "nota media de 8,00",
+    "nota media será de 7,00",
+    "superar\nArtes y Humanidades . . . ......................... 90%"
+  ],
+  "fecha_limite": [
+    "Antes del 1 de septiembre de 2021",
+    "antes del 29 de diciembre de 2021",
+    "hasta\nel 31 de diciembre de 2021",
+    "hasta el 30 de junio de 2021"
+  ],
+  "referencias_legales": [
+    "Ley 24/2005",
+    "Ley 29/1998",
+    "Ley 38/2003",
+    "Ley 39/2015",
+    "Ley 40/2015",
+    "Ley Orgánica 1/2004",
+    "Ley Orgánica 2/2006",
+    "Ley Orgánica 3/2020",
+    "Real Decreto\n1721/2007",
+    "Real Decreto\n471/2021",
+    "Real Decreto\n887/2006",
+    "Real Decreto\n939/2005",
+    "Real Decreto 1614/2009",
+    "Real Decreto 1721/2007",
+    "Real Decreto 1954/1994",
+    "Real Decreto 3195/1980",
+    "Real Decreto 471/2021",
+    "Real Decreto 688/2020",
+    "Real Decreto 887/2006"
+  ],
+  "plataforma": [
+    "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm",
+    "https://sede.educacion.gob.es",
+    "https://sede.educacion.gob.es,"
+  ],
+  "criterios_elegibilidad": {
+    "nacionalidad": [],
+    "residencia": [],
+    "límites_de_edad": []
+  },
+  "documentacion_requerida": [],
+  "incompatibilidades": []
+}
