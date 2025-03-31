@@ -59,11 +59,11 @@ def structure_information(entities) -> dict:
 
 if __name__ == "__main__":
     pdfs = [
-        # 'corpus/ayudas_20-21.pdf',  # This was a scan of the original document, therefore pdfplumber fails
         'corpus/ayudas_21-22.pdf',
         'corpus/ayudas_22-23.pdf',
         'corpus/ayudas_23-24.pdf',
         'corpus/ayudas_24-25.pdf',
+        'corpus/ayudas_25-26.pdf',
     ]
 
     for pdf in pdfs:
