@@ -1,0 +1,196 @@
+[
+  {
+    "documento": "corpus/ayudas_20-21.pdf",
+    "autoridad_emisora": "V",
+    "niveles_educativos": [],
+    "importes_beca": [],
+    "umbrales_de_ingresos": [],
+    "requisitos_académicos": [],
+    "fecha_limite": [],
+    "legal_references": [],
+    "plataforma": [
+      "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm"
+    ],
+    "summary": "Genera un resumen claro y conciso para estudiantes sobre la beca publicada en corpus/ayudas_20-21.pdf. Organismo: V Niveles educativos: Cuanta: Umbral de renta: Requisitos académicos: Plazo de solicitud: Más info: https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm"
+  },
+  {
+    "documento": "corpus/ayudas_21-22.pdf",
+    "autoridad_emisora": "##IO DE EDUCACIÓN",
+    "niveles_educativos": [
+      "bachillerato",
+      "educación secundaria",
+      "formación profesional",
+      "grado",
+      "máster",
+      "universidad"
+    ],
+    "importes_beca": [],
+    "umbrales_de_ingresos": [],
+    "requisitos_académicos": [
+      "haber superado el cincuenta por ciento de las asignaturas, créditos",
+      "nota media\nserá de 7,00",
+      "nota media de 5,00",
+      "nota media de 8,00",
+      "nota media será de 7,00",
+      "superar\nArtes y Humanidades . . . ......................... 90%"
+    ],
+    "fecha_limite": [
+      "hasta el 30 de junio de 2021"
+    ],
+    "legal_references": [
+      "Real Decreto\n1721/2007",
+      "Real Decreto\n471/2021",
+      "Real Decreto\n887/2006",
+      "Real Decreto\n939/2005",
+      "Real Decreto 1614/2009",
+      "Real Decreto 1721/2007",
+      "Real Decreto 1954/1994",
+      "Real Decreto 3195/1980",
+      "Real Decreto 471/2021",
+      "Real Decreto 688/2020",
+      "Real Decreto 887/2006"
+    ],
+    "plataforma": [
+      "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm",
+      "https://sede.educacion.gob.es",
+      "https://sede.educacion.gob.es,"
+    ],
+    "summary": "Genera un resumen claro y conciso para estudiantes sobre la beca publicada en corpus/ayudas_21-22.pdf. Organismo: ##IO DE EDUCACIN Niveles educativos: bachillerato, educación secundaria, formación profesional, grado, máster, universidad Cuanta: Umbral de renta: Requisitos académicos: haber superado el cincuenta por ciento de las asignaturas, créditos, nota media será de 7,00, nota media de 5,00, nota media de 8,00, nota media será de 7,00, superar Artes y Humanidades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+  },
+  {
+    "documento": "corpus/ayudas_22-23.pdf",
+    "autoridad_emisora": "MIN",
+    "niveles_educativos": [
+      "bachillerato",
+      "educación secundaria",
+      "formación profesional",
+      "grado",
+      "máster",
+      "universidad"
+    ],
+    "importes_beca": [],
+    "umbrales_de_ingresos": [],
+    "requisitos_académicos": [
+      "haber superado el cincuenta por ciento de las asignaturas, créditos",
+      "nota media de 5,00",
+      "nota media de 8,00",
+      "superar\nArtes y Humanidades . . . . . . . . . . . . . . . . . . . . . . 90%"
+    ],
+    "fecha_limite": [
+      "hasta el 12 de mayo de 2022",
+      "hasta el 30 de junio de 2022"
+    ],
+    "legal_references": [
+      "Real Decreto\n154/2022",
+      "Real Decreto\n1721/2007",
+      "Real Decreto 1014/1985",
+      "Real Decreto 154/2022",
+      "Real Decreto 1614/2009",
+      "Real Decreto 1721/2007",
+      "Real Decreto 1954/1994",
+      "Real Decreto 3195/1980",
+      "Real Decreto 688/2020",
+      "Real Decreto 822/2021",
+      "Real Decreto 887/2006"
+    ],
+    "plataforma": [
+      "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm",
+      "https://sede.educacion.gob.es",
+      "https://sede.educacion.gob.es,",
+      "https://sede.educacion.gob.es."
+    ],
+    "summary": "Genera un resumen claro y conciso para estudiantes sobre la beca publicada en corpus/ayudas_22-23.pdf. Organismo: MIN Niveles educativos: bachillerato, educación secundaria, formación profesional, grado, máster, universidad Cuanta: Umbral de renta: Requisitos académicos: haber superado el cincuenta por ciento de las asignaturas, créditos, nota media de 5,00, nota media de 8,00, superar Artes y Humanidades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  {
+    "documento": "corpus/ayudas_23-24.pdf",
+    "autoridad_emisora": "##C",
+    "niveles_educativos": [
+      "bachillerato",
+      "educación secundaria",
+      "formación profesional",
+      "grado",
+      "máster",
+      "universidad"
+    ],
+    "importes_beca": [],
+    "umbrales_de_ingresos": [],
+    "requisitos_académicos": [
+      "haber superado el cincuenta por ciento de las asignaturas, créditos",
+      "nota media de 5,00",
+      "nota media de 8,00",
+      "superar\nArtes y Humanidades . . . . . . . . . . . . . . . . . . . . . . 90%"
+    ],
+    "fecha_limite": [
+      "hasta el 17 de mayo de 2023",
+      "hasta el 30 de junio de 2023"
+    ],
+    "legal_references": [
+      "Real Decreto\n1721/2007",
+      "Real Decreto 1014/1985",
+      "Real Decreto 1085/2020",
+      "Real Decreto 1147/2011",
+      "Real Decreto 117/2023",
+      "Real Decreto 1614/2009",
+      "Real Decreto 1721/2007",
+      "Real Decreto 1954/1994",
+      "Real Decreto 3195/1980",
+      "Real Decreto 822/2021",
+      "Real Decreto 887/2006"
+    ],
+    "plataforma": [
+      "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm",
+      "https://sede.educacion.gob.es",
+      "https://sede.educacion.gob.es,",
+      "https://sede.educacion.gob.es.",
+      "https://www.educacionyfp.gob.es",
+      "https://www.educacionyfp.gob.es/"
+    ],
+    "summary": "Genera un resumen claro y conciso para estudiantes sobre la beca publicada en corpus/ayudas_23-24.pdf. Organismo: ##C Niveles educativos: bachillerato, educación secundaria, formación profesional, grado, máster, universidad Cuanta: Umbral de renta: Requisitos académicos: haber superado el cincuenta por ciento de las asignaturas, créditos, nota media de 5,00, nota media de 8,00, superar Artes y Humanidades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  {
+    "documento": "corpus/ayudas_24-25.pdf",
+    "autoridad_emisora": "##C",
+    "niveles_educativos": [
+      "bachillerato",
+      "educación secundaria",
+      "formación profesional",
+      "grado",
+      "máster",
+      "universidad"
+    ],
+    "importes_beca": [],
+    "umbrales_de_ingresos": [],
+    "requisitos_académicos": [
+      "haber superado el cincuenta por ciento de las asignaturas, créditos",
+      "nota media de 5,00",
+      "nota media de 8,00",
+      "superar\nArtes y Humanidades . . . . . . . . . . . . . . . . . . . . . . 90%"
+    ],
+    "fecha_limite": [
+      "hasta el 30 de junio de 2024"
+    ],
+    "legal_references": [
+      "Real Decreto\n1721/2007",
+      "Real Decreto\n201/2024",
+      "Real Decreto 1014/1985",
+      "Real Decreto 1085/2020",
+      "Real Decreto 1147/2011",
+      "Real Decreto 1614/2009",
+      "Real Decreto 1721/2007",
+      "Real Decreto 1954/1994",
+      "Real Decreto 201/2024",
+      "Real Decreto 3195/1980",
+      "Real Decreto 822/2021",
+      "Real Decreto 887/2006"
+    ],
+    "plataforma": [
+      "https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm",
+      "https://sede.educacion.gob.es",
+      "https://sede.educacion.gob.es,",
+      "https://sede.educacion.gob.es.",
+      "https://www.educacionyfp.gob.es,",
+      "https://www.educacionyfp.gob.es/"
+    ],
+    "summary": "Genera un resumen claro y conciso para estudiantes sobre la beca publicada en corpus/ayudas_24-25.pdf. Organismo: ##C Niveles educativos: bachillerato, educación secundaria, formación profesional, grado, máster, universidad Cuanta: Umbral de renta: Requisitos académicos: haber superado el cincuenta por ciento de las asignaturas, créditos, nota media de 5,00, nota media de 8,00, superar Artes y Humanidades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  }
+]
