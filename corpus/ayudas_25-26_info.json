@@ -1,0 +1,82 @@
+{
+  "documento": "corpus/ayudas_25-26.pdf",
+  "autoridad_emisora": "EDUCACIÓN",
+  "niveles_educativos": [
+    "bachillerato",
+    "educación secundaria",
+    "formación profesional",
+    "grado",
+    "máster",
+    "universidad"
+  ],
+  "importes_beca": [
+    "1.176,00 euros",
+    "1.500 euros",
+    "1.700 euros",
+    "1.700,00 euros",
+    "1.811,00 euros",
+    "1.964.000.000 euros",
+    "100 euros",
+    "125 euros",
+    "13.130 euros",
+    "155.500 euros",
+    "18,46 euros",
+    "2.000,00 euros",
+    "2.100 euros",
+    "2.700,00 euros",
+    "2.881,00 euros",
+    "200 euros",
+    "28,00 euros",
+    "300 euros",
+    "300,00 euros",
+    "350 euros",
+    "4.000,00 euros",
+    "42.900 euros",
+    "42.900,00\neuros",
+    "442,00 euros",
+    "450.000.000,00 euros",
+    "50 euros",
+    "500 euros",
+    "500,00 euros",
+    "525,00 euros",
+    "60,00 euros",
+    "623,00 euros",
+    "75 euros",
+    "800 euros",
+    "800,00 euros",
+    "888,00 euros",
+    "937,00 euros"
+  ],
+  "umbrales_de_ingresos": [
+    "."
+  ],
+  "requisitos_académicos": [
+    "haber superado el cincuenta por ciento de las asignaturas, créditos",
+    "nota media de 5,00",
+    "nota media de 8,00",
+    "superar\nArtes y Humanidades  90%"
+  ],
+  "fecha_limite": [
+    "hasta el 30 de junio de 2025"
+  ],
+  "legal_references": [
+    "Real Decreto\n163/2025",
+    "Real Decreto 1014/1985",
+    "Real Decreto 1085/2020",
+    "Real Decreto 1147/2011",
+    "Real Decreto 1614/2009",
+    "Real Decreto 163/2025",
+    "Real Decreto 1721/2007",
+    "Real Decreto 1954/1994",
+    "Real Decreto 3195/1980",
+    "Real Decreto 822/2021",
+    "Real Decreto 887/2006"
+  ],
+  "plataforma": [
+    "https://sede.educacion.gob.es",
+    "https://sede.educacion.gob.es,",
+    "https://sede.educacion.gob.es.",
+    "https://www.educacionyfp.gob.es,",
+    "https://www.educacionyfp.gob.es/"
+  ]
+}

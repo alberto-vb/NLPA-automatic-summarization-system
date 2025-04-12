@@ -9,13 +9,51 @@
     "máster",
     "universidad"
   ],
-  "importes_beca": [],
-  "umbrales_de_ingresos": [],
+  "importes_beca": [
+    "1.176,00 euros",
+    "1.500 euros",
+    "1.700 euros",
+    "1.700,00 euros",
+    "1.811,00 euros",
+    "1.920.000.000 euros",
+    "100 euros",
+    "125 euros",
+    "13.130 euros",
+    "155.500 euros",
+    "18,46 euros",
+    "2.000,00 euros",
+    "2.100 euros",
+    "2.500,00 euros",
+    "2.881,00 euros",
+    "28,00 euros",
+    "300 euros",
+    "300,00 euros",
+    "350 euros",
+    "4.000,00 euros",
+    "42.900 euros",
+    "42.900,00\neuros",
+    "442,00 euros",
+    "450.000.000,00 euros",
+    "50 euros",
+    "500 euros",
+    "500,00 euros",
+    "525,00 euros",
+    "60,00 euros",
+    "623,00 euros",
+    "75 euros",
+    "800 euros",
+    "800,00 euros",
+    "888,00 euros",
+    "937,00 euros"
+  ],
+  "umbrales_de_ingresos": [
+    "."
+  ],
   "requisitos_académicos": [
     "haber superado el cincuenta por ciento de las asignaturas, créditos",
     "nota media de 5,00",
     "nota media de 8,00",
-    "superar\nArtes y Humanidades . . . . . . . . . . . . . . . . . . . . . . 90%"
+    "superar\nArtes y Humanidades  90%"
   ],
   "fecha_limite": [
     "hasta el 30 de junio de 2024"
