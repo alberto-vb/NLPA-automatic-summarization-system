@@ -69,7 +69,7 @@ def semantic_pattern_extractor(text):
 
     return resultados
 
-def spacy_extractor(text):
+def spacy_extractor(text, max_entities=10, max_sentence_length=120):
     nlp = spacy.load("es_core_news_md")
     doc = nlp(text)
 
@@ -79,57 +79,65 @@ def spacy_extractor(text):
         "ORG": []
     }
 
-    # Extraer frases completas que contengan entidades
+    # Función para acortar frases manteniendo el contexto
+    def shorten_sentence(sentence, max_length):
+        if len(sentence) <= max_length:
+            return sentence
+        words = sentence.split()
+        # Mantener la entidad y palabras alrededor
+        for ent in doc.ents:
+            if ent.text in sentence:
+                start = max(0, sentence.find(ent.text) - 20)
+                end = min(len(sentence), sentence.find(ent.text) + len(ent.text) + 20)
+                return sentence[start:end] + "..."
+        return ' '.join(words[:15]) + '...' if len(words) > 15 else sentence
+
+    # Contadores para limitar entidades
+    counters = {"FECHAS": 0, "DINERO": 0, "ORG": 0}
+
+    # Extraer entidades con frases relevantes
     for sent in doc.sents:
         for ent in sent.ents:
-            # Para fechas: mejorar detección incluyendo patrones comunes
-            if ent.label_ == "DATE":
-                entidades["FECHAS"].append({
-                    "entidad": ent.text,
-                    "frase": sent.text,
-                    "tipo": "DATE"
-                })
+            ent_type = None
             
-            # Para dinero: ampliar criterios de detección
-            elif ent.label_ == "MONEY" or \
-                 any(t.like_num and "€" in sent.text for t in sent) or \
-                 any(t.like_num and "euro" in sent.text.lower() for t in sent):
-                entidades["DINERO"].append({
+            if ent.label_ == "DATE" and counters["FECHAS"] < max_entities:
+                ent_type = "FECHAS"
+            elif (ent.label_ == "MONEY" or 
+                  any(t.like_num and "€" in sent.text for t in sent) or 
+                  any(t.like_num and "euro" in sent.text.lower() for t in sent)) and counters["DINERO"] < max_entities:
+                ent_type = "DINERO"
+            elif ent.label_ == "ORG" and counters["ORG"] < max_entities:
+                ent_type = "ORG"
+                
+            if ent_type:
+                entidades[ent_type].append({
                     "entidad": ent.text,
-                    "frase": sent.text,
-                    "tipo": "MONEY"
+                    "frase": shorten_sentence(sent.text, max_sentence_length),
+                    "tipo": ent.label_
                 })
-            
-            # Para organizaciones (ya funciona bien)
-            elif ent.label_ == "ORG":
-                entidades["ORG"].append({
-                    "entidad": ent.text,
-                    "frase": sent.text,
-                    "tipo": "ORG"
-                })
+                counters[ent_type] += 1
 
-    # Mejorar extracción de frases con verbos de acción
+    # Extraer frases de acción más relevantes (limitadas a 3)
     verbos_accion = ["convocar", "requerir", "solicitar", "otorgar", "financiar"]
-    frases_accion = [
-        {
-            "frase": sent.text,
-            "verbos": [token.lemma_ for token in sent if token.lemma_ in verbos_accion]
-        }
-        for sent in doc.sents
-        if any(token.lemma_ in verbos_accion for token in sent)
-    ]
+    frases_accion = []
+    
+    for sent in doc.sents:
+        if len(frases_accion) >= 8:  # Máximo 8 frases de acción
+            break
+            
+        action_verbs = [token.lemma_ for token in sent if token.lemma_ in verbos_accion]
+        if action_verbs:
+            frases_accion.append({
+                "frase": shorten_sentence(sent.text, max_sentence_length),
+                "verbos": list(set(action_verbs))[:2]  # Máximo 2 verbos por frase
+            })
 
-    # Filtrar duplicados manteniendo el orden
-    for key in entidades:
-        seen = set()
-        entidades[key] = [x for x in entidades[key] if not (x["frase"] in seen or seen.add(x["frase"]))]
-
+    # Eliminar duplicados y asegurar formato compacto
     resultados = {
-        "entidades": entidades,
+        "entidades": {k: v[:max_entities] for k, v in entidades.items()},  # Asegurar máximo de entidades
         "frases_accion": frases_accion
     }
     
-    #print(json.dumps(resultados, indent=2, ensure_ascii=False))
     return resultados
 
 def save_json(data, foldername, filename):
@@ -165,9 +173,9 @@ if __name__ == "__main__":
             with open(txt, 'r', encoding='utf-8') as file:
                 contenido = file.read()
                 # Guardar resultados de regex_extractor
-                save_json(regex_extractor(contenido), "resumenes_regex", txt)
+                #save_json(regex_extractor(contenido), "resumenes_regex", txt)
                 # Guardar resultados de semantic_pattern_extractor
-                save_json(semantic_pattern_extractor(contenido), "resumenes_semantic", txt)
+                #save_json(semantic_pattern_extractor(contenido), "resumenes_semantic", txt)
                 # Guardar resultados de spacy_extractor
                 save_json(spacy_extractor(contenido), "resumenes_spacy", txt)
 
