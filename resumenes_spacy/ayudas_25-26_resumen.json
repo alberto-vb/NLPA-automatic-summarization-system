@@ -1,0 +1,1189 @@
+{
+  "entidades": {
+    "FECHAS": [],
+    "DINERO": [
+      {
+        "entidad": "El importe de las becas concedidas",
+        "frase": "El importe de las becas concedidas, excluido el importe de las becas de matrícula, no podrá exceder de 1.964.000.000 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "No",
+        "frase": "No obstante, dicho importe podrá incrementarse con una cuantía adicional de 450.000.000,00 euros, cuando, como consecuencia de la concurrencia de alguna de las circunstancias previstas en la letra a) del artículo 58.2 del Reglamento de la Ley General de Subvenciones, aprobado por el Real Decreto 887/2006, de 21 de julio, se produzca un incremento de crédito disponible antes de la concesión definitiva de las becas que se convocan por esta Resolución.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Cuantía",
+        "frase": "b) Cuantía fija ligada a la renta del solicitante: 1.700,00 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Cuantía",
+        "frase": "c) Cuantía fija ligada a la residencia del solicitante durante el curso: 2.700,00 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Cuantía",
+        "frase": "d) Cuantía fija ligada a la excelencia académica: entre 50 y 125 euros con la siguiente distribución: Nota media del estudiante Cuantía en euros Entre 8,00 y 8,49 puntos 50 euros Entre 8,50 y 8,99 puntos 75 euros Entre 9,00 y 9,49 puntos 100 euros 9,50 puntos o más 125 euros e) Beca básica: 300,00 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Ciclos Formativos de Grado Básico",
+        "frase": "En el caso de los becarios que cursen Ciclos Formativos de Grado Básico esta cuantía será de 350 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Comunidades Autónomas de Canarias",
+        "frase": "Los beneficiarios de beca con domicilio familiar en las Comunidades Autónomas de Canarias o las Illes Balears o en las Ciudades de Ceuta o de Melilla, que se vean en la necesidad de utilizar transporte marítimo o aéreo para acceder al centro docente en el que cursen sus estudios desde su domicilio, dispondrán de 442,00 euros más sobre la beca que les haya correspondido.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Lanzarote",
+        "frase": "Esta cantidad adicional será de 623,00 euros para los becarios con domicilio familiar en las islas de Lanzarote, Fuerteventura, La Gomera, El Hierro y La Palma, Menorca, Ibiza y Formentera.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Comunidades Autónomas de Canarias",
+        "frase": "En el caso de que el estudiante tenga que desplazarse entre las Comunidades Autónomas de Canarias o las Illes Balears y la Península Ibérica, las cantidades a que se refieren los dos párrafos anteriores serán de 888,00 euros y 937,00 euros, respectivamente.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Comunidad Autónoma de Canarias",
+        "frase": "En el caso de becarios con domicilio familiar en la Comunidad Autónoma de Canarias que cursen estudios de formación profesional las cantidades indicadas en los números 1, 2 y 3 anteriores se incrementarán en 300 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Comunidad Autónoma de Canarias",
+        "frase": "Los becarios con domicilio familiar en la Comunidad Autónoma de Canarias que cursen estudios de formación profesional y deban desplazarse a otra isla de esa Comunidad, distinta de la de su domicilio, exclusivamente para la realización de las prácticas integrantes del correspondiente ciclo formativo o para realizar un programa de movilidad distinto de las prácticas, percibirán una compensación por gastos de desplazamiento de 300 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "España",
+        "frase": "En el supuesto de que exclusivamente para realizar las prácticas o el programa de movilidad deban desplazarse a la España peninsular, la compensación será de 500 euros y si el desplazamiento es a otro país de la Unión Europea, de 800 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "La deducción aplicable al solicitante universitario",
+        "frase": "La deducción aplicable al solicitante universitario será de 2.000,00 euros cuando éste se encuentre afectado de una discapacidad de grado igual o superior al sesenta y cinco por ciento.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Los umbrales de renta familiar aplicables para la concesión de las becas",
+        "frase": "Los umbrales de renta familiar aplicables para la concesión de las becas que se convocan por esta Resolución serán los que se señalan a continuación: Nº de miembros de la familia Umbral 1 (euros) Umbral 2 (euros) Umbral 3 (euros) 1 8.843 13.898 14.818 2 13.264 23.724 25.293 3 17.685 32.201 34.332 4 22.107 38.242 40.773 5 25.644 42.743 45.572 6 29.181 46.142 49.196 7 32.718 49.503 52.780 8 36.255 52.850 56.348 Cada miembro adicional al 8º 3.536 3.340 3.561 Artículo 20.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "ABELARDO DE LA ROSA",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n16 b) La suma de los valores catastrales de las construcciones situadas en fincas rústicas, incluyendo los bienes inmuebles de naturaleza especial, y excluido el valor catastral de la construcción que constituya la vivienda habitual de la familia, no podrá superar los 42.900 euros, siendo aplicables a dichas construcciones los coeficientes multiplicadores, en función del año en que se hubiera efectuado la última revisión catastral, que se establecen en el apartado a) anterior.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Real Decreto",
+        "frase": "Conforme a lo dispuesto en la disposición adicional cuarta del Real Decreto 163/2025, de 4 de marzo, el Ministerio de Educación, Formación Profesional y Deportes aportará a las universidades, en concepto de compensación de los precios públicos por servicios académicos correspondientes a los estudiantes becarios exentos de su pago, una cantidad por estudiante becado igual a la del precio público fijado para la titulación correspondiente en el curso 2025-2026 con las siguientes precisiones: a) En el supuesto de que el precio del crédito en los estudios conducentes al título de Grado en el curso 2025-2026 fuese superior al vigente en el curso de referencia 2011 2012 para los mismos estudios, el Ministerio de Educación, Formación Profesional y Deportes aportará a las universidades una cantidad por estudiante con beca igual a este último importe, con el límite de 18,46 euros por cada crédito.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Máster",
+        "frase": "En el supuesto de que el precio del crédito en los estudios conducentes al título de Máster habilitante o vinculado en el curso 2025-2026 fuese superior al vigente en el curso de referencia 2011-2012 para los mismos estudios, el Ministerio de Educación, Formación Profesional y Deportes aportará a las universidades una cantidad por estudiante igual a este último importe, con el límite de 18,46 euros por cada crédito.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Máster",
+        "frase": "En el supuesto de que el precio del crédito en los estudios conducentes al título de Máster no habilitante en el curso 2025-2026 fuese superior al vigente en el curso de referencia 2019-2020 para los mismos estudios, el Ministerio de Educación, Formación Profesional y Deportes aportará a las universidades una cantidad por estudiante igual a este último importe, con el límite de 28,00 euros por cada crédito.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Másteres",
+        "frase": "En el supuesto de becarios matriculados en los Másteres que en el curso de referencia 2011-2012 se denominaban «Másteres con precio diferenciado», el Ministerio de Educación, Formación Profesional y Deportes compensará a la universidad el importe del precio público fijado para la titulación correspondiente en el curso 2025-2026, hasta un máximo de 2.100 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "El cálculo de su contravalor en euros",
+        "frase": "El cálculo de su contravalor en euros se hará aplicando el tipo oficial que dé un resultado menor y que hubiera tenido la moneda respectiva el primer día hábil de 2025.",
+        "tipo": "MONEY"
+      }
+    ],
+    "ORG": [
+      {
+        "entidad": "SECRETARÍA",
+        "frase": "1 MINISTERIO DE EDUCACIÓN, FORMACIÓN PROFESIONAL Y DEPORTES\u0001 RESOLUCIÓN DE LA SECRETARÍA DE ESTADO DE EDUCACIÓN, POR LA QUE SE CONVOCAN BECAS DE CARÁCTER GENERAL PARA EL CURSO ACADÉMICO 2025-2026 PARA ESTUDIANTES QUE CURSEN ESTUDIOS POSTOBLIGATORIOS.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Orden ECI/1815/2005",
+        "frase": "Por lo expuesto, en aplicación de la normativa antes indicada, de la Ley 24/2005, de 18 de noviembre, de Reforma para el Impulso de la Productividad, el Real Decreto 1721/2007, de 21 de diciembre, por el que se establece el régimen de las becas y ayudas al estudio personalizadas, el Real Decreto 163/2025, de 4 de marzo, por el que se establecen los umbrales de renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio para el curso 2025-2026 y se modifica el Real Decreto 1721/2007, de 21 de diciembre, y la Orden ECI/1815/2005, de 6 de junio (BOE de 15 de junio), por la que se aprueban las bases reguladoras de la concesión de becas y ayudas al estudio por el Ministerio de Educación y Ciencia, he resuelto: ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n2 CAPÍTULO I Objeto y ámbito de aplicación Artículo 1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución será preciso cumplir los requisitos básicos establecidos en el Real Decreto 1721/2007, de 21 de diciembre, por el que se establece el régimen de las becas y ayudas al estudio personalizadas, así como en el Real Decreto 163/2025, de 4 de marzo, por el que se establecen los umbrales de renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio del Ministerio de Educación, Formación Profesional y Deportes para el curso 2025-2026 y se modifica el Real Decreto 1721/2007, de 21 de diciembre, y en esta convocatoria.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "La condición de beneficiario podrá obtenerse, aunque no se cumplan los requisitos establecidos en el artículo 13.2 de la Ley 38/2003, de 17 de diciembre, General de Subvenciones.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El importe correspondiente a las becas que se convocan se hará efectivo con cargo al crédito 18.08.323M.482.00 de los presupuestos del Ministerio de Educación, Formación Profesional y Deportes de los ejercicios de 2025 y 2026.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Además, el importe para compensar a las universidades y centros que impartan enseñanzas artísticas superiores por los precios públicos por los servicios académicos correspondientes a los estudiantes exentos de su pago por ser beneficiarios de beca se realizará con cargo al crédito 18.08.323M.482.05 y 18.08.323M.482.02, respectivamente, de los presupuestos del Ministerio de Educación, Formación Profesional y Deportes de los ejercicios de 2025 y 2026.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n3 3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes y de Ciencia",
+        "frase": "Por Resolución conjunta de los Ministerios de Educación, Formación Profesional y Deportes y de Ciencia, Innovación y Universidades se determinará el porcentaje de dicho importe que se destinará a la cuantía variable que corresponda, por una parte, a los estudiantes universitarios, de enseñanzas artísticas superiores y de estudios religiosos superiores y, por otra, a los demás estudiantes no universitarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "b) Ciclos de Formación Profesional de grado medio y de grado superior, incluidos los estudios de formación profesional realizados en los centros docentes militares.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n4 b) Enseñanzas universitarias conducentes a títulos oficiales de grado y de máster, incluidos los estudios de grado y máster cursados en los centros universitarios de la defensa y de la guardia civil, así como los cursados en el Centro Universitario de Formación de la Policía Nacional, O.A. Para la concesión de beca será necesario que las tasas correspondientes deban ser abonadas a una universidad española.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías fijas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n5 En el caso de centros privados o adscritos a centros públicos o privados que impartan Enseñanzas Artísticas superiores y que no apliquen los precios oficiales aprobados por la comunidad autónoma, la cuantía de la beca de matrícula será igual al precio mínimo establecido por la comunidad autónoma para estudios de Enseñanzas Artísticas superiores del mismo tipo según la clasificación que se recoge en el artículo 6.1 de la Ley 1/2024, de 7 de junio, cursadas en centros públicos de esa comunidad autónoma.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n6 3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de primer curso: nota media obtenida en segundo curso de bachillerato, prueba o curso de acceso respectivamente o en la calificación final del ciclo formativo de grado medio que dé acceso al ciclo formativo de grado superior.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de segundos y posteriores cursos: nota media obtenida en el curso anterior, b)  Enseñanzas de bachillerato, enseñanzas profesionales de música y danza y grado medio de formación profesional, enseñanzas profesionales de artes plásticas y diseño y de las enseñanzas deportivas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de primer curso: nota media obtenida en el cuarto curso de Educación Secundaria Obligatoria, prueba de acceso o en la calificación final del ciclo formativo de grado medio o de grado básico que dé acceso a estas enseñanzas, en su caso.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de segundos y posteriores cursos: nota media obtenida en el curso anterior.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de primer curso: nota obtenida en la prueba o curso de acceso.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n7 d)  Enseñanzas universitarias conducentes al título de grado.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de primer curso: la calificación de acceso a la Universidad.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "NMB",
+        "frase": "Dicha calificación se calculará conforme a la fórmula 0,6 NMB + 0,4 PAU.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "PAU",
+        "frase": "A los efectos de esta convocatoria, la nota de la PAU, de conformidad con la normativa que resulta de aplicación, tendrá en cuenta las calificaciones obtenidas en dicha prueba en las materias comunes y específicas obligatorias de modalidad de 2º de Bachillerato.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de primer curso: nota media obtenida en los estudios previos que les dan acceso al máster.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "• Estudiantes de segundos cursos: nota media obtenida en primer curso de máster.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "     ",
+        "frase": "                                                   S i i i total R R N N R Rj N Nj C S C C Cj 1 max max max max min min 1 * / 1 * / * * ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n8 Cmin = Cuantía variable mínima, que se establecerá en los reales decretos anuales que fijen los umbrales económicos y los demás requisitos necesarios para obtener beca o ayuda al estudio.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artes y Humanidades",
+        "frase": "En el caso de estudiantes de enseñanzas artísticas superiores y estudios religiosos superiores, Nmax será igual al mejor decil de becarios de los estudiantes universitarios de la rama de Artes y Humanidades.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "Para el cálculo de la nota media del estudiante, referida anteriormente N, se aplicarán las siguientes reglas: A las calificaciones de los becarios de primer curso de grado procedentes de la Prueba de Acceso a la Universidad se les aplicará un coeficiente corrector igual al cociente entre la calificación media obtenida en los estudios universitarios por los becarios del área de conocimiento que corresponda y la calificación media obtenida en la PAU, teniendo en cuenta las calificaciones obtenidas en las materias comunes y específicas obligatorias de modalidad de 2º de Bachillerato por todos los beneficiarios que van cursar primer curso en dicha área de conocimiento.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n9 A los referidos efectos, en el caso de primer curso de enseñanzas artísticas superiores y estudios religiosos superiores, se tendrá en cuenta la calificación obtenida en la prueba o curso que dan acceso a estas enseñanzas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "El Ministerio de Educación, Formación Profesional y Deportes calculará los parámetros de la fórmula, que se comunicarán a las comunidades autónomas firmantes del convenio para la gestión de las becas, a los efectos de su aplicación para la asignación de la cuantía variable a los becarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías de las becas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n10 Artículo 12.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías adicionales por domicilio insular o en las Ciudades de Ceuta o de Melilla.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n11 3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Garantía Integral de la Libertad Sexual",
+        "frase": "Igual régimen se aplicará a las personas que acrediten en el periodo indicado la condición de víctima de violencia sexual, de acuerdo con lo dispuesto en el artículo 37 de la Ley Orgánica 10/2022, de 6 de septiembre, de Garantía Integral de la Libertad Sexual y el artículo 2.1 de la Ley 35/1995, de 11 de diciembre, de ayudas y asistencia a las víctimas de delitos violentos y contra la libertad sexual.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "Las personas a que se refiere el apartado 1, además de cumplir los requisitos previstos en el mismo, deberán matricularse en el curso 2025-2026 como mínimo, del siguiente número de créditos, horas, asignaturas, módulos o su equivalente en horas: 1.º) Estudiantes de enseñanzas artísticas y estudios religiosos superiores: 30 créditos o el 50 por ciento del curso completo en el caso de enseñanzas organizadas por asignaturas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "2.º) Estudiantes de grado superior de formación profesional, de artes plásticas y diseño y de enseñanzas deportivas: 500 horas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "3.º) Estudiantes de bachillerato, enseñanzas profesionales de música y danza y grado medio de formación profesional, enseñanzas profesionales de artes plásticas y diseño y de las enseñanzas deportivas: 4 asignaturas o 500 horas, respectivamente.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "4.º) Estudiantes universitarios: 30 créditos o la mitad del curso completo en el caso de dobles titulaciones de grado.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 15",
+        "frase": "CAPÍTULO III Requisitos de carácter general Artículo 15.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "De conformidad con el artículo 4.1 del Real Decreto 1721/2007, de 21 de diciembre, para ser beneficiario de las becas que se convocan por esta Resolución será preciso: ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n12 a) No estar en posesión o no reunir los requisitos legales para la obtención de un título oficial del mismo o superior nivel al correspondiente al de los estudios para los que se solicita la beca a fecha 30 de septiembre de 2025.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estado",
+        "frase": "Ser español o poseer la nacionalidad de un Estado miembro de la Unión Europea.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Unión Europea",
+        "frase": "En el caso de ciudadanos de la Unión Europea o de sus familiares, beneficiarios de los derechos de libre circulación y residencia, se requerirá que tengan la condición de residentes permanentes o que acrediten ser trabajadores por cuenta propia o ajena.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 16.",
+        "frase": "CAPÍTULO IV Requisitos de carácter económico Artículo 16.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "La renta familiar a efectos de beca o ayuda se obtendrá por agregación de las rentas de cada uno de los miembros computables de la familia que obtengan ingresos de cualquier naturaleza, calculadas según se indica en los apartados siguientes y de conformidad con la normativa reguladora del Impuesto sobre la Renta de las Personas Físicas aplicable conforme a ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n13 lo dispuesto en el Real Decreto 163/2025, de 4 de marzo.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Para la determinación de la renta de los miembros computables que hayan presentado declaración por el Impuesto sobre la Renta de las Personas Físicas, se procederá del modo siguiente: a) Se sumará la base imponible general con la base imponible del ahorro, excluyendo todos los saldos netos negativos de ganancias y pérdidas patrimoniales de 2020 a 2023 y el saldo neto negativo de rendimientos del capital mobiliario de 2020 a 2023 a integrar en la base imponible del ahorro.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Para la determinación de la renta de los demás miembros computables que obtengan ingresos propios y no hayan presentado declaración por el Impuesto sobre la Renta de las Personas Físicas se seguirá el procedimiento descrito en la letra a) del apartado 3 y del resultado obtenido se restarán los pagos a cuenta efectuados.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Miembros",
+        "frase": "Miembros computables.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Cuando se trate de un mayor de edad tendrá la consideración de no integrado en la unidad familiar, a estos ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n14 efectos, siempre y cuando de hecho no subsistan las circunstancias de integración con la familia de acogida y así se acredite debidamente.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n15 Artículo 19.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Las ganancias patrimoniales derivadas de los mencionados premios se computarán de acuerdo con la normativa del Impuesto sobre la Renta de las Personas Físicas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Real Decreto-ley",
+        "frase": "Finalmente, no serán tenidas en cuenta las subvenciones recibidas al amparo del Real Decreto-ley 6/2024, de 5 de noviembre, por el que se adoptan medidas urgentes de respuesta ante los daños causados por la Depresión Aislada en Niveles Altos (DANA) en diferentes municipios entre el 28 de octubre y el 4 de noviembre de 2024; el Real Decreto-ley 7/2024, de 11 de noviembre, por el que se adoptan medidas urgentes para el impulso del Plan de respuesta inmediata, reconstrucción y relanzamiento frente a los daños causados por la Depresión Aislada en Niveles Altos (DANA) en diferentes municipios entre el 28 de octubre y el 4 de noviembre de 2024 y Real Decreto-ley 8/2024, de 28 de noviembre, por el que se adoptan medidas urgentes complementarias en el marco del Plan de respuesta inmediata, reconstrucción y relanzamiento frente a los daños causados por la Depresión Aislada en Niveles Altos (DANA) en diferentes municipios entre el 28 de octubre y el 4 de noviembre de 2024.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "El valor de los elementos indicativos de patrimonio a que se refiere este apartado d) se determinará de conformidad con lo dispuesto en la normativa del Impuesto sobre la Renta de las Personas Físicas por su valor a 31 de diciembre de 2024.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n17 4.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 21",
+        "frase": "CAPÍTULO V Requisitos de carácter académico Artículo 21.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n18 P = Puntuación de cada asignatura.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "NCa = Número",
+        "frase": "NCa = Número de créditos que integran la asignatura.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "El número mínimo de créditos fijado en los párrafos anteriores en que el alumno debe quedar matriculado en el curso para el que solicita la beca no será exigible, por una sola vez, en el caso de los estudiantes a los que, para finalizar sus estudios, les reste un número de créditos inferior a ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n19 dicho número mínimo, siempre que no haya disfrutado de la condición de becario durante más años de los previstos en el artículo 25.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "PAU",
+        "frase": "Para la concesión de beca a quienes se matriculen por primera vez de primer curso de estudios de grado y, estando en posesión del título de bachillerato accedan a la universidad mediante la PAU, se requerirá una nota de 5,00 puntos en la calificación de acceso a la universidad, es decir, dicha nota de acceso se calculará conforme a la fórmula 0,6 NMB + 0,4 PAU.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "En aquellos casos excepcionales en los que la calificación ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n20 obtenida en la prueba de acceso por el solicitante no se corresponda con la escala de 0 a 10, el órgano de selección realizará la adaptación a la referida escala que resulte procedente.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Humanidades",
+        "frase": "Para obtener beca los solicitantes de segundos y posteriores cursos de los estudios a que se refiere esta sección deberán haber superado en los últimos estudios cursados los siguientes porcentajes de los créditos matriculados: Rama o área de conocimiento Porcentaje de créditos a superar Artes y Humanidades .",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ciencias",
+        "frase": "90% Ciencias .",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ciencias Sociales y Jurídicas",
+        "frase": "65% Ciencias Sociales y Jurídicas .",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ciencias de la Salud",
+        "frase": "90% Ciencias de la Salud.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Cuando se produzca un cambio de estudios universitarios cursados total o parcialmente con condición de becario, no podrá obtenerse ninguna beca en los nuevos estudios hasta que el ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n21 solicitante haya quedado matriculado de, al menos, treinta créditos más de los que hubiera cursado con beca en los estudios abandonados.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 26.",
+        "frase": "Artículo 26.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "En el caso de que el estudiante esté matriculado de créditos que correspondan a distinto curso, se ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n22 considerará curso completo el número de créditos que resulte de dividir el total de los que integran el plan de estudios entre el número de años que lo componen.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "En aquellos casos en los que, en virtud de la normativa propia de la Universidad, resulte limitado el número de créditos en que puedan quedar matriculados todos los estudiantes, éstos podrán obtener todas las cuantías que les correspondan si se matriculan en todos aquellos créditos en los que les sea posible.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Si dichos créditos se cursan en un cuatrimestre/semestre, la cuantía de la beca será del cincuenta por ciento de la ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n23 cantidad que le hubiese correspondido con excepción de la beca de matrícula y la cuantía variable mínima a las que no se aplicará esta reducción del cincuenta por ciento.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Para la concesión de beca a quienes se matriculen de segundo curso, la nota media requerida será la calificación numérica obtenida en la escala 0 a 10 en el curso anterior, ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n24 incluyendo, en su caso, los complementos formativos cursados.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n25 2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n26 6ª. Cuando se trate de planes de estudios organizados por créditos o por módulos, la puntuación obtenida en cada asignatura se ponderará en función del número de créditos o de horas que la integren, de acuerdo con la siguiente fórmula: V = P x NCa NCt V = Valor resultante de la ponderación de la nota obtenida en cada asignatura.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "NCa = Número",
+        "frase": "NCa = Número de créditos u horas que integran la asignatura.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Matriculación",
+        "frase": "Para obtener beca en las enseñanzas a que se refiere este artículo, se establecen los siguientes requisitos: 1º. Matriculación.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "No obstante, se considerará matriculados en curso completo a los solicitantes de beca para cursar estudios de formación profesional de grado superior a los que se les haya convalidado alguno o algunos de los módulos de formación profesional de grado medio a que se refiere el artículo 3.2 y 3.6 del Real Decreto 1085/2020, de 9 de diciembre, por el que se establecen convalidaciones de módulos profesionales de los títulos de Formación Profesional del sistema educativo español y las medidas para su aplicación, y se modifica el Real Decreto 1147/2011, de 29 de julio, por el que se establece la ordenación general de la formación profesional del sistema ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n27 educativo, siempre que no puedan matricularse en otros módulos adicionales que pudieran sumar créditos para considerar la matrícula de un curso completo.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Quienes utilicen la oferta específica de personas adultas, bachillerato nocturno organizado en más de dos años u oferta de matrícula parcial, podrán también obtener la beca siempre que se ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n28 matriculen de, al menos, cuatro asignaturas o un número de módulos cuya suma horaria sea igual o superior a 500 horas, que deberán aprobar en su totalidad para obtenerla en el siguiente curso.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Sólo",
+        "frase": "Sólo podrá obtenerse beca durante el número de años que dure el plan de estudios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Para obtener beca en las enseñanzas a que se refiere este artículo, se establecen los siguientes requisitos: ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n29 1º. Matriculación.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Los requisitos necesarios para la obtención de beca en las demás enseñanzas artísticas superiores, así como en los estudios religiosos superiores organizados por créditos serán los ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n30 establecidos en esta convocatoria, en todo aquello que les resulte de aplicación, para estudiantes de grado de la rama o área de conocimiento de artes y humanidades.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cambio",
+        "frase": "Cambio de estudios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n31 Los beneficiarios de las becas que se convocan por esta Resolución quedan obligados a: a) Destinar la beca a la finalidad para la que se concede, entendiéndose por tal la matriculación, asistencia a clase y superación de asignaturas o de créditos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "Asimismo, los órganos competentes del Ministerio de Educación, Formación Profesional y Deportes podrán denegar la beca o proceder a su revocación en el supuesto de que, por vía de muestreo, detecten la existencia de unidades familiares que justifiquen unos ingresos que objetivamente están por debajo de su nivel de gastos si no acreditan los medios de vida con que cuentan.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "A estos efectos, los órganos colegiados de selección de becarios verificarán la concurrencia ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n32 en el solicitante de los requisitos generales establecidos en esta Resolución.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Por su parte, el Ministerio de Educación, Formación Profesional y Deportes verificará, sobre la base de la información facilitada por las correspondientes administraciones públicas, que el solicitante cumple los requisitos académicos y económicos requeridos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n33 Artículo 44.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Cuando, por el contrario, proceda el reintegro parcial o total de la/beca/s concedida/s, dichos órganos propondrán al Ministerio de Educación, Formación Profesional y Deportes, en un plazo no superior a cinco meses, contados desde la fecha de inicio del expediente, que proceda a dictar la oportuna resolución de reintegro del principal, así como de los intereses de demora cuando proceda.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Orden",
+        "frase": "A la vista de la propuesta efectuada, se resolverá el expediente notificándolo al interesado y comunicándolo a la delegación provincial del Ministerio de Hacienda correspondiente al domicilio del mismo, de conformidad con lo dispuesto en la Orden PRE/1064/2016, de 29 de junio, por la que se desarrolla parcialmente el Reglamento General de Recaudación, aprobado por Real Decreto 939/2005, de 29 de julio, en lo relativo al procedimiento de recaudación de recursos no tributarios ni aduaneros de titularidad de la Administración General del Estado a través de entidades colaboradoras.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Tanto el acuerdo de inicio como la resolución de reintegro o sobreseimiento del expediente, en su caso, serán notificados por vía telemática en la sede electrónica del Ministerio de Educación, ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n34 Formación Profesional y Deportes, previo envío de un SMS de aviso de la puesta a disposición de la notificación al número de teléfono que conste en la solicitud de beca, debiendo los interesados efectuar la descarga de su contenido en la dirección electrónica https://sede.educacion.gob.es en el apartado «Mis Notificaciones».",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "IDESP",
+        "frase": "A los efectos establecidos en los apartados anteriores y en los términos legalmente previstos, la firma electrónica tanto del interesado como de todos los miembros computables de su unidad familiar se efectuará consignando en la solicitud, además del número, el IDESP o IXEPS del NIF o NIE y/o la fecha de caducidad del documento de todos los firmantes, tal como se establece en la disposición adicional trigésima cuarta de la de la Ley Orgánica 2/2006, de 3 de mayo, de Educación.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n35 Quienes aleguen independencia familiar y económica deberán justificar fehacientemente que cuentan con medios económicos propios suficientes que permitan dicha independencia, así como la titularidad o el alquiler de su domicilio habitual.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "Que tienen conocimiento de la incompatibilidad de estas becas y que, en caso de obtener otra beca o ayuda procedente de cualquier administración o entidad pública o privada, deberá comunicarlo a la Universidad o Administración tramitadora de su beca.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Para que esta nueva situación económica familiar pueda ser tenida en cuenta, será preciso que el solicitante exponga y acredite ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n36 documentalmente tanto la realidad de los hechos causantes de la situación como las características de la misma.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Unidad de becas",
+        "frase": "Secretario: el jefe de la Unidad de becas de la gerencia universitaria.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "Para las becas no universitarias, en cada dirección provincial del Ministerio de Educación, Formación Profesional y Deportes se constituirá en el mes de mayo de 2025 una comisión provincial de selección de becarios con la siguiente composición: a) Presidente: el director provincial del Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes.",
+        "frase": "b) Vicepresidente: el secretario general de la dirección provincial del Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "c) Vocales: dos inspectores técnicos; el jefe de programas; el jefe del servicio y/o jefe de la sección de que dependan las unidades de gestión de becas; un director de centro público y otro de un centro privado, designados por el director provincial del Ministerio de Educación, Formación Profesional y Deportes; un representante de la correspondiente ciudad autónoma; tres representantes de los padres, dos de centros públicos y uno de centro privado concertado, elegidos entre aquellos que forman parte de los consejos escolares; tres representantes de las organizaciones estudiantiles que sean mayores de dieciséis años. d) Secretario: el funcionario encargado de la gestión de becas que designe el director provincial.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "ABELARDO DE LA ROSA",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n37 3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "De las reuniones celebradas por los órganos a que se refieren los párrafos anteriores, empezando por la de su constitución, se levantará acta, que será remitida a la Dirección General de Planificación y Gestión Educativa.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Régimen Jurídico del Sector Público",
+        "frase": "El funcionamiento de estos órganos se ajustará a lo dispuesto en las normas contenidas al efecto en los artículos 15 y siguientes de la Ley 40/2015, de 1 de octubre de Régimen Jurídico del Sector Público.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Dichos órganos comprobarán si las solicitudes presentadas cumplen los requisitos personales y familiares exigibles, cursando quincenalmente al Ministerio de Educación, Formación Profesional y Deportes por los procedimientos informáticos establecidos al efecto, propuesta de denegación de aquellas solicitudes que no reúnan o acrediten dichos requisitos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "El Ministerio de Educación, Formación Profesional y Deportes notificará dicha propuesta de denegación a los interesados haciendo constar la causa que la motiva e informando de las alegaciones que puedan formular.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Los mencionados órganos de selección remitirán al Ministerio de Educación, Formación Profesional y Deportes, quincenalmente, y, en todo caso, antes del 15 de julio de 2025 y por cualquiera de las vías informáticas habilitadas al efecto, un informe en el que se concrete el resultado de la evaluación efectuada de los solicitantes que reúnan los mencionados requisitos personales y familiares.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n38 6.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Con estas solicitudes, el Ministerio de Educación, Formación Profesional y Deportes elaborará una base de datos que contrastará con la información sobre rentas y patrimonios que les faciliten las administraciones tributarias correspondientes a los efectos de determinar el cumplimiento de los requisitos económicos establecidos en la presente convocatoria.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Acto seguido, el Ministerio de Educación, Formación Profesional y Deportes informará a los solicitantes del resultado del contraste de sus datos económicos con la información suministrada por las administraciones tributarias.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Subdirección General de Tecnologías de la Información y Comunicaciones",
+        "frase": "A estos efectos, la Subdirección General de Tecnologías de la Información y Comunicaciones pondrá a disposición de los interesados los datos que pudieran ser objeto de modificación.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Los referidos órganos cursarán quincenalmente y, en todo caso, antes del 5 de diciembre de 2025, al Ministerio de Educación, Formación Profesional y Deportes, por los procedimientos informáticos establecidos al efecto, soportes con los datos académicos necesarios para la comprobación del cumplimiento de los requisitos establecidos en la convocatoria, así como propuesta de denegación de aquellas solicitudes que dichos órganos colegiados hayan podido comprobar que no cumplen alguno o algunos de los referidos requisitos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Con los datos remitidos por los órganos colegiados de selección de becarios, el Ministerio de Educación, Formación Profesional y Deportes llevará a cabo las comprobaciones necesarias para determinar el cumplimiento de los requisitos establecidos en la convocatoria y proceder a la concesión y denegación de las solicitudes por el procedimiento que se describe en el artículo siguiente.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Antes del 5 de diciembre de 2025, las comunidades autónomas que hayan suscrito el convenio a que se refiere el artículo 65 de esta Resolución, comunicarán al Ministerio de Educación, Formación Profesional y Deportes el importe a que ascienden las cuantías fijas adjudicadas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n39 11.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Además, en la página web del Ministerio de Educación, Formación Profesional y Deportes, https://www.educacionyfp.gob.es, podrá consultarse la situación de tramitación de las solicitudes en cada una de las universidades y administraciones educativas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "De acuerdo con la información que le hayan facilitado las administraciones públicas, las universidades y las comunidades autónomas firmantes del convenio mencionado en el apartado 10 del artículo anterior, el Ministerio de Educación, Formación Profesional y Deportes elaborará una base de datos en soporte informático con los solicitantes que, por reunir todos los requisitos, tengan derecho a la beca de matrícula, la cuantía básica, la cuantía fija ligada a la renta, la cuantía fija ligada a la residencia, la cuantía fija ligada a la excelencia académica y la cuantía variable mínima y las cuantías adicionales a que se refiere el artículo 2.3 con los importes adjudicados.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Asimismo, el Ministerio de Educación, Formación Profesional y Deportes elaborará una base de datos en soporte informático con las solicitudes que deban resultar denegadas con indicación de sus causas y clasificadas por órganos de selección.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Directora General de Planificación y Gestión Educativa",
+        "frase": "La Subdirección General de Becas, Ayudas al Estudio y Promoción Educativa (en adelante SGBecas), como órgano instructor del procedimiento, elevará las oportunas propuestas de concesión de las mencionadas cuantías, a los efectos de que la Directora General de Planificación y Gestión Educativa, en virtud de las competencias delegadas del Secretario de Estado de Educación, de acuerdo con la Orden EFP/43/2021, de 21 de enero, dicte las correspondientes órdenes parciales y sucesivas de concesión a medida que los órganos de selección formulen las correspondientes propuestas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "Tanto las resoluciones de concesión como las propuestas de denegación y, en su caso, las peticiones de datos adicionales, serán notificados por vía telemática en la sede electrónica del ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n40 Ministerio de Educación, Formación Profesional y Deportes, previo envío de un correo electrónico de aviso de la puesta a disposición de dicha notificación, debiendo los interesados efectuar la descarga de su contenido en la dirección electrónica https://sede.educacion.gob.es en el apartado «Mis Notificaciones».",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "Conocido el coste de las referidas cuantías y, por tanto, el importe no invertido en las mismas, el Secretario de Estado de Educación del Ministerio de Educación, Formación Profesional y Deportes y el Secretario General de Universidades, del Ministerio de  Ciencia, Innovación y Universidades dictarán resolución asignando el porcentaje de dicho importe que se destinará a la cuantía variable que corresponda, por una parte,  a los estudiantes universitarios, de enseñanzas artísticas superiores y  de estudios religiosos superiores y, por otra, a los demás estudiantes no universitarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "El Ministerio de Educación, Formación Profesional y Deportes distribuirá los referidos montantes entre todos los becarios que tengan derecho a la cuantía variable conforme a lo dispuesto en esta convocatoria, con excepción de quienes ya hayan percibido la cuantía variable mínima.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "La Directora General de Planificación y Gestión Educativa, en virtud de las competencias delegadas del Secretario de Estado de Educación, de acuerdo con la Orden  EFP/43/2021, de 21 de enero, dictará la resolución definitiva de la convocatoria en el plazo de seis meses computados a partir del momento en que el Ministerio de Educación, Formación Profesional y Deportes disponga de la información facilitada por las administraciones públicas, las universidades y las comunidades autónomas firmantes del convenio que resulta necesaria para la adjudicación o denegación de la cuantía variable.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "La resolución de concesión y las relaciones definitivas de los beneficiarios de las ayudas concedidas se publicarán en la página web del Ministerio de Educación, Formación Profesional y Deportes, entendiéndose que quedan denegadas por el mismo motivo indicado en la propuesta de denegación las solicitudes presentadas que no aparezcan publicadas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "El Ministerio de Educación, Formación Profesional y Deportes confeccionará los soportes informáticos necesarios para el procedimiento de pago tanto de las cuantías inicialmente concedidas como de las cuantías variables concedidas en un momento posterior.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "La Directora General de Planificación y Gestión Educativa, asimismo por delegación del Secretario de Estado de Educación, ordenará la provisión de fondos al Tesoro Público y a las comunidades autónomas firmantes del convenio a que se refiere el artículo  65 de esta Resolución, que efectuarán el pago de las becas concedidas a la cuenta corriente o libreta de ahorro que el interesado haya consignado en la solicitud y que deberá estar abierta a nombre del becario y, tratándose de menores, también de la persona cuya representación corresponda legalmente en entidades de crédito.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n41 2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el caso de nuevas titulaciones que no existieran en el curso de referencia, el Ministerio de Educación, Formación Profesional y Deportes compensará a las universidades el importe del precio público fijado para la titulación correspondiente en el curso 2025-2026.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "En el supuesto de que el precio del crédito en el curso 2025-2026 fuese superior al fijado para el curso de referencia, en los términos previstos en los apartados anteriores, para titulaciones con el mismo grado de contenido experimental en su comunidad autónoma, el Ministerio de Educación, Formación Profesional y Deportes compensará esta última cantidad.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "En los denominados grados abiertos el Ministerio de Educación, Formación Profesional y Deportes compensará exclusivamente el importe de los precios públicos de los créditos que integren la titulación oficial que finalmente curse el becario.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n42 5.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el caso de nuevas titulaciones que no existieran en el curso de referencia, en los términos previstos en el apartado 1, el Ministerio de Educación, Formación Profesional y Deportes compensará a los centros que impartan Enseñanzas Artísticas superiores o a las entidades en que se integren el importe del precio público fijado para la titulación correspondiente en el curso 2025-2026.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "Si el precio del crédito en el curso 2025-2026 fuese superior al fijado para el curso de referencia para titulaciones del mismo tipo según la clasificación que se recoge en el artículo 6.1 de la Ley 1/2024, de 7 de junio, en su comunidad autónoma, el Ministerio de Educación, Formación Profesional y Deportes compensará esta última.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El caso de centros públicos que impartan Enseñanzas Artísticas superiores, si la cantidad aportada por el Ministerio de Educación, Formación Profesional y Deportes resultase inferior al coste de las becas de matrícula, en los términos definidos en el artículo 4.1.e), la comunidad autónoma correspondiente asumirá la diferencia.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "Los importes a que se refieren los apartados anteriores serán compensados a las universidades, a los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, y a las comunidades autónomas firmantes del convenio a que se refiere el artículo 65, por el procedimiento que se describe a continuación: a) Resuelta la convocatoria, las universidades y los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, solicitarán a la Dirección General de Planificación y Gestión Educativa, la compensación del importe a que se refiere el apartado 3 de este artículo en concepto de precios públicos por servicios académicos de sus estudiantes beneficiarios del componente de beca de matrícula a que se refiere la presente convocatoria.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Las solicitudes irán acompañadas de una certificación del presidente de la comisión de selección con el visto bueno del rector de la universidad, acreditativa del número de estudiantes beneficiarios de la beca, con relación nominativa de éstos y especificación del importe individual y total que corresponda aportar al Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Seguridad Social",
+        "frase": "Asimismo, las universidades y los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, acreditarán que se encuentran al corriente de obligaciones tributarias y frente a la Seguridad Social.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "La Dirección General de Planificación y Gestión Educativa requerirá a las universidades y los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, el envío de algunos expedientes de matrícula seleccionados por muestreo al objeto de comprobar los datos relativos a la matrícula de los estudiantes beneficiarios de beca.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n43 e) Podrán efectuarse libramientos parciales con el carácter de compensación «a cuenta» en cualquiera de los dos años que abarca el curso académico.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Directora General de Planificación y Gestión Educativa",
+        "frase": "A la vista de la documentación aportada, la Directora General de Planificación y Gestión Educativa, asimismo por delegación del Secretario de Estado de Educación, resolverá el procedimiento con la asignación de las cantidades correspondientes por este concepto mediante resolución que se publicará en la página web del Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Departamento",
+        "frase": "A efectos de lo dispuesto en el apartado 4 de la disposición adicional cuarta del Real Decreto 163/2025, de 4 de marzo, el citado Departamento facilitará a las CCAA que lo requieran y al Ministerio de Ciencia, Innovación y Universidades información sobre las cantidades que hubiera compensado a las universidades por este concepto.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el caso de que las normas reguladoras de aquéllos proclamaran su compatibilidad con las becas del Ministerio de Educación, Formación Profesional y Deportes, para que dicha compatibilidad sea efectiva, deberá ser solicitada por el estudiante o por la entidad convocante, en cada caso, a la Dirección General de Planificación y Gestión Educativa.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "No se considerarán incompatibles las becas de esta convocatoria con las Becas Colaboración convocadas por el Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Mutualidad General de Funcionarios Civiles del Estado",
+        "frase": "Las becas para residencia convocadas por la Mutualidad General de Funcionarios Civiles del Estado (MUFACE) serán compatibles con las becas que se convocan por esta Resolución con excepción de la cuantía ligada a la residencia.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Seguridad Social",
+        "frase": "La condición de becario no se verá afectada por causar alta el estudiante en el sistema de la Seguridad Social para la realización de un período de formación o prácticas en entidades públicas o privadas o en empresas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n44 Artículo 56.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "La resolución de la convocatoria pondrá fin a la vía administrativa y podrá ser recurrida potestativamente en reposición en el plazo de un mes contado a partir del día siguiente al de su publicación en la página web del Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Asimismo, contra la resolución de la convocatoria podrá interponerse directamente recurso contencioso-administrativo ante la Sala de lo Contencioso Administrativo de la Audiencia Nacional, de acuerdo con lo previsto en los artículos 11.1 y 46 de la Ley 29/1998, de 13 de julio, en el plazo de dos meses a contar desde el día siguiente al de su publicación en la página web del Ministerio de Educación, Formación Profesional y Deportes.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "A estos efectos, las universidades y órganos correspondientes de las Comunidades Autónomas y de las Direcciones Provinciales del Ministerio de Educación, Formación Profesional y Deportes tendrán la consideración de registros, de conformidad con lo dispuesto en el artículo 16 de la Ley 39/2015, de 1 de octubre.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Centros",
+        "frase": "Centros españoles en el exterior.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n45 3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "Para estos alumnos, las consejerías de educación llevarán a cabo las tareas que se asignan en esta Resolución a las direcciones provinciales del Ministerio de Educación, Formación Profesional y Deportes y calcularán la renta de los solicitantes y verificarán el cumplimiento de los requisitos generales y académicos requeridos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "La Directora General de Planificación y Gestión Educativa, por delegación del Secretario de Estado de Educación, realizará los correspondientes libramientos a los cajeros pagadores de las Consejerías de Educación en el exterior que, a su vez, entregarán el importe de la ayuda a los beneficiarios matriculados en los centros docentes dependientes de ellas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Migraciones",
+        "frase": "El disfrute de las becas reguladas en esta Resolución será, en todo caso, incompatible con el disfrute de beneficios de análogo carácter procedentes de la Dirección General de Migraciones.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 59.",
+        "frase": "Artículo 59.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n46 Artículo 61.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "Las propuestas de concesión de beca correspondientes a convenios o sentencias judiciales, así como las que, por razón de plazos, no puedan ser tratadas por el procedimiento ordinario que se describe en esta convocatoria, serán tramitadas directamente por la Dirección General de Planificación y Gestión Educativa.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General",
+        "frase": "En los supuestos de becas denegadas por motivos académicos en los que, a la vista de la propuesta del órgano colegiado de selección de becarios, se aprecie por parte de la citada Dirección General, una circunstancia médica  excepcional de fuerza mayor sobrevenida, debidamente justificada con un informe emitido por el Sistema Público de Salud, que haya impedido de forma indubitada el cumplimiento de los citados requisitos académicos establecidos, podrá procederse a la revisión de la solicitud, concediéndose en estos casos únicamente beca básica en el supuesto de estudios no universitarios, o beca de matrícula calculada en la forma prevista en esta convocatoria, en el caso de estudios universitarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional y Deportes",
+        "frase": "El Ministerio de Educación, Formación Profesional y Deportes eximirá del pago de las tasas de matrícula al alumnado matriculado en centros públicos dependientes del mismo que resulte beneficiario de alguna de las becas o ayudas al estudio convocadas por esta Resolución para cursar enseñanzas no universitarias.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Mediante los oportunos convenios de colaboración con el Ministerio de Educación, Formación Profesional y Deportes y en los términos establecidos en los mismos, las comunidades autónomas podrán realizar, respecto de las becas que se convocan por la presente Resolución, ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n47 con excepción de las correspondientes a los estudiantes de la Universidad Nacional de Educación a Distancia (UNED) y del Centro para la Innovación y Desarrollo de la Educación a Distancia (CIDEAD), las funciones de tramitación adjudicación y pago, así como la inspección, verificación, control y, en su caso, resolución de los recursos administrativos que puedan interponerse.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretaría de Estado de Educación",
+        "frase": "A estos efectos, las tareas que en esta resolución se encomiendan a la Secretaría de Estado de Educación, a la Dirección General de Planificación y Gestión Educativa y a la SGBecas con excepción de las previstas en los artículos 2.3,  52.1 y  52.5 en lo que se refiere a la distribución del montante total destinado a la cuantía variable entre los becarios universitarios y no universitarios, y en los artículos 53.2,  55.1  y 58.5, serán llevadas a cabo, en el ámbito de su competencia, por los órganos que determinen las comunidades autónomas firmantes del convenio.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Recursos",
+        "frase": "Recursos contra esta Resolución 1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretaría de Estado de Educación",
+        "frase": "Contra esta Resolución de convocatoria, se podrá interponer recurso de reposición ante la Secretaría de Estado de Educación, en el plazo de un mes a contar desde el día siguiente al de la publicación de su extracto en el «Boletín Oficial del Estado», de acuerdo con lo dispuesto en los artículos 123 y 124 de la Ley 39/2015, de 1 de octubre.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Contra",
+        "frase": "Contra la resolución de dicho recurso administrativo podrá interponerse recurso contencioso-administrativo ante la Sala de lo Contencioso Administrativo de la Audiencia Nacional de acuerdo con lo previsto en los artículos 11.1 y 46 de la Ley 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso Administrativa.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n48 2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS",
+        "frase": "EL SECRETARIO DE ESTADO DE EDUCACIÓN Orden EFP/43/2021, de 21 de enero (BOE del 26) Abelardo de la Rosa Díaz ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es",
+        "tipo": "ORG"
+      }
+    ]
+  },
+  "frases_accion": [
+    {
+      "frase": "Se convocan por la presente Resolución becas para estudiantes que en el curso académico 2025-2026, cursen enseñanzas postobligatorias con validez en todo el territorio nacional.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución será preciso cumplir los requisitos básicos establecidos en el Real Decreto 1721/2007, de 21 de diciembre, por el que se establece el régimen de las becas y ayudas al estudio personalizadas, así como en el Real Decreto 163/2025, de 4 de marzo, por el que se establecen los umbrales de renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio del Ministerio de Educación, Formación Profesional y Deportes para el curso 2025-2026 y se modifica el Real Decreto 1721/2007, de 21 de diciembre, y en esta convocatoria.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "El importe correspondiente a las becas que se convocan se hará efectivo con cargo al crédito 18.08.323M.482.00 de los presupuestos del Ministerio de Educación, Formación Profesional y Deportes de los ejercicios de 2025 y 2026.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "No obstante, dicho importe podrá incrementarse con una cuantía adicional de 450.000.000,00 euros, cuando, como consecuencia de la concurrencia de alguna de las circunstancias previstas en la letra a) del artículo 58.2 del Reglamento de la Ley General de Subvenciones, aprobado por el Real Decreto 887/2006, de 21 de julio, se produzca un incremento de crédito disponible antes de la concesión definitiva de las becas que se convocan por esta Resolución.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para el curso académico 2025-2026 y, con cargo a los créditos mencionados en el artículo anterior se convocan becas sin número determinado de personas beneficiarias para las siguientes enseñanzas: 1.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para cursar en el año académico 2025-2026 las enseñanzas enumeradas en el artículo anterior se convocan becas que incluirán alguna o algunas de las siguientes cuantías: 1.  ",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para la adjudicación de la cuantía ligada a la residencia del estudiante durante el curso se requerirá que el solicitante acredite la necesidad de residir fuera del domicilio familiar durante todo el curso escolar, por razón de la distancia entre el mismo y el centro docente en que se encuentra matriculado, los medios de comunicación existentes y los horarios lectivos.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la adjudicación de la cuantía ligada a la excelencia en el rendimiento académico se requerirá que el solicitante acredite haber obtenido una nota media de 8,00 puntos o superior en el curso, pruebas de acceso o estudios previos siguientes: a)  Enseñanzas de grado superior de formación profesional, de artes plásticas y diseño y de enseñanzas deportivas.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "De conformidad con el artículo 4.1 del Real Decreto 1721/2007, de 21 de diciembre, para ser beneficiario de las becas que se convocan por esta Resolución será preciso: ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n12 a) No estar en posesión o no reunir los requisitos legales para la obtención de un título oficial del mismo o superior nivel al correspondiente al de los estudios para los que se solicita la beca a fecha 30 de septiembre de 2025.",
+      "verbos": [
+        "convocar",
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "En el caso de ciudadanos de la Unión Europea o de sus familiares, beneficiarios de los derechos de libre circulación y residencia, se requerirá que tengan la condición de residentes permanentes o que acrediten ser trabajadores por cuenta propia o ajena.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la concesión de las becas que se convocan por esta Resolución, se seguirá el procedimiento y se aplicarán los umbrales de renta y patrimonio familiares que se fijan en este capítulo.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Los umbrales de renta familiar aplicables para la concesión de las becas que se convocan por esta Resolución serán los que se señalan a continuación: Nº de miembros de la familia Umbral 1 (euros) Umbral 2 (euros) Umbral 3 (euros) 1 8.843 13.898 14.818 2 13.264 23.724 25.293 3 17.685 32.201 34.332 4 22.107 38.242 40.773 5 25.644 42.743 45.572 6 29.181 46.142 49.196 7 32.718 49.503 52.780 8 36.255 52.850 56.348 Cada miembro adicional al 8º 3.536 3.340 3.561 Artículo 20.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución, los solicitantes deberán estar matriculados en el curso 2025-2026 en alguno de los estudios mencionados en el artículo 3 y cumplir los requisitos de naturaleza académica que se establecen a continuación.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "El número mínimo de créditos fijado en los párrafos anteriores en que el alumno debe quedar matriculado en el curso para el que solicita la beca no será exigible, por una sola vez, en el caso de los estudiantes a los que, para finalizar sus estudios, les reste un número de créditos inferior a ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n19 dicho número mínimo, siempre que no haya disfrutado de la condición de becario durante más años de los previstos en el artículo 25.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la concesión de beca a quienes se matriculen por primera vez de primer curso de estudios de grado y, estando en posesión del título de bachillerato accedan a la universidad mediante la PAU, se requerirá una nota de 5,00 puntos en la calificación de acceso a la universidad, es decir, dicha nota de acceso se calculará conforme a la fórmula 0,6 NMB + 0,4 PAU.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En las demás vías de acceso a la universidad se requerirá haber obtenido 5,00 puntos en la prueba o enseñanza que permita el acceso a la universidad.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la concesión de las becas que se convocan en esta Resolución a quienes cursen dobles titulaciones les será de aplicación lo dispuesto en los artículos anteriores con las salvedades que se indican a continuación.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de las becas que se convocan mediante esta Resolución, los estudiantes de másteres deberán cumplir los siguientes requisitos académicos: Los estudiantes de primer curso de másteres deberán acreditar una nota media de 5,00 puntos en los estudios previos que les dan acceso al máster.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "10º.  En aquellos casos en los que la organización del currículo de formación profesional prevea módulos cuya evaluación definitiva se haga depender de la realización de un período de formación en empresa que se desarrolle en todo o en parte en un curso posterior, se tendrá en cuenta a efectos de beca la calificación que, con carácter provisional, se haya otorgado en la fase de formación en el centro.",
+      "verbos": [
+        "otorgar"
+      ]
+    },
+    {
+      "frase": "En cualquier caso, para obtener beca en estas enseñanzas se requerirá la matrícula en un número de módulos cuya suma horaria sea como mínimo de 500 horas.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido curso cuando tengan superados la totalidad de los módulos de los cursos anteriores a aquél para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de estas ayudas se requerirá tener totalmente superado el ciclo y haber disfrutado de la condición de becario en el curso anterior.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En cualquier caso, para obtener beca en estas enseñanzas se requerirá la matrícula en un número de módulos cuya suma horaria sea como mínimo de 500 horas, con la excepción indicada en el último párrafo de este número respecto de las enseñanzas deportivas.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido curso cuando tengan superadas la totalidad de las materias o módulos de los cursos anteriores a aquél para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de estas ayudas se requerirá tener totalmente superado el ciclo y haber disfrutado de la condición de becario en el curso anterior.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido curso cuando tengan superadas la totalidad de las materias de los cursos anteriores a aquél para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido curso cuando tengan superados la totalidad de los módulos de los cursos anteriores a aquel para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n31 Los beneficiarios de las becas que se convocan por esta Resolución quedan obligados a: a) Destinar la beca a la finalidad para la que se concede, entendiéndose por tal la matriculación, asistencia a clase y superación de asignaturas o de créditos.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Declarar, específicamente en los supuestos de cambio de estudios, el hecho de haber sido becario en años anteriores, así como de estar en posesión o en condiciones legales de obtener un título académico del mismo o superior nivel de estudios que aquel para el que se solicita la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Asimismo, dará lugar a la denegación de la beca solicitada o a la modificación o revocación de la beca concedida la ocultación de la posesión de titulaciones académicas de igual o superior nivel al de los estudios para los que se solicita la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "De conformidad con lo dispuesto en el artículo 30.7 de la Ley 38/2003, de 17 de noviembre, la concesión de las becas que se convocan por esta Resolución no requerirá otra justificación que la acreditación previa a la concesión de que el solicitante reúne los requisitos establecidos en esta convocatoria.",
+      "verbos": [
+        "convocar",
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Las secretarías de los centros docentes comunicarán, tan pronto como les sea requerido por las comisiones de selección de becarios correspondientes el nombre, apellidos y demás datos identificativos que se requieran de los becarios incursos en cualquiera de las situaciones a que se refiere el punto anterior.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En los casos en que, de conformidad con lo dispuesto en la Ley 38/2003, de 17 de noviembre, concurra alguna causa de reintegro, las administraciones educativas correspondientes y/o las universidades notificarán al beneficiario esta circunstancia para que proceda a la devolución al Tesoro Público y, en su caso, a la comunidad autónoma que haya financiado parcialmente el componente de beca de matrícula, de la cantidad indebidamente percibida así como de los intereses de demora cuando proceda en el plazo de dos meses.",
+      "verbos": [
+        "financiar"
+      ]
+    },
+    {
+      "frase": "En cualquier momento del procedimiento, se podrá requerir la aportación de los documentos originales justificativos de las circunstancias alegadas.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "El solicitante y, en el caso de que sea menor de edad o no esté emancipado, el padre, madre, tutor o persona encargada de la guarda y protección del solicitante declararán bajo responsabilidad solidaria lo siguiente: a) Que aceptan las bases de la convocatoria para la que solicitan beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "En estos casos, las solicitudes se presentarán directamente en las comunidades autónomas o en las universidades en las que corresponda realizar los estudios para los que se solicita la beca y los órganos colegiados de selección atenderán, para la concesión o denegación de la beca solicitada a la nueva situación económica familiar sobrevenida.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Los órganos de selección a que se refiere el artículo anterior examinarán  los datos personales y familiares de las solicitudes presentadas para requerir al interesado, en su caso, que subsane los eventuales defectos o acompañe los documentos preceptivos en el plazo de diez días contados desde la recepción del requerimiento, indicándoles que si así no lo hicieran, se les tendrá por desistidos de su petición, archivándose la misma, previa resolución dictada a tal efecto de acuerdo con el artículo 21.1 de la Ley 39/2015, de 1 de octubre.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En casos específicos, los órganos colegiados de selección de solicitudes de becas podrán requerir los documentos complementarios que se estimen precisos para un adecuado conocimiento de las circunstancias peculiares de cada caso, a los efectos de garantizar la correcta inversión de los recursos presupuestarios destinados a becas.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "No obstante, lo dispuesto en el párrafo anterior, las secretarías de los centros universitarios podrán requerir cautelarmente el abono de dichos precios públicos a quienes no cumplan los requisitos establecidos en esta convocatoria.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Los importes a que se refieren los apartados anteriores serán compensados a las universidades, a los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, y a las comunidades autónomas firmantes del convenio a que se refiere el artículo 65, por el procedimiento que se describe a continuación: a) Resuelta la convocatoria, las universidades y los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, solicitarán a la Dirección General de Planificación y Gestión Educativa, la compensación del importe a que se refiere el apartado 3 de este artículo en concepto de precios públicos por servicios académicos de sus estudiantes beneficiarios del componente de beca de matrícula a que se refiere la presente convocatoria.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "La Dirección General de Planificación y Gestión Educativa requerirá a las universidades y los centros que impartan enseñanzas artísticas superiores, o entidades en que se integren, el envío de algunos expedientes de matrícula seleccionados por muestreo al objeto de comprobar los datos relativos a la matrícula de los estudiantes beneficiarios de beca.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "A efectos de lo dispuesto en el apartado 4 de la disposición adicional cuarta del Real Decreto 163/2025, de 4 de marzo, el citado Departamento facilitará a las CCAA que lo requieran y al Ministerio de Ciencia, Innovación y Universidades información sobre las cantidades que hubiera compensado a las universidades por este concepto.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En el caso de que las normas reguladoras de aquéllos proclamaran su compatibilidad con las becas del Ministerio de Educación, Formación Profesional y Deportes, para que dicha compatibilidad sea efectiva, deberá ser solicitada por el estudiante o por la entidad convocante, en cada caso, a la Dirección General de Planificación y Gestión Educativa.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Las becas para residencia convocadas por la Mutualidad General de Funcionarios Civiles del Estado (MUFACE) serán compatibles con las becas que se convocan por esta Resolución con excepción de la cuantía ligada a la residencia.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Cuando los ingresos o los resultados académicos a acreditar procedan de un país extranjero, los correspondientes órganos de selección requerirán al solicitante la aportación de la documentación que consideren necesaria a dichos efectos.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Mediante los oportunos convenios de colaboración con el Ministerio de Educación, Formación Profesional y Deportes y en los términos establecidos en los mismos, las comunidades autónomas podrán realizar, respecto de las becas que se convocan por la presente Resolución, ABELARDO DE LA ROSA DIAZ - 2025-03-18 13:02:02 CET Puede comprobar la autenticidad de esta copia mediante CSV:  OIP_FAEQ74H43VQX3R3QK9HQSIQQBMLS  en https://www.pap.hacienda.gob.es\n\n47 con excepción de las correspondientes a los estudiantes de la Universidad Nacional de Educación a Distancia (UNED) y del Centro para la Innovación y Desarrollo de la Educación a Distancia (CIDEAD), las funciones de tramitación adjudicación y pago, así como la inspección, verificación, control y, en su caso, resolución de los recursos administrativos que puedan interponerse.",
+      "verbos": [
+        "convocar"
+      ]
+    }
+  ]
+}

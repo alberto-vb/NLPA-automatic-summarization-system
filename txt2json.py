@@ -152,7 +152,8 @@ if __name__ == "__main__":
         'corpus/ayudas_22-23.txt',
         'corpus/ayudas_23-24.txt',
         'corpus/ayudas_24-25.txt',
-        #'corpus/ayudas_24-25.txt',
+        'corpus/ayudas_24-25.txt',
+        'corpus/ayudas_25-26.txt'
     ]
 
     for txt in txts:
@@ -164,9 +165,10 @@ if __name__ == "__main__":
             with open(txt, 'r', encoding='utf-8') as file:
                 contenido = file.read()
                 # Guardar resultados de regex_extractor
-                #save_json(regex_extractor(contenido), "resumenes_regex", txt)
+                save_json(regex_extractor(contenido), "resumenes_regex", txt)
                 # Guardar resultados de semantic_pattern_extractor
-                #save_json(semantic_pattern_extractor(contenido), "resumenes_semantic", txt)
+                save_json(semantic_pattern_extractor(contenido), "resumenes_semantic", txt)
+                # Guardar resultados de spacy_extractor
                 save_json(spacy_extractor(contenido), "resumenes_spacy", txt)
 
         except FileNotFoundError:
