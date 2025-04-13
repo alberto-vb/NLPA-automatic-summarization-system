@@ -16,7 +16,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('punkt_tab')  # Download the Spanish tokenizer data
 
-def date_and_money_extractor(text, filename):
+def regex_extractor(text):
     # EXTRACTOR DE LAS FRASES SIN REPETIDAS, SIN STOPWORDS, QUE CONTENGAN FECHAS Y DINERO
 
     # 1. Extraer frases con fechas y montos
@@ -54,7 +54,7 @@ def date_and_money_extractor(text, filename):
 
     return resultados
 
-def date_semantic_pattern(text, filename):
+def semantic_pattern_extractor(text):
     # Extraer secciones clave usando patrones semánticos
     patrones = {
         "convocatoria": r"CONVOCATORIA.*?(?=\n|$)",
@@ -67,6 +67,69 @@ def date_semantic_pattern(text, filename):
         matches = re.findall(patron, text, re.DOTALL | re.IGNORECASE)
         resultados[nombre] = [match.strip() for match in matches]
 
+    return resultados
+
+def spacy_extractor(text):
+    nlp = spacy.load("es_core_news_md")
+    doc = nlp(text)
+
+    entidades = {
+        "FECHAS": [],
+        "DINERO": [],
+        "ORG": []
+    }
+
+    # Extraer frases completas que contengan entidades
+    for sent in doc.sents:
+        for ent in sent.ents:
+            # Para fechas: mejorar detección incluyendo patrones comunes
+            if ent.label_ == "DATE":
+                entidades["FECHAS"].append({
+                    "entidad": ent.text,
+                    "frase": sent.text,
+                    "tipo": "DATE"
+                })
+            
+            # Para dinero: ampliar criterios de detección
+            elif ent.label_ == "MONEY" or \
+                 any(t.like_num and "€" in sent.text for t in sent) or \
+                 any(t.like_num and "euro" in sent.text.lower() for t in sent):
+                entidades["DINERO"].append({
+                    "entidad": ent.text,
+                    "frase": sent.text,
+                    "tipo": "MONEY"
+                })
+            
+            # Para organizaciones (ya funciona bien)
+            elif ent.label_ == "ORG":
+                entidades["ORG"].append({
+                    "entidad": ent.text,
+                    "frase": sent.text,
+                    "tipo": "ORG"
+                })
+
+    # Mejorar extracción de frases con verbos de acción
+    verbos_accion = ["convocar", "requerir", "solicitar", "otorgar", "financiar"]
+    frases_accion = [
+        {
+            "frase": sent.text,
+            "verbos": [token.lemma_ for token in sent if token.lemma_ in verbos_accion]
+        }
+        for sent in doc.sents
+        if any(token.lemma_ in verbos_accion for token in sent)
+    ]
+
+    # Filtrar duplicados manteniendo el orden
+    for key in entidades:
+        seen = set()
+        entidades[key] = [x for x in entidades[key] if not (x["frase"] in seen or seen.add(x["frase"]))]
+
+    resultados = {
+        "entidades": entidades,
+        "frases_accion": frases_accion
+    }
+    
+    #print(json.dumps(resultados, indent=2, ensure_ascii=False))
     return resultados
 
 def save_json(data, foldername, filename):
@@ -89,7 +152,7 @@ if __name__ == "__main__":
         'corpus/ayudas_22-23.txt',
         'corpus/ayudas_23-24.txt',
         'corpus/ayudas_24-25.txt',
-        'corpus/ayudas_25-26.txt',
+        #'corpus/ayudas_24-25.txt',
     ]
 
     for txt in txts:
@@ -100,10 +163,11 @@ if __name__ == "__main__":
         try:
             with open(txt, 'r', encoding='utf-8') as file:
                 contenido = file.read()
-                # Guardar resultados de date_and_money_extractor
-                save_json(date_and_money_extractor(contenido, txt), "resumenes_regex", txt)
-                # Guardar resultados de date_semantic_pattern
-                save_json(date_semantic_pattern(contenido, txt), "resumenes_semantic", txt)
+                # Guardar resultados de regex_extractor
+                #save_json(regex_extractor(contenido), "resumenes_regex", txt)
+                # Guardar resultados de semantic_pattern_extractor
+                #save_json(semantic_pattern_extractor(contenido), "resumenes_semantic", txt)
+                save_json(spacy_extractor(contenido), "resumenes_spacy", txt)
 
         except FileNotFoundError:
             print(f"Error: El archivo {txt} no fue encontrado")

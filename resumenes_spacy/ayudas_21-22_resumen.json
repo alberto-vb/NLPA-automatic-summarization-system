@@ -1,0 +1,1012 @@
+{
+  "entidades": {
+    "FECHAS": [],
+    "DINERO": [
+      {
+        "entidad": "Los recursos\nfinancieros",
+        "frase": "Los recursos\nfinancieros para dicho curso ascenderán a 2.038,13 millones de euros, de los cuales 1.550,00\nmillones se invertirán en las becas de carácter general convocadas por esta Resolución y el resto\nhasta cubrir la cuantía presupuestada, y como se venía realizando en cursos anteriores, en la\nconvocatoria de ayudas para alumnos con necesidades educativas especiales, y en la compensación\na las universidades de los precios públicos por los servicios académicos correspondientes a\nestudiantes becarios y a estudiantes de la Universidad Nacional de Educación a Distancia con\ndiscapacidad, así como en las bonificaciones correspondientes a los estudiantes pertenecientes a\nfamilias numerosas de tres hijos y equiparadas.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Reglamento",
+        "frase": "No obstante, dicho importe podrá incrementarse con una cuantía\nadicional de 450.000.000,00 euros, cuando, como consecuencia de la concurrencia de alguna de las\ncircunstancias previstas en la letra a) del artículo 58.2 del Reglamento de la Ley General de\nSubvenciones, aprobado por el Real Decreto 887/2006, de 21 de julio, se produzca un incremento de\ncrédito disponible antes de la concesión definitiva de las becas que se convocan por esta Resolución.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Cuantía",
+        "frase": "Cuantía fija ligada a la renta del solicitante: 1.700,00 euros.\nC) Cuantía fija ligada a la residencia del solicitante durante el curso: 1.600,00 euros.\nD) Cuantía fija ligada a la excelencia académica: entre 50 y 125 euros con la siguiente\ndistribución:\nNota media del estudiante Cuantía en euros\nEntre 8,00 y 8,49 puntos 50 euros\nEntre 8,50 y 8,99 puntos 75 euros\nEntre 9,00 y 9,49 puntos 100 euros\n9,50 puntos o más 125 euros\nE) Beca básica: 300,00 euros.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Ciclos Formativos de Grado\nBásico",
+        "frase": "En el caso de los becarios que cursen Ciclos Formativos de Grado\nBásico esta cuantía será de 350 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "España",
+        "frase": "Los beneficiarios de beca con domicilio familiar en la España insular, o en Ceuta o Melilla, que\nse vean en la necesidad de utilizar transporte marítimo o aéreo para acceder al centro docente en el\nque cursen sus estudios desde su domicilio, dispondrán de 442,00 euros más sobre la beca que les\nhaya correspondido.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Lanzarote",
+        "frase": "Esta cantidad adicional será de 623,00 euros para los becarios con domicilio familiar en las islas\nde Lanzarote, Fuerteventura, La Gomera, El Hierro y La Palma, Menorca, Ibiza y Formentera.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "islas Baleares",
+        "frase": "En el caso de que el estudiante tenga que desplazarse entre las islas Baleares o las islas\nCanarias y la Península Ibérica, las cantidades a que se refieren los dos párrafos anteriores serán de\n888,00 euros y 937,00 euros, respectivamente.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Marco Español de Cualificaciones",
+        "frase": "No obstante lo dispuesto en el párrafo anterior, quienes estén en posesión de un título oficial de\ngrado que haya sido adscrito al nivel 3 (máster) del Marco Español de Cualificaciones para la\nEducación Superior (MECES), o en posesión de un título oficial de arquitecto, ingeniero, licenciado,\narquitecto técnico, ingeniero técnico o diplomado que haya obtenido la correspondencia con el nivel\n3 (máster) del MECES, podrán ser beneficiarios de beca para cursar enseñanzas conducentes a un\ntítulo oficial de máster universitario\nAsimismo, quienes estén en posesión de un título oficial de diplomado, arquitecto técnico,\ningeniero técnico o maestro que haya obtenido la correspondencia con el nivel 2 (grado) del Marco\nEspañol de Cualificaciones para la Educación Superior (MECES) podrán ser beneficiarios de beca\npara cursar créditos complementarios o complementos de formación necesarios para la obtención\ndel título oficial de grado.\nb) Cumplir los requisitos básicos establecidos en el Real Decreto 1721/2007, de 21 de diciembre,\nasí como los que se fijan en el Real Decreto 471/2021, de 29 de junio, por el que se establecen los\numbrales de renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio para el curso\n2021-2022 y se modifica parcialmente el Real Decreto 1721/2007, de 21 de diciembre\nc) Estar matriculado en alguna de las enseñanzas del sistema educativo español que se\nenumeran en el artículo 3 de esta Resolución.\nd) Ser español o poseer la nacionalidad de un Estado miembro de la Unión Europea.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "DIRECCIÓN",
+        "frase": "14\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\nb) 525,00 euros por cada hermano que sea miembro computable, incluido el solicitante, que\nconviva en el domicilio familiar, cuando se trate de familias numerosas de categoría general y 800,00\neuros para familias numerosas de categoría especial, siempre que tenga derecho a este beneficio.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Umbral 1:\n• Familias",
+        "frase": "Umbral 1:\n• Familias de un miembro: 8.422,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de dos miembros: 12.632,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de tres miembros: 16.843,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de cuatro miembros: 21.054,00 euros.\n•",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de cinco miembros: 24.423,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de seis miembros: 27.791,00 euros.\n•",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de siete miembros: 31.160,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de ocho miembros: 34.529,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Umbral 2:\n• Familias",
+        "frase": "Umbral 2:\n• Familias de un miembro: 13.236,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de dos miembros: 22.594,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de tres miembros: 30.668,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "DIRECCIÓN",
+        "frase": "15\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\n• Familias de cuatro miembros: 36.421,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de cinco miembros: 40.708,00 euros.\n•",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de seis miembros: 43.945,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de siete miembros: 47.146,00 euros.\n• Familias de ocho miembros: 50.333,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Umbral 3:\n• Familias",
+        "frase": "Umbral 3:\n• Familias de un miembro: 14.112,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de dos miembros: 24.089,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de tres miembros: 32.697,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de cuatro miembros: 38.831,00 euros.\n•",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de cinco miembros: 43.402,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de seis miembros: 46.853,00 euros.\n•",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "Familias de siete miembros: 50.267,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "Familias",
+        "frase": "• Familias de ocho miembros: 53.665,00 euros.\n",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "El\ncálculo de su contravalor en euros",
+        "frase": "El\ncálculo de su contravalor en euros se hará aplicando el tipo oficial que dé un resultado menor y que\nhubiera tenido la moneda respectiva el primer día hábil de 2021.\n3.",
+        "tipo": "MONEY"
+      },
+      {
+        "entidad": "El cálculo de su contravalor en euros",
+        "frase": "El cálculo de su contravalor en euros se hará aplicando el tipo oficial que dé un resultado\nmenor y que hubiera tenido la moneda respectiva el primer día hábil de 2021.\n3.",
+        "tipo": "MONEY"
+      }
+    ],
+    "ORG": [
+      {
+        "entidad": "SECRETARÍA",
+        "frase": "MINISTERIO\nDE EDUCACIÓN,\nY FORMACIÓN PROFESIONAL\nRESOLUCIÓN DE LA SECRETARÍA DE ESTADO DE EDUCACIÓN, POR LA QUE SE\nCONVOCAN BECAS DE CARÁCTER GENERAL PARA EL CURSO ACADÉMICO 2021-2022,\nPARA ESTUDIANTES QUE CURSEN ESTUDIOS POSTOBLIGATORIOS\nEl Real Decreto 1721/2007, de 21 de diciembre, estableció un nuevo régimen de las becas y\nayudas al estudio del Ministerio de Educación y Formación Profesional, modificando el anteriormente\nvigente de gestión centralizada y regulando, con carácter básico, los parámetros precisos para\nasegurar la igualdad en el acceso a las citadas becas y ayudas al estudio sin detrimento de las\ncompetencias normativas y de ejecución de las comunidades autónomas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Gobierno",
+        "frase": "Gracias a un sensible incremento en la financiación del sistema de becas y ayudas al estudio,\nel Gobierno aprobó el Real Decreto 688/2020, de 21 de julio, por el que se establecían los umbrales\nde renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio para el curso 2020-2021\ny se modificaba parcialmente el Real Decreto 1721/2007, de 21 de diciembre, que introdujo\nimportantes medidas de reforma en el modelo de becas destinadas a facilitar el acceso a las becas\na un abanico más amplio de estudiantes, al tiempo que incrementaba la cuantía de determinados\ncomponentes de las mismas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Para este próximo curso, el Real Decreto 471/2021, de 29 de junio, por\nel que se establecen los umbrales de renta y patrimonio familiar y las cuantías de las becas y ayudas\nal estudio del Ministerio de Educación y Formación Profesional para el curso 2021-2022 y se modifica\nparcialmente el Real Decreto 1721/2007, de 21 de diciembre, por el que se establece el régimen de\nlas becas y ayudas personalizadas, da nuevos pasos en la línea emprendida de la reforma,\nflexibilizando los requisitos académicos para la obtención de beca en el caso de las enseñanzas\nconducentes a un título de máster habilitante e incrementando la cuantía de la beca básica para los\nestudiantes de Ciclos Formativos de Grado Básico.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Procede ahora, pues, que el Ministerio de Educación y Formación Profesional convoque a través\nde esta Resolución, para el curso académico 2021-2022, las becas de carácter general para\nestudiantes de enseñanzas postobligatorias, tanto universitarios como no universitarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Orden ECI/1815/2005",
+        "frase": "Por todo ello, de conformidad con la disposición adicional novena de la Ley 24/2005, de 18 de\nnoviembre, de Reforma para el Impulso de la Productividad, los Reales Decretos anteriormente\ncitados y la Orden ECI/1815/2005, de 6 de junio, por la que se aprueban las bases reguladoras de la\nconcesión de becas y ayudas al estudio por el Ministerio de Educación y Ciencia, he resuelto:\nCAPÍTULO I\nObjeto y ámbito de aplicación\nArtículo 1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución será preciso cumplir\nlos requisitos básicos establecidos en el Real Decreto 1721/2007, así como los que se fijan en el Real\nDecreto 471/2021, de 29 de junio, por el que se establecen los umbrales de renta y patrimonio familiar\ny las cuantías de las becas y ayudas al estudio del Ministerio de Educación y Formación Profesional\npara el curso 2021-2022 y se modifica parcialmente el Real Decreto 1721/2007, de 21 de diciembre,\ny en esta convocatoria.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "La condición de beneficiario podrá obtenerse aunque no se cumplan los requisitos establecidos\nen el artículo 13.2 de la Ley 38/2003, de 17 de diciembre, General de Subvenciones.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El importe correspondiente a las becas que se convocan se hará efectivo con cargo al crédito\n18.08.323M.482.00 de los presupuestos del Ministerio de Educación y Formación Profesional de los\nejercicios de 2021 y 2022.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Además, el importe para compensar a las universidades los precios públicos por los servicios\nacadémicos correspondientes a los estudiantes exentos de su pago por ser beneficiarios de beca, se\nrealizará con cargo al crédito 18.08.323M.482.05 de los presupuestos del Ministerio de Educación y\nFormación Profesional para el ejercicio de 2022.\n3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Por Resolución conjunta de los Ministerios de Educación y Formación Profesional y de\nUniversidades se determinará el porcentaje de dicho importe que se destinará a la cuantía variable\nque corresponda, por una parte, a los estudiantes universitarios, de enseñanzas artísticas superiores\ny de estudios religiosos superiores y, por otra, a los demás estudiantes no universitarios.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Enseñanzas postobligatorias y superiores no universitarias del sistema educativo español y\ncon validez en todo el territorio nacional:\na) Primer y segundo cursos de bachillerato.\nb) Formación Profesional de grado medio y de grado superior, incluidos los estudios de formación\nprofesional realizados en los centros docentes militares.\nc) Enseñanzas artísticas profesionales.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías fijas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Este componente de la beca se hará efectivo mediante la exención al becario del importe\ncorrespondiente y su compensación a las universidades en los términos previstos en la disposición\nadicional cuarta del Real Decreto 471/2021, de 29 de junio, por el que se establecen los umbrales\nde renta y patrimonio familiar y las cuantías de las becas y ayudas al estudio del Ministerio de\nEducación y Formación Profesional, para el curso 2021-2022 y se modifica parcialmente el Real\nDecreto 1721/2007, de 21 de diciembre, y mediante el procedimiento que se establece en el artículo\n54 de esta Resolución.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "Para la adjudicación de la cuantía ligada a la excelencia en el rendimiento académico se requerirá\nque el solicitante acredite haber obtenido una nota media de 8,00 puntos o superior en el curso,\npruebas de acceso o estudios previos siguientes:\na) Enseñanzas de grado superior de formación profesional, de artes plásticas y diseño y de\nenseñanzas deportivas\n6\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\n Estudiantes de primer curso: nota media obtenida en segundo curso de bachillerato,\nprueba o curso de acceso respectivamente o en la calificación final del ciclo formativo de\ngrado medio que dé acceso al ciclo formativo de grado superior.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": " Estudiantes de segundos y posteriores cursos: nota media obtenida en el curso anterior,\nb) Enseñanzas de bachillerato, enseñanzas profesionales de música y danza y grado medio de\nformación profesional, enseñanzas profesionales de artes plásticas y diseño y de las enseñanzas\ndeportivas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": " Estudiantes de primer curso: nota media obtenida en el cuarto curso de Educación\nSecundaria Obligatoria, prueba de acceso o en la calificación final del ciclo formativo de\ngrado medio o de grado básico que dé acceso a estas enseñanzas, en su caso.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": " Estudiantes de segundos y posteriores cursos: nota media obtenida en el curso anterior.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": " Estudiantes de primer curso: nota obtenida en la prueba o curso de acceso\n Estudiantes de segundos y posteriores cursos: nota media obtenida en el curso anterior,\nd)",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "Enseñanzas universitarias conducentes al título de grado\n Estudiantes de primer curso: la nota de acceso a la Universidad con exclusión de la\ncalificación obtenida en las pruebas de las materias de opción del bloque de las\nasignaturas troncales es decir, dicha nota de acceso se calculará conforme a la fórmula\n0,6 NMB + 0,4 EBAU.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "e) Enseñanzas universitarias conducentes al título de máster\n Estudiantes de primer curso: nota media obtenida en los estudios previos que les dan acceso\nal máster.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": " Estudiantes de segundos cursos: nota media obtenida en primer curso de máster.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artes y Humanidades",
+        "frase": "En el caso de estudiantes de enseñanzas\nartísticas superiores y estudios religiosos superiores, Nmax será igual al mejor decil de becarios de\nlos estudiantes universitarios de la rama de Artes y Humanidades.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "Rj= Renta per cápita del becario (igual a cero si Rj es negativo)\nRi = Renta per cápita de cada uno de los becarios a que se refiere S\nRmax = Renta per cápita máxima para ser beneficiario de la cuantía variable\nPara el cálculo de la nota media del estudiante, referida anteriormente N se aplicarán las\nsiguientes reglas:\n8\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\nA las calificaciones de los becarios de primer curso de grado procedentes de la Evaluación de\nBachillerato para el Acceso a la Universidad se les aplicará un coeficiente corrector igual al cociente\nentre la calificación media obtenida en los estudios universitarios por los becarios del área de\nconocimiento que corresponda y la calificación media obtenida en Evaluación de Bachillerato para el\nAcceso a la Universidad, excluyendo la nota de las pruebas de las materias de opción del bloque de\nlas asignaturas troncales, por todos los beneficiarios que van cursar primer curso en dicha área de\nconocimiento.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El Ministerio de Educación y Formación Profesional calculará los parámetros de la fórmula, que\nse comunicarán a las comunidades autónomas firmantes del convenio para la gestión de las becas,\na los efectos de su aplicación para la asignación de la cuantía variable a los becarios.\n2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 11",
+        "frase": "Artículo 11.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías de las becas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 12",
+        "frase": "Artículo 12.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cuantías",
+        "frase": "Cuantías adicionales por domicilio insular o en Ceuta o Melilla.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "Las personas a que se refiere el apartado 1, además de cumplir los requisitos previstos en el\nmismo, deberán matricularse en el curso 2021-2022 como mínimo, del siguiente número de\ncréditos, horas, asignaturas, módulos o su equivalente en horas:\n1.º) Estudiantes de enseñanzas artísticas y estudios religiosos superiores: 30 créditos o el 50\npor ciento del curso completo en el caso de enseñanzas organizadas por asignaturas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "2.º) Estudiantes de grado superior de formación profesional, de artes plásticas y diseño y de\nenseñanzas deportivas: 500 horas\n3.º) Estudiantes de bachillerato, enseñanzas profesionales de música y danza y grado medio\nde formación profesional, enseñanzas profesionales de artes plásticas y diseño y de las\nenseñanzas deportivas: 4 asignaturas o 500 horas, respectivamente.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Estudiantes",
+        "frase": "11\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\n4.º) Estudiantes universitarios: 30 créditos o la mitad del curso completo en el caso de dobles\ntitulaciones de grado.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 15",
+        "frase": "CAPÍTULO III\nRequisitos de carácter general\nArtículo 15.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Unión Europea",
+        "frase": "En el caso\nde ciudadanos de la Unión Europea o de sus familiares, beneficiarios de los derechos de libre\ncirculación y residencia, se requerirá que tengan la condición de residentes permanentes o que\nacrediten ser trabajadores por cuenta propia o ajena.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Renta de las Personas",
+        "frase": "La renta familiar a efectos de beca o ayuda se obtendrá por agregación de las rentas de cada\nuno de los miembros computables de la familia que obtengan ingresos de cualquier naturaleza,\ncalculadas según se indica en los apartados siguientes y de conformidad con la normativa reguladora\ndel Impuesto sobre la Renta de las Personas Físicas aplicable conforme a lo dispuesto en el Real\nDecreto 471/2021, de 29 de junio, por el que se establecen los umbrales de renta y patrimonio familiar\ny las cuantías de las becas y ayudas al estudio para el curso 2021-2022 y se modifica parcialmente\nel Real Decreto 1721/2007, de 21 de diciembre.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Para la determinación de la renta de los miembros computables que hayan presentado\ndeclaración por el Impuesto sobre la Renta de las Personas Físicas, se procederá del modo siguiente:\na) Se sumará la base imponible general con la base imponible del ahorro, excluyendo todos los\nsaldos netos negativos de ganancias y pérdidas patrimoniales de 2016 a 2019 y el saldo neto negativo\nde rendimientos del capital mobiliario de 2016 a 2019 a integrar en la base imponible del ahorro.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Para la determinación de la renta de los demás miembros computables que obtengan ingresos\npropios y no hayan presentado declaración por el Impuesto sobre la Renta de las Personas Físicas\nse seguirá el procedimiento descrito en la letra a) del apartado 3 y del resultado obtenido se restarán\nlos pagos a cuenta efectuados.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 17.",
+        "frase": "Artículo 17.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Miembros",
+        "frase": "Miembros computables.\n1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 20.",
+        "frase": "Artículo 20.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "Las ganancias patrimoniales derivadas de los mencionados premios se computarán de\nacuerdo con la normativa del Impuesto sobre la Renta de las Personas Físicas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Impuesto",
+        "frase": "El valor de los elementos indicativos de patrimonio a que se refiere este apartado d) se\ndeterminará de conformidad con lo dispuesto en la normativa del Impuesto sobre la Renta de las\nPersonas Físicas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 21",
+        "frase": "CAPÍTULO V\nRequisitos de carácter académico\nArtículo 21.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 23.",
+        "frase": "Artículo 23.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "Para la concesión de beca a quienes se matriculen por primera vez de primer curso de estudios\nde grado y, estando en posesión del título de bachillerato accedan a la universidad mediante la\nEvaluación del Bachillerato para Acceso a la Universidad, se requerirá una nota de 5,00 puntos en la\nnota de acceso a la universidad con exclusión de la calificación obtenida en las pruebas de las\nmaterias de opción del bloque de las asignaturas troncales es decir, dicha nota de acceso se calculará\nconforme a la fórmula 0,6 NMB + 0,4 EBAU.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ciencias",
+        "frase": "90%\nCiencias .",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ciencias Sociales y",
+        "frase": "........................ 65%\nCiencias Sociales y Jurídicas ..................... 90%\nCiencias de la Salud.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "COVID",
+        "frase": "Para calcular el porcentaje de créditos superados no se tendrán en cuenta los créditos\ncorrespondientes a asignaturas matriculadas en el curso 2020-2021 que, como consecuencia de la\n21\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\naplicación de las medidas adoptadas para la contención de la pandemia del COVID 19, no le hayan\npodido ser evaluados al estudiante.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "En aquellos casos en los que, en virtud de la normativa propia de la Universidad, resulte\nlimitado el número de créditos en que puedan quedar matriculados todos los estudiantes, éstos\npodrán obtener todas las cuantías que les correspondan si se matriculan en todos aquellos créditos\nen los que les sea posible.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 30",
+        "frase": "Artículo 30.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Matriculación",
+        "frase": "Para obtener beca en las enseñanzas a que se refiere este artículo, se establecen los siguientes\nrequisitos:\n1º. Matriculación.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Parafarmacia",
+        "frase": "Para todos los alumnos:\n- “Formación y Orientación Laboral”\n- “Empresa e iniciativa emprendedora”\nb) Para determinadas titulaciones:\n- “Primeros auxilios” que es el mismo para grado medio (en “ Farmacia y Parafarmacia”, “Atención\na personas en situación de dependencia”, y “Conducción de vehículos de Transporte por carretera”)\ny en grado superior (en “Educación Infantil”, “Higiene Bucodental”, “Animación sociocultural y\nTurística”, “Integración Social”, “Promoción de la Igualdad de género” y “Mediación comunicativa”)\n- “Interpretación gráfica” que es el mismo en los ciclos de grado medio (de “Mecanizado”,\n“Soldadura y calderería” y “Conformado por moldeo de metales y polímeros”) y en grado superior (de\n“Programación de la producción en fabricación mecánica” y en “Programación de la producción en\nmoldeo de metales y polímeros”).\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "COVID",
+        "frase": "Para calcular el número de asignaturas o el porcentaje de módulos profesionales, créditos o su\nequivalente en horas superados en el curso 2020-2021, no se tendrán en cuenta los correspondientes\na asignaturas o módulos profesionales que, como consecuencia de la aplicación de las medidas\nadoptadas para la contención de la pandemia del COVID 19, hayan sido objeto de autorización de\naplazamiento por parte de la administración competente, para su realización en el siguiente curso\nacadémico.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Cambio",
+        "frase": "Cambio de estudios.\n1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "En estos supuestos, se procederá a\ndenegar la beca solicitada o a modificar su concesión o acordar su reintegro según el procedimiento\nprevisto en esta Resolución y en la Ley 38/2003, de 17 de noviembre, General de Subvenciones.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Asimismo, los órganos competentes del Ministerio de Educación y Formación Profesional podrán\ndenegar la beca o proceder a su revocación en el supuesto de que, por vía de muestreo, detecten la\nexistencia de unidades familiares que justifiquen unos ingresos que objetivamente están por debajo\nde su nivel de gastos si no acreditan los medios de vida con que cuentan.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "De conformidad con lo dispuesto en el artículo 30.7 de la Ley 38/2003, de 17 de noviembre,\nGeneral de Subvenciones, la concesión de las becas que se convocan por esta Resolución no\nrequerirá otra justificación que la acreditación previa a la concesión de que el solicitante reúne los\nrequisitos establecidos en esta convocatoria.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Por su parte, el\nMinisterio de Educación y Formación Profesional verificará, sobre la base de la información facilitada\npor las correspondientes administraciones públicas, que el solicitante cumple los requisitos\nacadémicos y económicos requeridos.\nArtículo 43.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "En los casos en que, de conformidad con lo dispuesto en la Ley 38/2003, de 17 de noviembre,\nGeneral de Subvenciones, concurra alguna causa de reintegro, las administraciones educativas\ncorrespondientes y/o las universidades notificarán al beneficiario esta circunstancia para que proceda\na la devolución al Tesoro Público y, en su caso, a la comunidad autónoma que haya financiado\nparcialmente el componente de beca de matrícula, de la cantidad indebidamente percibida en el plazo\nde dos meses.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Cuando, por el contrario, proceda el reintegro parcial o total de la/beca/s concedida/s, dichos\nórganos propondrán al Ministerio de Educación y Formación Profesional, en un plazo no superior a\ncinco meses, contados desde la fecha de inicio del expediente, que proceda a dictar la oportuna\nresolución de reintegro del principal, así como de los intereses cuando proceda.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Orden",
+        "frase": "A la vista de la propuesta efectuada, se resolverá el expediente notificándolo al interesado y\ncomunicándolo a la delegación provincial del Ministerio de Hacienda correspondiente al domicilio del\nmismo, de conformidad con lo dispuesto en la Orden PRE/1064/2016, de 29 de junio, por la que se\ndesarrolla parcialmente el Reglamento General de Recaudación, aprobado por Real Decreto\n939/2005, de 29 de julio, en lo relativo al procedimiento de recaudación de recursos no tributarios ni\naduaneros de titularidad de la Administración General del Estado a través de entidades\ncolaboradoras.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Tanto el acuerdo de inicio como la resolución de reintegro o sobreseimiento del expediente, en\nsu caso, serán notificados por vía telemática en la sede electrónica del Ministerio de Educación y\nFormación Profesional, previa comunicación que reúna las garantías a que hace referencia el artículo\nel artículo 41 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las\nAdministraciones Públicas.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "General de Subvenciones",
+        "frase": "A los efectos establecidos en el presente capítulo, será de aplicación lo dispuesto en los artículos\n36 y siguientes de la Ley 38/2003, de 17 de noviembre, General de Subvenciones y en el Real Decreto\n887/2006, de 21 de julio, por el que se aprueba su Reglamento.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "IDESP",
+        "frase": "A los efectos establecidos en los apartados anteriores y en los términos legalmente previstos,\nla firma electrónica tanto del interesado como de todos los miembros computables de su unidad\nfamiliar se efectuará consignando en la solicitud, además del número, el IDESP o IXEPS del Nif o\nNie y/o la fecha de caducidad del documento de todos los firmantes, tal como se establece en la\ndisposición adicional trigésima cuarta de la de la Ley Orgánica 2/2006, de 3 de agosto de Educación,\nen la redacción dada por la Ley Orgánica 3/2020, de 29 de diciembre.\n3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Universidad",
+        "frase": "El solicitante y, en el caso de que sea menor de edad o no esté emancipado, el padre, madre,\ntutor o persona encargada de la guarda y protección del solicitante declararán bajo responsabilidad\nsolidaria lo siguiente:\na) Que aceptan las bases de la convocatoria para la que solicitan beca.\nb) Que todos los datos incorporados a la solicitud se ajustan a la realidad.\nc) Que quedan enterados de que la inexactitud en las circunstancias declaradas dará lugar a la\ndenegación o reintegro de la beca.\nd) Que tienen conocimiento de la incompatibilidad de estas becas y que, en caso de obtener otra\nbeca o ayuda procedente de cualquier administración o entidad pública o privada, deberá comunicarlo\na la Universidad o Administración tramitadora de su beca.\ne) Que manifiestan su conformidad para recibir notificaciones de forma telemática vía SMS.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "A partir de la fecha de inicio de presentación de solicitudes, el Ministerio de Educación y\nFormación Profesional pondrá a disposición de las unidades de gestión de las becas de las\nadministraciones educativas y de las universidades las solicitudes que se vayan presentando por\nprocedimiento electrónico.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Unidad de becas",
+        "frase": "Secretario: El jefe de la Unidad de becas de la gerencia universitaria.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Para las becas no universitarias, en cada dirección provincial del Ministerio de Educación y\nFormación Profesional se constituirá en el mes de septiembre de 2021 una comisión provincial de\nselección de becarios con la siguiente composición:\na) Presidente: El director provincial del Ministerio de Educación y Formación Profesional\nVicepresidente: El secretario general de la dirección provincial del Ministerio de Educación y\nFormación Profesional\nb) Vocales: Dos inspectores técnicos; el jefe de programas; el jefe del servicio y/o jefe de la\nsección de que dependan las unidades de gestión de becas; un director de centro público y\notro de un centro privado, designados por el director provincial del Ministerio de Educación y\nFormación Profesional; un representante de la correspondiente ciudad autónoma; tres\nrepresentantes de los padres, dos de centros públicos y uno de centro privado concertado,\nelegidos entre aquellos que forman parte de los consejos escolares; tres representantes de\nlas organizaciones estudiantiles que sean mayores de dieciséis años y becarios del Estado.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de\nPlanificación y Gestión Educativa",
+        "frase": "De las reuniones celebradas por los órganos a que se refieren los párrafos anteriores,\nempezando por la de su constitución, se levantará acta, que será remitida a la Dirección General de\nPlanificación y Gestión Educativa.\n6.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Régimen Jurídico del\nSector Público",
+        "frase": "El funcionamiento de estos órganos se ajustará a lo dispuesto en las normas contenidas al\nefecto en los artículos 15 y siguientes de la Ley 40/2015, de 1 de octubre de Régimen Jurídico del\nSector Público.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Dichos órganos comprobarán, asimismo, si las solicitudes presentadas cumplen los requisitos\ngenerales exigibles, cursando quincenalmente al Ministerio de Educación y Formación Profesional\npor los procedimientos informáticos establecidos al efecto, propuesta de denegación de aquellas\nsolicitudes que no reúnan o acrediten dichos requisitos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación\nProfesional",
+        "frase": "El Ministerio de Educación y Formación\nProfesional notificará dicha propuesta de denegación a los interesados haciendo constar la causa\nque la motiva e informando de las alegaciones que puedan formular.\n3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Los mencionados órganos de selección remitirán al Ministerio de Educación y Formación\nProfesional, quincenalmente, y, en todo caso, antes del 29 de diciembre de 2021 y por cualquiera de\nlas vías informáticas habilitadas al efecto, un informe en el que se concrete el resultado de la\nevaluación efectuada de los solicitantes que reúnan los mencionados requisitos generales.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Con estas solicitudes, el Ministerio de Educación y Formación Profesional comprobará, por\nlos procedimientos informáticos establecidos, el cumplimiento por parte de los solicitantes de los\nrequisitos académicos que establece esta convocatoria y elaborará una base de datos que\ncontrastará con la información sobre rentas y patrimonios que le faciliten las administraciones\ntributarias correspondientes a los efectos de determinar, asimismo, el cumplimiento de los requisitos\neconómicos establecidos en la presente convocatoria.\n7.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el mismo plazo señalado en el apartado 4 de este artículo, las comunidades autónomas\nque hayan suscrito el convenio a que se refiere el artículo 65 de esta Resolución, comunicarán al\nMinisterio de Educación y Formación Profesional el importe a que ascienden las cuantías fijas\nadjudicadas.\n9.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "De acuerdo con la información que le hayan facilitado las administraciones públicas, las\nuniversidades y las comunidades autónomas firmantes del convenio mencionado en el apartado 8\ndel artículo anterior, el Ministerio de Educación y Formación Profesional elaborará una base de datos\nen soporte informático con los solicitantes que, por reunir todos los requisitos, tengan derecho a la\nbeca de matrícula, la cuantía básica, la cuantía fija ligada a la renta, la cuantía fija ligada a la\nresidencia, la cuantía fija ligada a la excelencia académica y la cuantía variable mínima y las cuantías\nadicionales a que se refiere el artículo 2.3 con los importes adjudicados.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Asimismo, el Ministerio de Educación y Formación Profesional elaborará una base de datos en\nsoporte informático con las solicitudes que deban resultar denegadas con indicación de sus causas\ny clasificadas por órganos de selección.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "La Subdirección General de Becas, Ayudas al Estudio y Promoción Educativa (en adelante\nSGBecas), como órgano instructor del procedimiento, elevará las oportunas propuestas de concesión\nde las mencionadas cuantías, a los efectos de que el Director General de Planificación y Gestión\nEducativa, en virtud de las competencias delegadas del Secretario de Estado de Educación, de\nacuerdo con la Orden EFP/43/2021, de 21 de enero, dicte las correspondientes órdenes parciales y\nsucesivas de concesión a medida que los órganos de selección formulen las correspondientes\npropuestas\nAsimismo, formulará propuesta de denegación de las solicitudes que no reúnan los requisitos\nestablecidos de acuerdo con la información de la base de datos a que se refiere el párrafo anterior.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El Ministerio de Educación y Formación Profesional emitirá las credenciales de concesión de las\nmencionadas cuantías a quienes resulten beneficiarios.\n3.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Asimismo, el Ministerio de Educación y Formación Profesional emitirá las oportunas\nnotificaciones de propuestas de denegación a quienes no cumplan los requisitos exigibles, en las que\nse hará constar la causa que la motiva y los recursos que pueden interponer.\n5.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "Conocido el coste de las referidas cuantías y, por tanto, el importe no invertido en las mismas,\nel Secretario de Estado de Educación del Ministerio de Educación y Formación Profesional y el\nSecretario General de Universidades, del Ministerio de Universidades dictarán resolución asignando el\nporcentaje de dicho importe que se destinará a la cuantía variable que corresponda, por una parte,\na los estudiantes universitarios, de enseñanzas artísticas superiores y de estudios religiosos\nsuperiores y, por otra, a los demás estudiantes no universitarios.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "El Ministerio de Educación y\nFormación Profesional distribuirá los referidos montantes entre todos los becarios que tengan\nderecho a la cuantía variable conforme a lo dispuesto en esta convocatoria, con excepción de quienes\nya hayan percibido la cuantía variable mínima.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "El Director General de Planificación y Gestión\nEducativa, en virtud de las competencias delegadas del Secretario de Estado de Educación, de\nacuerdo con la Orden EFP/43/2021, de 21 de enero, dictará la resolución definitiva de la convocatoria\nen el plazo de seis meses computados a partir del momento en que el Ministerio de Educación y\nFormación Profesional disponga de la información facilitada por las administraciones públicas, las\nuniversidades y las comunidades autónomas firmantes del convenio que resulta necesaria para la\nadjudicación o denegación de la cuantía variable.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "La resolución de concesión y las relaciones definitivas de los beneficiarios de las ayudas\nconcedidas se publicarán en la página web del Ministerio de Educación y Formación Profesional,\nentendiéndose que quedan denegadas por el mismo motivo indicado en la propuesta de denegación\nlas solicitudes presentadas que no aparezcan publicadas.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "El Ministerio de Educación y Formación Profesional confeccionará los soportes informáticos\nnecesarios para el procedimiento de pago tanto de las cuantías inicialmente concedidas como de las\ncuantías variables concedidas en un momento posterior.\n2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "El Director General de Planificación y Gestión Educativa, asimismo por delegación del\nSecretario de Estado de Educación, ordenará la provisión de fondos al Tesoro Público y a las\ncomunidades autónomas firmantes del convenio a que se refiere el artículo 65 de esta Resolución,\nque efectuarán el pago de las becas concedidas a la cuenta corriente o libreta de ahorro que el\ninteresado haya consignado en la solicitud y que deberá estar abierta a nombre del becario y,\ntratándose de menores, también de la persona cuya representación corresponda legalmente en\nentidades de crédito.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Conforme a lo dispuesto en la disposición adicional cuarta del Real Decreto 471/2021, de 29\nde junio, por el que se establecen los umbrales de renta y patrimonio familiar y las cuantías de las\nbecas y ayudas al estudio para el curso 2021-2022 y se modifica parcialmente el Real Decreto\n1721/2007, de 21 de diciembre, el Ministerio de Educación y Formación Profesional aportará a las\nuniversidades, en concepto de compensación de los precios públicos por servicios académicos\ncorrespondientes a los estudiantes becarios exentos de su pago, una cantidad por estudiante becado\nigual a la del precio público fijado para la titulación correspondiente en el curso 2021-2022.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el\nsupuesto de que el precio del crédito en el curso 2021-2022 fuese superior al compensado en el\n44\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\ncurso 2020-2021 para los mismos estudios, el Ministerio de Educación y Formación Profesional\naportará a las universidades una cantidad por estudiante becado igual a este último importe.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "En los denominados grados abiertos el Ministerio de Educación y Formación Profesional\ncompensará exclusivamente el importe de los precios públicos de los créditos que integren la\ntitulación oficial que finalmente curse el becario.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación\ny Gestión Educativa",
+        "frase": "El importe a que se refiere el apartado anterior, será compensado a las universidades y a las\ncomunidades autónomas firmantes del convenio a que se refiere el artículo 65, por el procedimiento\nque se describe a continuación:\na) Resuelta la convocatoria, las universidades solicitarán a la Dirección General de Planificación\ny Gestión Educativa, la compensación del importe a que se refiere el apartado 3 de este artículo en\nconcepto de precios públicos por servicios académicos de sus estudiantes beneficiarios del\ncomponente de beca de matrícula a que se refiere la presente convocatoria.\nb) Las solicitudes irán acompañadas de una certificación del presidente de la comisión de\nselección con el visto bueno del rector de la universidad, acreditativa del número de estudiantes\nbeneficiarios de la beca, con relación nominativa de éstos y especificación del importe individual y\ntotal que corresponda aportar al Ministerio de Educación y Formación Profesional.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Seguridad Social",
+        "frase": "Asimismo, las universidades acreditarán que se encuentran al corriente de obligaciones\ntributarias y frente a la Seguridad Social.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "La Dirección General de Planificación y Gestión Educativa requerirá a las universidades el\nenvío de algunos expedientes de matrícula seleccionados por muestreo al objeto de comprobar los\ndatos relativos a la matrícula de los estudiantes beneficiarios de beca.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretario de",
+        "frase": "A la vista de la documentación aportada, el Director General de Planificación y Gestión\nEducativa, asimismo por delegación del Secretario de Estado de Educación, resolverá el\nprocedimiento con la asignación de las cantidades correspondientes por este concepto mediante\nresolución que se publicará en la página web del Ministerio de Educación y Formación Profesional.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "A efectos de lo dispuesto en el apartado 4 de la disposición adicional cuarta del Real Decreto\n471/2021, de 29 de junio, por el que se establecen los umbrales de renta y patrimonio familiar y las\ncuantías de las becas y ayudas al estudio del Ministerio de Educación y Formación Profesional para\nel curso 2021-2022 y se modifica parcialmente el Real Decreto 1721/2007, de 21 de diciembre, el\n45\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\ncitado Departamento facilitará a las CCAA que lo requieran información sobre las cantidades que\nhubiera compensado a las universidades por este concepto.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "En el caso de que las normas reguladoras de aquéllos proclamaran su compatibilidad con\nlas becas del Ministerio de Educación y Formación Profesional, para que dicha compatibilidad sea\nefectiva, deberá ser solicitada por el estudiante o por la entidad convocante, en cada caso, a la\nDirección General de Planificación y Gestión Educativa.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Becas-\nColaboración",
+        "frase": "No se considerarán incompatibles las becas de esta convocatoria con las Becas-\nColaboración convocadas por el Ministerio de Educación y Formación Profesional.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Mutualidad General de Funcionarios Civiles del\nEstado",
+        "frase": "Las becas para residencia convocadas por la Mutualidad General de Funcionarios Civiles del\nEstado (MUFACE) serán compatibles con las becas que se convocan por esta Resolución con\nexcepción de la cuantía ligada a la residencia.\n5.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "La resolución de la convocatoria pondrá fin a la vía administrativa y podrá ser recurrida\npotestativamente en reposición en el plazo de un mes contado a partir del día siguiente al de su\npublicación en la página web del Ministerio de Educación y Formación Profesional.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Contra",
+        "frase": "Contra la\nresolución de dicho recurso administrativo podrá interponerse recurso contencioso-administrativo\n46\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\nante la Sala de lo Contencioso Administrativo de la Audiencia Nacional de acuerdo con lo previsto en\nlos artículos 11.1 y 46 de la Ley 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso\nAdministrativa.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Asimismo, contra la resolución de la convocatoria podrá interponerse directamente recurso\ncontencioso-administrativo ante la Sala de lo Contencioso Administrativo de la Audiencia Nacional,\nde acuerdo con lo previsto en los artículos 11.1 y 46 de la Ley 29/1998, de 13 de julio, en el plazo de\ndos meses a contar desde el día siguiente al de su publicación en la página web del Ministerio de\nEducación y Formación Profesional.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Direcciones Provinciales",
+        "frase": "A estos efectos, las universidades y órganos correspondientes de las Comunidades Autónomas\ny de las Direcciones Provinciales del Ministerio de Educación y Formación Profesional tendrán la\nconsideración de registros, de conformidad con lo dispuesto en el artículo 16 de la Ley 39/2015, de\n1 de octubre.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Centros",
+        "frase": "Centros españoles en el exterior.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Formación Profesional",
+        "frase": "Para estos alumnos, las consejerías de educación llevarán a cabo las tareas que se asignan\nen esta Resolución a las direcciones provinciales del Ministerio de Educación y Formación Profesional\ny calcularán la renta de los solicitantes y verificarán el cumplimiento de los requisitos generales y\nacadémicos requeridos.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Migraciones",
+        "frase": "El disfrute de las becas reguladas en esta Resolución será, en todo caso, incompatible con el\ndisfrute de beneficios de análogo carácter procedentes de la Dirección General de Migraciones.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de\nPlanificación y Gestión Educativa",
+        "frase": "Las propuestas de concesión de beca correspondientes a convenios o sentencias judiciales, así\ncomo las que, por razón de plazos, no puedan ser tratadas por el procedimiento ordinario que se\ndescribe en esta convocatoria, serán tramitadas directamente por la Dirección General de\nPlanificación y Gestión Educativa.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección\nGeneral",
+        "frase": "En los supuestos de becas denegadas por motivos académicos en los que, a la vista de la\npropuesta del órgano colegiado de selección de becarios, se aprecie por parte de la citada Dirección\nGeneral, una circunstancia médica excepcional de fuerza mayor sobrevenida que haya impedido de\nforma indubitada el cumplimiento de los citados requisitos académicos establecidos, podrá\nprocederse a la revisión de la solicitud, concediéndose en estos casos únicamente beca básica en el\nsupuesto de estudios no universitarios, o beca de matrícula calculada en la forma prevista en esta\nconvocatoria, en el caso de estudios universitarios.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "El Ministerio de Educación y Formación Profesional eximirá del pago de las tasas de matrícula\nal alumnado matriculado en centros públicos dependientes del mismo que resulte beneficiario de\nalguna de las becas o ayudas al estudio convocadas por esta Resolución para cursar enseñanzas no\nuniversitarias.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Artículo 65",
+        "frase": "Artículo 65.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Ministerio de Educación",
+        "frase": "Mediante los oportunos convenios de colaboración con el Ministerio de Educación y Formación\nProfesional y en los términos establecidos en los mismos, las comunidades autónomas podrán\nrealizar, respecto de las becas que se convocan por la presente Resolución, con excepción de las\ncorrespondientes a los estudiantes de la Universidad Nacional de Educación a Distancia (UNED) y\ndel Centro para la Innovación y Desarrollo de la Educación a Distancia (CIDEAD), las funciones de\ntramitación adjudicación y pago, así como la inspección, verificación, control y, en su caso, resolución\nde los recursos administrativos que puedan interponerse.\n2.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretaría de Estado\nde Educación",
+        "frase": "A estos efectos, las tareas que en esta resolución se encomiendan a la Secretaría de Estado\nde Educación, a la Dirección General de Planificación y Gestión Educativa y a la SGBecas con\nexcepción de las previstas en los artículos 2.3, 52.1 y 52.6 en lo que se refiere a la distribución del\n49\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\nmontante total destinado a la cuantía variable entre los becarios universitarios y no universitarios, y\nen los artículos 53.2 y 55.1 serán llevadas a cabo, en el ámbito de su competencia, por los órganos\nque determinen las comunidades autónomas firmantes del convenio.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Dirección General de Planificación y Gestión Educativa",
+        "frase": "La Dirección General de Planificación y Gestión Educativa adoptará las medidas necesarias\npara la aplicación de lo dispuesto en la presente Resolución.\n",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Recursos",
+        "frase": "Recursos contra esta Resolución\n1.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Secretaría de Estado de Estado de Educación",
+        "frase": "Contra esta Resolución de convocatoria, se podrá interponer recurso de reposición ante la\nSecretaría de Estado de Estado de Educación, en el plazo de un mes a contar desde el día siguiente\nal de la publicación de su extracto en el «Boletín Oficial del Estado», de acuerdo con lo dispuesto en\nlos artículos 123 y 124 de la Ley 39/2015, de 1 de octubre.",
+        "tipo": "ORG"
+      },
+      {
+        "entidad": "Contra",
+        "frase": "Contra la resolución de dicho recurso\nadministrativo podrá interponerse recurso contencioso-administrativo ante la Sala de lo Contencioso\nAdministrativo de la Audiencia Nacional de acuerdo con lo previsto en los artículos 11.1 y 46 de la\nLey 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso Administrativa.",
+        "tipo": "ORG"
+      }
+    ]
+  },
+  "frases_accion": [
+    {
+      "frase": "Procede ahora, pues, que el Ministerio de Educación y Formación Profesional convoque a través\nde esta Resolución, para el curso académico 2021-2022, las becas de carácter general para\nestudiantes de enseñanzas postobligatorias, tanto universitarios como no universitarios.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Se convocan por la presente Resolución becas para estudiantes que en el curso académico\n2021-2022, cursen enseñanzas postobligatorias con validez en todo el territorio nacional.\n2.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución será preciso cumplir\nlos requisitos básicos establecidos en el Real Decreto 1721/2007, así como los que se fijan en el Real\nDecreto 471/2021, de 29 de junio, por el que se establecen los umbrales de renta y patrimonio familiar\ny las cuantías de las becas y ayudas al estudio del Ministerio de Educación y Formación Profesional\npara el curso 2021-2022 y se modifica parcialmente el Real Decreto 1721/2007, de 21 de diciembre,\ny en esta convocatoria.\n",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "El importe correspondiente a las becas que se convocan se hará efectivo con cargo al crédito\n18.08.323M.482.00 de los presupuestos del Ministerio de Educación y Formación Profesional de los\nejercicios de 2021 y 2022.\n",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "No obstante, dicho importe podrá incrementarse con una cuantía\nadicional de 450.000.000,00 euros, cuando, como consecuencia de la concurrencia de alguna de las\ncircunstancias previstas en la letra a) del artículo 58.2 del Reglamento de la Ley General de\nSubvenciones, aprobado por el Real Decreto 887/2006, de 21 de julio, se produzca un incremento de\ncrédito disponible antes de la concesión definitiva de las becas que se convocan por esta Resolución.\n",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para el curso académico 2021-2022 y, con cargo a los créditos mencionados en el artículo\nanterior se convocan becas sin número determinado de personas beneficiarias para las siguientes\nenseñanzas:\n1.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para cursar en el año académico 2021-2022 las enseñanzas enumeradas en el artículo anterior\nse convocan becas que incluirán alguna o algunas de las siguientes cuantías:\n1.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para la adjudicación de la cuantía ligada a la residencia del estudiante durante el curso se\nrequerirá que el solicitante acredite la necesidad de residir fuera del domicilio familiar durante todo el\ncurso escolar, por razón de la distancia entre el mismo y el centro docente, los medios de\ncomunicación existentes y los horarios lectivos.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la adjudicación de la cuantía ligada a la excelencia en el rendimiento académico se requerirá\nque el solicitante acredite haber obtenido una nota media de 8,00 puntos o superior en el curso,\npruebas de acceso o estudios previos siguientes:\na) Enseñanzas de grado superior de formación profesional, de artes plásticas y diseño y de\nenseñanzas deportivas\n6\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\n Estudiantes de primer curso: nota media obtenida en segundo curso de bachillerato,\nprueba o curso de acceso respectivamente o en la calificación final del ciclo formativo de\ngrado medio que dé acceso al ciclo formativo de grado superior.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "De conformidad con el artículo 4.1 del Real Decreto 1721/2007, de 21 de diciembre, para ser\nbeneficiario de las becas que se convocan por esta Resolución será preciso:\na) No estar en posesión o no reunir los requisitos legales para la obtención de un título del mismo\no superior nivel al correspondiente al de los estudios para los que se solicita la beca.",
+      "verbos": [
+        "convocar",
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "En el caso\nde ciudadanos de la Unión Europea o de sus familiares, beneficiarios de los derechos de libre\ncirculación y residencia, se requerirá que tengan la condición de residentes permanentes o que\nacrediten ser trabajadores por cuenta propia o ajena.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la concesión de las becas que se convocan por esta Resolución, se seguirá el\nprocedimiento y se aplicarán los umbrales de renta y patrimonio familiares que se fijan en este\ncapítulo.\n",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Los umbrales de renta familiar aplicables para la concesión de las becas que se convocan por\nesta Resolución serán los que se señalan a continuación:\n1.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para ser beneficiario de las becas que se convocan por esta Resolución, los solicitantes\ndeberán estar matriculados en el curso 2021-2022 en alguno de los estudios mencionados en el\nartículo 3 y cumplir los requisitos de naturaleza académica que se establecen a continuación.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "El número mínimo de créditos fijado en los párrafos anteriores en que el alumno debe quedar\nmatriculado en el curso para el que solicita la beca no será exigible, por una sola vez, en el caso de\nlos estudiantes a los que, para finalizar sus estudios, les reste un número de créditos inferior a dicho\nnúmero mínimo, siempre que no haya disfrutado de la condición de becario durante más años de los\nprevistos en el artículo 25.\n",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la concesión de beca a quienes se matriculen por primera vez de primer curso de estudios\nde grado y, estando en posesión del título de bachillerato accedan a la universidad mediante la\nEvaluación del Bachillerato para Acceso a la Universidad, se requerirá una nota de 5,00 puntos en la\nnota de acceso a la universidad con exclusión de la calificación obtenida en las pruebas de las\nmaterias de opción del bloque de las asignaturas troncales es decir, dicha nota de acceso se calculará\nconforme a la fórmula 0,6 NMB + 0,4 EBAU.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En las demás vías de acceso a la universidad se\nrequerirá haber obtenido 5,00 puntos en la prueba o enseñanza que permita el acceso a la\nuniversidad.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Para la concesión de las becas que se convocan en esta Resolución a quienes cursen dobles\ntitulaciones les será de aplicación lo dispuesto en los artículos anteriores con las salvedades que se\nindican a continuación.\n1.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de las becas que se convocan mediante esta Resolución, los estudiantes\nde másteres deberán cumplir los siguientes requisitos académicos:\nLos estudiantes de primer curso de másteres que habilitan o que sean condición necesaria para\nel ejercicio de una profesión regulada deberán acreditar una nota media de 5,00 puntos en los\nestudios previos que les dan acceso al máster.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido\ncurso cuando tengan superados la totalidad de los módulos de los cursos anteriores a aquél para el\nque solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de estas ayudas se requerirá tener\ntotalmente superado el ciclo y haber disfrutado de la condición de becario en el curso anterior.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito académico para ser becarios quienes hayan repetido\ncurso cuando tengan superadas la totalidad de las materias o módulos de los cursos anteriores a\naquél para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Para la obtención de estas ayudas se requerirá tener\ntotalmente superado el ciclo y haber disfrutado de la condición de becario en el curso anterior.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito\nacadémico para ser becarios quienes hayan repetido curso cuando tengan superadas la totalidad de\nlas materias de los cursos anteriores a aquél para el que solicitan la beca\nPara determinar el número de materias superadas no se tendrán en cuenta aquéllas que, como\nconsecuencia de la aplicación de las medidas adoptadas para la contención de la pandemia, hayan\nsido objeto de autorización de aplazamiento por parte del becario, para su realización en el siguiente\ncurso académico.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Se entenderá que cumplen el requisito\nacadémico para ser becarios quienes hayan repetido curso cuando tengan superados la totalidad de\nlos módulos de los cursos anteriores a aquel para el que solicitan la beca.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Los beneficiarios de las becas que se convocan por esta Resolución quedan obligados a:\na) Destinar la beca a la finalidad para la que se concede, entendiéndose por tal la matriculación,\nasistencia a clase y superación de asignaturas o de créditos.\n",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Declarar, específicamente en los supuestos de cambio de estudios, el hecho de haber sido\nbecario en años anteriores, así como de estar en posesión o en condiciones legales de obtener un\ntítulo académico del mismo o superior nivel de estudios que aquel para el que se solicita la beca.\n",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Asimismo dará lugar a la denegación de la beca solicitada o a la modificación o revocación de\nla beca concedida la ocultación de la posesión de titulaciones académicas de igual o superior nivel al\nde los estudios para los que se solicita la beca.\n",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "De conformidad con lo dispuesto en el artículo 30.7 de la Ley 38/2003, de 17 de noviembre,\nGeneral de Subvenciones, la concesión de las becas que se convocan por esta Resolución no\nrequerirá otra justificación que la acreditación previa a la concesión de que el solicitante reúne los\nrequisitos establecidos en esta convocatoria.\n",
+      "verbos": [
+        "convocar",
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Las secretarías de los centros docentes comunicarán, tan pronto como les sea requerido por\nlas comisiones de selección de becarios correspondientes el nombre, apellidos y demás datos\nidentificativos que se requieran de los becarios incursos en cualquiera de las situaciones a que se\nrefiere el punto anterior.\nArtículo 44.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En los casos en que, de conformidad con lo dispuesto en la Ley 38/2003, de 17 de noviembre,\nGeneral de Subvenciones, concurra alguna causa de reintegro, las administraciones educativas\ncorrespondientes y/o las universidades notificarán al beneficiario esta circunstancia para que proceda\na la devolución al Tesoro Público y, en su caso, a la comunidad autónoma que haya financiado\nparcialmente el componente de beca de matrícula, de la cantidad indebidamente percibida en el plazo\nde dos meses.\n",
+      "verbos": [
+        "financiar"
+      ]
+    },
+    {
+      "frase": "38\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\nEn cualquier momento del procedimiento, se podrá requerir la aportación de los documentos\noriginales justificativos de las circunstancias alegadas.\n4.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "El solicitante y, en el caso de que sea menor de edad o no esté emancipado, el padre, madre,\ntutor o persona encargada de la guarda y protección del solicitante declararán bajo responsabilidad\nsolidaria lo siguiente:\na) Que aceptan las bases de la convocatoria para la que solicitan beca.\nb) Que todos los datos incorporados a la solicitud se ajustan a la realidad.\nc) Que quedan enterados de que la inexactitud en las circunstancias declaradas dará lugar a la\ndenegación o reintegro de la beca.\nd) Que tienen conocimiento de la incompatibilidad de estas becas y que, en caso de obtener otra\nbeca o ayuda procedente de cualquier administración o entidad pública o privada, deberá comunicarlo\na la Universidad o Administración tramitadora de su beca.\ne) Que manifiestan su conformidad para recibir notificaciones de forma telemática vía SMS.\n",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "En estos casos, las solicitudes se presentarán directamente en las comunidades autónomas o\nen las universidades en las que corresponda realizar los estudios para los que se solicita la beca y\nlos órganos colegiados de selección atenderán, para la concesión o denegación de la beca solicitada\na la nueva situación económica familiar sobrevenida.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Los órganos de selección a que se refiere el artículo anterior examinarán las solicitudes\npresentadas para requerir al interesado en su caso, que subsane los eventuales defectos o acompañe\nlos documentos preceptivos en el plazo de diez días contados desde la recepción del requerimiento,\nindicándoles que si así no lo hicieran, se les tendrá por desistidos de su petición, archivándose la\nmisma, previa resolución dictada a tal efecto de acuerdo con el artículo 21.1 de la citada Ley 39/2015,\nde 1 de octubre.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En casos específicos, los órganos colegiados de selección de solicitudes de becas podrán\nrequerir los documentos complementarios que se estimen precisos para un adecuado conocimiento\nde las circunstancias peculiares de cada caso, a los efectos de garantizar la correcta inversión de los\nrecursos presupuestarios destinados a becas.\n4.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "No obstante lo dispuesto en el párrafo anterior, las secretarías de los centros universitarios\npodrán requerir cautelarmente el abono de dichos precios públicos a quienes no cumplan los\nrequisitos establecidos en esta convocatoria.\n3.",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "El importe a que se refiere el apartado anterior, será compensado a las universidades y a las\ncomunidades autónomas firmantes del convenio a que se refiere el artículo 65, por el procedimiento\nque se describe a continuación:\na) Resuelta la convocatoria, las universidades solicitarán a la Dirección General de Planificación\ny Gestión Educativa, la compensación del importe a que se refiere el apartado 3 de este artículo en\nconcepto de precios públicos por servicios académicos de sus estudiantes beneficiarios del\ncomponente de beca de matrícula a que se refiere la presente convocatoria.\nb) Las solicitudes irán acompañadas de una certificación del presidente de la comisión de\nselección con el visto bueno del rector de la universidad, acreditativa del número de estudiantes\nbeneficiarios de la beca, con relación nominativa de éstos y especificación del importe individual y\ntotal que corresponda aportar al Ministerio de Educación y Formación Profesional.",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "La Dirección General de Planificación y Gestión Educativa requerirá a las universidades el\nenvío de algunos expedientes de matrícula seleccionados por muestreo al objeto de comprobar los\ndatos relativos a la matrícula de los estudiantes beneficiarios de beca.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "A efectos de lo dispuesto en el apartado 4 de la disposición adicional cuarta del Real Decreto\n471/2021, de 29 de junio, por el que se establecen los umbrales de renta y patrimonio familiar y las\ncuantías de las becas y ayudas al estudio del Ministerio de Educación y Formación Profesional para\nel curso 2021-2022 y se modifica parcialmente el Real Decreto 1721/2007, de 21 de diciembre, el\n45\nCSV : GEN-93d6-2263-c487-92ef-6239-85f3-9e53-1098\nDIRECCIÓN DE VALIDACIÓN : https://sede.administracion.gob.es/pagSedeFront/servicios/consultaCSV.htm\nFIRMANTE(1) : ALEJANDRO TIANA FERRER | FECHA : 28/07/2021 09:29 | NOTAS : F\ncitado Departamento facilitará a las CCAA que lo requieran información sobre las cantidades que\nhubiera compensado a las universidades por este concepto.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "En el caso de que las normas reguladoras de aquéllos proclamaran su compatibilidad con\nlas becas del Ministerio de Educación y Formación Profesional, para que dicha compatibilidad sea\nefectiva, deberá ser solicitada por el estudiante o por la entidad convocante, en cada caso, a la\nDirección General de Planificación y Gestión Educativa.\n",
+      "verbos": [
+        "solicitar"
+      ]
+    },
+    {
+      "frase": "Las becas para residencia convocadas por la Mutualidad General de Funcionarios Civiles del\nEstado (MUFACE) serán compatibles con las becas que se convocan por esta Resolución con\nexcepción de la cuantía ligada a la residencia.\n5.",
+      "verbos": [
+        "convocar"
+      ]
+    },
+    {
+      "frase": "Cuando los ingresos o los resultados académicos a acreditar procedan de un país extranjero,\nlos correspondientes órganos de selección requerirán al solicitante la aportación de la documentación\nque consideren necesaria a dichos efectos.\n",
+      "verbos": [
+        "requerir"
+      ]
+    },
+    {
+      "frase": "Mediante los oportunos convenios de colaboración con el Ministerio de Educación y Formación\nProfesional y en los términos establecidos en los mismos, las comunidades autónomas podrán\nrealizar, respecto de las becas que se convocan por la presente Resolución, con excepción de las\ncorrespondientes a los estudiantes de la Universidad Nacional de Educación a Distancia (UNED) y\ndel Centro para la Innovación y Desarrollo de la Educación a Distancia (CIDEAD), las funciones de\ntramitación adjudicación y pago, así como la inspección, verificación, control y, en su caso, resolución\nde los recursos administrativos que puedan interponerse.\n2.",
+      "verbos": [
+        "convocar"
+      ]
+    }
+  ]
+}
