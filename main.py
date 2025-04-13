@@ -16,13 +16,16 @@ os.system("python parse_sections.py")
 
 # 4. GENERAR RESÚMENES INDIVIDUALES CON BERT
 print("\n[4/5] Generando resúmenes individuales...")
-os.system("python generate_summary.py")
+#os.system("python generate_summary_exp1.py")
+#os.system("python generate_summary_exp2.py")
+#os.system("python generate_summary_exp3.py")
+os.system("python generate_summary_exp4.py")
 
 print("\n=== PIPELINE COMPLETO ===")
 print("Todos los outputs están en:")
 print(" - data/extracted/")
 print(" - data/sections/")
 print(" - data/parsed/")
-print(" - data/summaries_t5/")
+print(" - data/summaries/")
 
 print("\n¡Hecho!")
