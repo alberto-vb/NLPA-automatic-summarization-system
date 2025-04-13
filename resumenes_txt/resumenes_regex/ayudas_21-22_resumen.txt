@@ -1,44 +1,34 @@
-El documento proporcionado contiene información detallada sobre los requisitos, plazos y montos asociados a las becas universitarias para el curso 2021-2022 en España, según lo establecido por el Ministerio de Educación y Formación Profesional. A continuación, se presenta un resumen estructurado de los aspectos más relevantes:
+Resumen de becas universitarias 2021-2022 (España)  
 
-### **Fechas y plazos clave**  
-- **Presentación de solicitudes**:  
-  - Estudiantes universitarios: del 14 de octubre de 2021 (inclusive).  
-  - Excepciones: hasta el 31 de diciembre de 2021 en casos de fallecimiento o jubilación forzosa del sustentador principal.  
-- **Evaluación de datos**: Las unidades de trámite iniciarán la recopilación de datos académicos a partir del 1 de septiembre de 2021.  
+### Fechas clave  
+- Solicitudes: desde 14/10/2021 (hasta 31/12/2021 en casos excepcionales).  
+- Evaluación: datos académicos recopilados desde 01/09/2021.  
 
-### **Requisitos económicos y patrimoniales**  
-- **Umbrales de renta familiar** (para denegación de beca si se superan):  
-  - **Familias de 1 miembro**:  
-    - Umbral 1: €8,422.  
-    - Umbral 2: €13,236.  
-    - Umbral 3: €14,112.  
-  - **Familias de 4 miembros**: €36,421 (umbral variable según composición familiar).  
-  - **Patrimonio inmobiliario**:  
-    - Suma de valores catastrales de propiedades urbanas (excluyendo vivienda habitual) no debe superar **€42,900**.  
-    - Propiedades rústicas: límite de **€13,130 por miembro computable**.  
+### Requisitos económicos  
+- Renta familiar máxima:  
+  - 1 miembro: €8,422 (umbral 1) o €14,112 (umbral 3).  
+  - 4 miembros: €36,421.  
+- Patrimonio:  
+  - Inmuebles urbanos: ≤€42,900 (excluye vivienda habitual).  
+  - Rústicos: ≤€13,130 por miembro.  
 
-### **Cuantías de las becas**  
-- **Cuantías fijas**:  
-  - **Ligada a renta**: €1,700.  
-  - **Ligada a residencia**: €1,600 (€888 o €937 para estudiantes de Baleares/Canarias que se desplacen a la península).  
-  - **Excelencia académica**: Desde €50 (nota 8.0) hasta €125 (nota 9.5).  
-- **Cuantías variables**: Mínimo de €60, calculadas en función de la nota media y renta familiar.  
-- **Beneficios adicionales**:  
-  - **Familias numerosas**: €525 por hermano (categoría general) o €800 (categoría especial).  
-  - **Discapacidad**: Deducciones de €2,000 a €4,000 según grado.  
-  - **Víctimas de violencia de género**: Acceso prioritario a becas básicas y complementos.  
+### Cuantías  
+- Fijas:  
+  - Renta: €1,700 | Residencia: €1,600.  
+  - Excelencia: €50-€125 (notas 8.0-9.5).  
+- Variables: mínimo €60.  
+- Adicionales:  
+  - Familias numerosas: +€525-€800/hermano.  
+  - Discapacidad: deducciones de €2,000-€4,000.  
 
-### **Requisitos académicos**  
-- **Nota mínima**: Los becarios deben aprobar el **100% de los créditos matriculados** en el curso anterior.  
-- **Primer curso universitario**: La nota se calcula con un coeficiente corrector basado en el rendimiento en bachillerato.  
-- **Ciclos formativos**: Becas disponibles por **2 años** (o 3 en casos excepcionales).  
+### Académicos  
+- Aprobar 100% créditos del curso anterior.  
+- Primer año: nota corregida por rendimiento en bachillerato.  
+- Ciclos formativos: becas por 2-3 años.  
 
-### **Situaciones especiales**  
-- **COVID-19**: Se considerarán casos donde la pandemia haya impedido la evaluación normal.  
-- **Residencia legal**: Para solicitantes refugiados o con protección subsidiaria, el permiso de residencia puede obtenerse hasta el **30 de junio de 2021**.  
-- **Vivienda habitual**: Se aplican coeficientes reductores a valores catastrales según el año de revisión (ej. 0.43 para revisiones anteriores a 2003).  
+### Situaciones especiales  
+- COVID-19: consideración por afectación académica.  
+- Refugiados: permiso de residencia hasta 30/06/2021.  
 
-### **Observaciones finales**  
-- **Documentación**: Puede requerirse la presentación de originales en cualquier momento del proceso.  
-- **Montos totales**: El importe máximo asignado a becas es de **€1,550,000,000**, con posibles incrementos de €450,000,000 en casos excepcionales.  
-
+### Monto total  
+- Presupuesto: €1,550,000,000 (+€450M en casos excepcionales).  
