@@ -1,0 +1,31 @@
+CONVOCATORIA DE BECA
+
+Fecha límite: 31 de diciembre de 2025
+
+Requisitos principales:
+  - Estudiantes de enseñanzas artísticas y estudios religiosos superiores: 30 créditos o el 50 por ciento del curso completo en el caso de enseñanzas organizadas por asignaturas.
+  - Estudiantes de grado superior de formación profesional, de artes plásticas y diseño y de enseñanzas deportivas: 500 horas.
+  - Estudiantes de bachillerato, enseñanzas profesionales de música y danza y grado medio de formación profesional, enseñanzas profesionales de artes plásticas y diseño y de las enseñanzas deportivas: 4 asignaturas o 500 horas, respectivamente.
+  - Estudiantes universitarios: 30 créditos o la mitad del curso completo en el caso de dobles titulaciones de grado. En estos casos, la beca de matrícula se extenderá a los créditos de que se matriculen tanto por primera como por segunda vez. CAPÍTULO III
+
+Porcentajes por rama:
+  - artes_humanidades: 90%
+  - ciencias: 65%
+  - ciencias_sociales_juridicas: 90%
+  - ciencias_de_la_salud: 80%
+  - ingenieria_arquitectura_tecnicas: 65%
+
+Cuantías disponibles:
+  - Beca Matricula: Gratuidad de los créditos de primera matrícula
+  - Fija Renta: 1700,00
+  - Fija Residencia: 2700,00
+  - Beca Basica Normal: 300,00
+  - Beca Basica Fp Basico: 350
+  - Variable Minima: 60,00
+
+Excelencia:
+  - Nota Minima Excelencia: 8,00
+  - Excelencia Cuantia Min: 50
+  - Excelencia Cuantia Max: 125
+
+Presentar la solicitud en: solicitudes se presentarán directamente en las comunidades autónomas o en las universidades en las que corresponda realizar los estudios para los que se solicita la beca y los órganos colegiados de selección atenderán, para la concesión o denegación de la beca solicitada a la nueva situación económica familiar sobrevenida.

@@ -1,0 +1,24 @@
+{
+  "requisitos": {
+    "matriculacion_minima": {}
+  },
+  "cuantias": {
+    "beca_matricula": null,
+    "fija_renta": null,
+    "fija_residencia": null,
+    "beca_basica_normal": null,
+    "beca_basica_fp_basico": null,
+    "variable_minima": null
+  },
+  "excelencia": {
+    "nota_minima_excelencia": null,
+    "excelencia_cuantia_min": null,
+    "excelencia_cuantia_max": null
+  },
+  "plazo": {
+    "plazo_presentacion_fin": null
+  },
+  "solicitud": {
+    "donde_presentar": null
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "requisitos": {
+    "matriculacion_minima": {
+      "Estudiantes de enseñanzas artísticas y estudios religiosos superiores": "30 créditos o el 50 por ciento del curso completo en el caso de enseñanzas organizadas por asignaturas.",
+      "Estudiantes de grado superior de formación profesional, de artes plásticas y diseño y de enseñanzas deportivas": "500 horas",
+      "Estudiantes de bachillerato, enseñanzas profesionales de música y danza y grado medio de formación profesional, enseñanzas profesionales de artes plásticas y diseño y de las enseñanzas deportivas": "4 asignaturas o 500 horas, respectivamente.",
+      "Estudiantes universitarios": "30 créditos o la mitad del curso completo en el caso de dobles titulaciones de grado. En estos casos, la beca de matrícula se extenderá a los créditos que se matriculen tanto por primera como por segunda vez. CAPÍTULO III"
+    },
+    "porcentajes_por_rama": {
+      "artes_humanidades": 90,
+      "ciencias": 65,
+      "ciencias_sociales_juridicas": 90,
+      "ciencias_de_la_salud": 80,
+      "ingenieria_arquitectura_tecnicas": 65
+    }
+  },
+  "cuantias": {
+    "beca_matricula": "Gratuidad de los créditos de primera matrícula",
+    "fija_renta": "1700,00",
+    "fija_residencia": "1600,00",
+    "beca_basica_normal": "300,00",
+    "beca_basica_fp_basico": "350",
+    "variable_minima": "60,00"
+  },
+  "excelencia": {
+    "nota_minima_excelencia": "8,00",
+    "excelencia_cuantia_min": "50",
+    "excelencia_cuantia_max": "125"
+  },
+  "plazo": {
+    "plazo_presentacion_fin": "31 de diciembre de 2021"
+  },
+  "solicitud": {
+    "donde_presentar": "solicitudes se presentarán directamente en las comunidades autónomas o en las universidades en las que corresponda realizar los estudios para los que se solicita la beca y los órganos colegiados de selección atenderán, para la concesión o denegación de la beca solicitada a la nueva situación económica familiar sobrevenida."
+  }
+}
