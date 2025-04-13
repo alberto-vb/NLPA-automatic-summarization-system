@@ -5,41 +5,59 @@ import os
 def parse_requisitos(text: str) -> dict:
     """
     Extrae únicamente la información de matriculacion_minima (bullets 1.º), 2.º), etc.).
-    Se ELIMINA 'nota_minima_master' y no se genera.
+    Elimina 'CAPÍTULO III' al final del bloque si aparece.
     
-    Devuelve algo como:
+    Devuelve un dict así:
     {
-      "matriculacion_minima": { ... }
+      "matriculacion_minima": {
+         "Estudiantes de enseñanzas artísticas...": "30 créditos...",
+         "Estudiantes de bachillerato...": "4 asignaturas...",
+         ...
+      }
     }
     """
     results = {
         "matriculacion_minima": {}
     }
 
+    # Patrón para capturar enumeraciones del tipo "1.º)" y su contenido
     pattern_bullets = re.compile(
         r'(?s)(\d{1,2}\.\s*º\))(.*?)(?=(\d{1,2}\.\s*º\))|$)',
         flags=re.MULTILINE
     )
 
     for match in pattern_bullets.finditer(text):
-        bullet = match.group(1).strip()   # "1.º)"
+        bullet = match.group(1).strip()  # por ej. "1.º)"
         content = match.group(2).strip()
 
+        # Eliminamos saltos de línea y dividimos
         lines = content.splitlines()
         if not lines:
             results["matriculacion_minima"][bullet] = ""
             continue
 
         first_line = lines[0].strip()
+        # Patrón para "Estudiantes de X...: 30 créditos..."
         colonmatch = re.match(r'^(.*?)\:\s*(.*)$', first_line)
+
         if colonmatch:
             title = colonmatch.group(1).strip()
             remainder = colonmatch.group(2).strip()
+
+            # Si hay más líneas, se añaden al final del remainder
             if len(lines) > 1:
                 remainder += "\n" + "\n".join(lines[1:])
+
+            # Aquí quitamos "CAPÍTULO III" si aparece al final
+            remainder = remainder.replace("CAPÍTULO III", "").strip()
+
             results["matriculacion_minima"][title] = remainder
         else:
-            results["matriculacion_minima"][bullet] = content
+            # Caso donde no hay "Título: contenido"
+            # o no encaja el primer match
+            # Guardamos tal cual, pero eliminamos "CAPÍTULO III" si está
+            cleaned = content.replace("CAPÍTULO III", "").strip()
+            results["matriculacion_minima"][bullet] = cleaned
 
     return results
 
@@ -98,6 +116,7 @@ def parse_cuantias(text: str) -> dict:
     if match_variable:
         results["variable_minima"] = match_variable.group(1)
 
+    # Porcentajes de créditos por rama
     patron_ramas = re.compile(
         r"(Artes y Humanidades|Ciencias Sociales y Jurídicas|Ciencias de la Salud|Ingeniería o Arquitectura[/\w\s]*técnicas|Ciencias).*?(\d{1,3})\%",
         flags=re.IGNORECASE
@@ -121,10 +140,6 @@ def parse_cuantias(text: str) -> dict:
 
 
 def parse_excelencia(text: str) -> dict:
-    """
-    Cambiamos 'excelencia_min' -> 'excelencia_cuantia_min'
-    y 'excelencia_max' -> 'excelencia_cuantia_max'
-    """
     results = {
         "nota_minima_excelencia": None,
         "excelencia_cuantia_min": None,
@@ -150,9 +165,6 @@ def parse_excelencia(text: str) -> dict:
 
 
 def parse_plazo(text: str) -> dict:
-    """
-    Solo 'plazo_presentacion_fin' y no 'plazo_presentacion_inicio'
-    """
     results = {
         "plazo_presentacion_fin": None
     }
@@ -166,9 +178,6 @@ def parse_plazo(text: str) -> dict:
 
 
 def parse_solicitud(text: str) -> dict:
-    """
-    Solo 'donde_presentar' y no 'fecha_limite'
-    """
     result = {
         "donde_presentar": None
     }
@@ -194,37 +203,39 @@ def main():
         output_path = os.path.join(output_folder, filename)
         print(f"[Parseando información...] Procesando {filename}")
 
+        # Cargamos la sección
         with open(input_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
+        # Extraemos el texto de cada sección
         req_text  = data.get("requisitos",[{"content":""}])[0]["content"]
         cuan_text = data.get("cuantias",[{"content":""}])[0]["content"]
         plazo_text= data.get("plazo",[{"content":""}])[0]["content"]
         sol_text  = data.get("solicitud",[{"content":""}])[0]["content"]
         ex_text   = data.get("excelencia",[{"content":""}])[0]["content"]
 
-        # Parseamos
+        # Parseamos cada parte
         req_parsed   = parse_requisitos(req_text)
         cuan_parsed  = parse_cuantias(cuan_text)
         plazo_parsed = parse_plazo(plazo_text)
         sol_parsed   = parse_solicitud(sol_text)
         ex_parsed    = parse_excelencia(ex_text)
 
-        # Construimos final_info
+        # Construimos el dict final
         final_info = {
-            "requisitos": req_parsed,     # sin nota_minima_master
+            "requisitos": req_parsed,
             "cuantias": cuan_parsed,
-            "excelencia": ex_parsed,      # excel_cuantia_min & excel_cuantia_max
+            "excelencia": ex_parsed,
             "plazo": plazo_parsed,
             "solicitud": sol_parsed
         }
 
-        # Mover porcentajes_por_rama de cuantias a requisitos
+        # Movemos 'porcentajes_por_rama' desde cuantias a requisitos
         por_rama = final_info["cuantias"].pop("porcentajes_por_rama", None)
         if por_rama:
             final_info["requisitos"]["porcentajes_por_rama"] = por_rama
 
-        # Guardamos
+        # Guardamos en JSON final
         with open(output_path, "w", encoding="utf-8") as out:
             json.dump(final_info, out, indent=2, ensure_ascii=False)
 
